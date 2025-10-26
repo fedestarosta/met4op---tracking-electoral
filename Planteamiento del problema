@@ -1,10 +1,26 @@
 Planteamiento del problema
 
-INPUT
+# OBJETIVO:
+# 1 Unificar las distintas encuestas en una sola base.
+# 2 Calcular indicadores de evolución temporal (imagen del candidato)
+# 3 Comparar la variable principal (imagen del candidato) con variables de "control" como voto y voto anterior
+# 4 Ponderar o corregir según variables sociodemográficas.
+# 5 Generar una salida dinámica actualizable.
+
+#INPUT
+  # VARIABLES DE ENTRADA:
+  # Encuestas sucesivas con columnas:
+  # Fecha, Encuesta, Estrato, Sexo, Edad, NivelEducativo, IntegrantesHogar, ImagenCandidato, Voto, VotoAnterior
+
+# OBJETIVO:
+  # 1 Unificar las distintas encuestas en una sola base.
+  # 2 Calcular indicadores de evolución temporal (imagen, voto).
+  # 3 Ponderar o corregir según variables sociodemográficas.
+  # 4 Generar una salida dinámica actualizable (tracking).
 
 
-PROCESAMIENTO
+#PROCESAMIENTO
 
 
 
-OUTPUT
+#OUTPUT
