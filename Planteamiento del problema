@@ -1,26 +1,39 @@
 Planteamiento del problema
 
 # OBJETIVO:
-# 1 Unificar las distintas encuestas en una sola base.
-# 2 Calcular indicadores de evolución temporal (imagen del candidato)
-# 3 Comparar la variable principal (imagen del candidato) con variables de "control" como voto y voto anterior
-# 4 Ponderar o corregir según variables sociodemográficas.
-# 5 Generar una salida dinámica actualizable.
+# 1) Unificar las distintas encuestas en una sola base.
+# 2) Calcular indicadores de evolución temporal (imagen del candidato)
+# 3) Comparar la variable principal (imagen del candidato) con variables de "control" como voto y voto anterior
+# 4) Ponderar o corregir según variables sociodemográficas.
+# 5) Generar una salida dinámica actualizable.
 
 #INPUT
   # VARIABLES DE ENTRADA:
   # Encuestas sucesivas con columnas:
   # Fecha, Encuesta, Estrato, Sexo, Edad, NivelEducativo, IntegrantesHogar, ImagenCandidato, Voto, VotoAnterior
 
-# OBJETIVO:
-  # 1 Unificar las distintas encuestas en una sola base.
-  # 2 Calcular indicadores de evolución temporal (imagen, voto).
-  # 3 Ponderar o corregir según variables sociodemográficas.
-  # 4 Generar una salida dinámica actualizable (tracking).
-
-
 #PROCESAMIENTO
+  # 1) CARGA Y LIMPIEZA DE DATOS
+      # Importar librerías necesarias (pandas, numpy, etc.)
+      # Cargar todas las encuestas disponibles desde su fuente (CSV, Excel o API)
+      # Concatenar en un único dataframe (base_tracking)
+      # Uniformar nombres de columnas y formatos (fecha, categorías)
+      # Eliminar duplicados y casos inválidos
 
+  # CREAR VARIABLES AUXILIARES:
+    #  Grupo Etario: dividir la variable Edad en intervalos estándar. 
+    #  Los grupos se definen como: 18-24, 25-34, 35-44, 45-54, 55-64 y 65 o más.
+    #  Esta variable permitirá analizar diferencias generacionales en la evolución del apoyo.
+    #  Periodo de Encuesta: crear un indicador temporal que agrupe las observaciones 
+      # según el día de realización de la encuesta. 
+ 
+    # Ordenar los datos en sentido temporal ascendente, asegurando que las encuestas más antiguas queden primero.
+    # (por ejemplo, imagen del candidato o intención de voto) a lo largo de las distintas olas.
+
+  # PESOS Y CORRECCIONES:
+    # - Calcular pesos según distribución poblacional (sexo, edad, educación)
+    # - Usar datos del INDEC o censo para definir proporciones esperadas.
+    # - Calcular peso = proporción_poblacional / proporción_muestral
 
 
 #OUTPUT
