@@ -78,17 +78,17 @@ Planteamiento del problema
     # Ordenar los datos en sentido temporal ascendente, asegurando que las encuestas más antiguas queden primero.
 
   # 3) PESOS Y CORRECCIONES:
-    # - Calcular pesos según distribución poblacional (sexo, edad) (Hay que agregar alguna otra variable para los pesos?)
-    # - Usar datos del INDEC o censo para definir proporciones esperadas.
-    # - Calcular peso = proporción_poblacional / proporción_muestral
+    # Calcular pesos según distribución poblacional (sexo, edad). Usar datos del INDEC o censo para definir proporciones esperadas.
+    # Calcular peso = proporción_poblacional / proporción_muestral  
+    # Corregir posibles NAs.
 
  # 4) CALCULAR VARIABLES PRINCIPALES:
     # Imagen del candidato (variable continua):
-    # Agrupar por Fecha → calcular media ponderada de imagen_Candidato
+       # Agrupar por Fecha → calcular media ponderada de imagen_Candidato
 
-    
+
     # Intención de voto (variable categórica):
-    # Agrupar por Fecha y Voto → calcular proporciones ponderadas
+       # Agrupar por Fecha y Voto → calcular proporciones ponderadas
     
     
     # Transferencia de voto:
