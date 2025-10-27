@@ -25,8 +25,8 @@ Planteamiento del problema
       #Estrato
       #Variable: estrato
       #Tipo: categórica
-      #utilidad: segmentar por nivel socioeconómico, zona o tipo de localidad según el diseño muestral.
-      
+      #utilidad: 
+
       #Sexo
       #Variable: sexo
       #Tipo: categórica (“Masculino”, “Femenino”, “Otro/NS”)
