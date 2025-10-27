@@ -37,11 +37,6 @@ Planteamiento del problema
       #Tipo: numérica (int)
       #utilidad: base para construir el grupo etario; permite análisis de correlación con la imagen y el voto.
       
-      #Grupo Etario (variable derivada)
-      #Variable: grupo_etario
-      #Tipo: categórica (intervalos: 18–24, 25–34, 35–44, 45–54, 55–64, 65+)
-      #utilidad: segmentar tendencias por generación; visualizar diferencias etarias en voto e imagen.
-      
       #Nivel Educativo
       #Variable: nivel_educativo
       #Tipo: categórica (“Primario completo o incompleto”, “Secundario completo o incompleto”, “Terciario completo o incompleto”, “Universitario completo o incompleto”, "Ns/Nc")
@@ -79,9 +74,7 @@ Planteamiento del problema
 
   # 2) CREAR VARIABLES AUXILIARES:
     # Ola o Periodo: crear la variable categórica a partir de la variable fecha. #utilidad: agrupar encuestas por tramo temporal para suavizar fluctuaciones y comparar tendencias entre olas.
-    # Grupo Etario: dividir la variable Edad en intervalos estándar. 
-    # Los grupos se definen como: 18-24, 25-34, 35-44, 45-54, 55-64 y 65 o más.
-    # Esta variable permitirá analizar diferencias generacionales en la evolución del apoyo.
+    # Crear la variable grupo_etario (variable derivada de Edad). Tipo: categórica (intervalos: 18–24, 25–34, 35–44, 45–54, 55–64, 65+). Uutilidad: segmentar tendencias por generación; visualizar diferencias etarias en voto e imagen. 
     # Periodo de Encuesta: crear un indicador temporal que agrupe las observaciones 
       # según el día de realización de la encuesta. 
  
