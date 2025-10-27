@@ -76,7 +76,6 @@ Planteamiento del problema
     # Ola o Periodo: crear la variable categórica a partir de la variable fecha. #utilidad: crear un indicador temporal que agrupe las observaciones según el día de realización de la encuesta y nos permita comparar tendencias entre olas.
     # Crear la variable grupo_etario (variable derivada de Edad). Tipo: categórica (intervalos: 18–24, 25–34, 35–44, 45–54, 55–64, 65+). Uutilidad: segmentar tendencias por generación; visualizar diferencias etarias en voto e imagen. 
     # Ordenar los datos en sentido temporal ascendente, asegurando que las encuestas más antiguas queden primero.
-    # (por ejemplo, imagen del candidato o intención de voto) a lo largo de las distintas olas.
 
   # 3) PESOS Y CORRECCIONES:
     # - Calcular pesos según distribución poblacional (sexo, edad) (Hay que agregar alguna otra variable para los pesos?)
