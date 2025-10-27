@@ -19,22 +19,22 @@ Planteamiento del problema
       
       #Encuesta
       #Variable: encuesta_id
-      #Tipo: string o int (CONSULTAR DUDA)
+      #Tipo: int
       #utilidad: identificador único de cada encuesta; permite distinguir fuentes y momentos de medición.
       
       #Estrato
       #Variable: estrato
       #Tipo: categórica
-      #utilidad: segmentar por nivel socioeconómico, zona o tipo de localidad según el diseño muestral.
+      #utilidad: variable de control, permite ponderar.
       
       #Sexo
       #Variable: sexo
-      #Tipo: categórica (“Masculino”, “Femenino”, “Otro/NS”)
-      #utilidad: desagregar resultados y comparar diferencias entre grupos de género.
+      #Tipo: categórica (“Masculino”, “Femenino”, “Otro”)
+      #utilidad: desagregar resultados y comparar diferencias entre grupos de género. También variable de control.
       
       #Edad
       #Variable: edad
-      #Tipo: numérica (int)
+      #Tipo: int
       #utilidad: base para construir el grupo etario; permite análisis de correlación con la imagen y el voto.
       
       #Grupo Etario (variable derivada)
