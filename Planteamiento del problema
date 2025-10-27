@@ -34,7 +34,7 @@ Planteamiento del problema
       
       #Edad
       #Variable: edad
-      #Tipo: int
+      #Tipo: numérica (int)
       #utilidad: base para construir el grupo etario; permite análisis de correlación con la imagen y el voto.
       
       #Grupo Etario (variable derivada)
@@ -60,18 +60,13 @@ Planteamiento del problema
       
       #Voto
       #Variable: voto
-      #Tipo: categórica (“Candidato_A”, “Candidato_B”, “Indeciso”, “Blanco”)
+      #Tipo: categórica (“Candidato_A”, “Candidato_B”, “Blanco”, "Nulo", "Ns/Nc")
       #utilidad: variable central para estimar apoyo electoral y calcular intención de voto agregada.
       
       #Voto Anterior
       #Variable: voto_anterior
-      #Tipo: categórica (mismo formato que voto)
+      #Tipo: categórica (“Candidato_A”, “Candidato_B”, "No fue a votar", “Blanco”, "Nulo", "Ns/Nc")
       #utilidad: analizar transferencias de voto, fidelidad y cambios entre elecciones.
-      
-      #Ola o Periodo (DUDA CON ESTO)
-      #Variable: ola 
-      #Tipo: categórica o temporal (semana, quincena)
-      #utilidad: agrupar encuestas por tramo temporal para suavizar fluctuaciones y comparar tendencias entre olas.
 
 
 #PROCESAMIENTO
@@ -80,9 +75,10 @@ Planteamiento del problema
       # Cargar todas las encuestas disponibles desde su fuente (CSV, Excel o API)
       # Concatenar en un único dataframe (base_tracking)
       # Uniformar nombres de columnas y formatos (fecha, categorías)
-      # Eliminar duplicados y casos inválidos
+      # Eliminar duplicados y casos inválidos, como por ejemplo menores de 16 años. 
 
   # 2) CREAR VARIABLES AUXILIARES:
+    # Ola o Periodo: crear la variable categórica a partir de la variable fecha. #utilidad: agrupar encuestas por tramo temporal para suavizar fluctuaciones y comparar tendencias entre olas.
     # Grupo Etario: dividir la variable Edad en intervalos estándar. 
     # Los grupos se definen como: 18-24, 25-34, 35-44, 45-54, 55-64 y 65 o más.
     # Esta variable permitirá analizar diferencias generacionales en la evolución del apoyo.
