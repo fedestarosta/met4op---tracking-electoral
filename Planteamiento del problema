@@ -99,16 +99,48 @@ Planteamiento del problema
 
  # 4) CALCULAR VARIABLES PRINCIPALES:
     # Imagen del candidato (variable continua):
-    # Agrupar por Fecha → calcular media ponderada de ImagenCandidato
+    # Agrupar por Fecha → calcular media ponderada de imagen_Candidato
+
     
     # Intención de voto (variable categórica):
     # Agrupar por Fecha y Voto → calcular proporciones ponderadas
+    
     
     # Transferencia de voto:
     # Cruzar VotoAnterior vs. Voto → matriz de flujos (% ponderados)
       # La transferencia de voto mide hacia dónde se mueven los votantes entre dos momentos (antes y ahora), podemos mostrarla con un diagrama de Sankey
 
+    # Generar gráficos series de tiempo
+        # Imagen media del candidato
+        # Intención de voto por fuerza política
 
-
+    # Propuesta EXTRA (consultar si es útil o no)
+      # Analisis por segmentos
+        Cruzar indicadores (Imagen o Voto) con variables:
+        #   - Sexo
+        #   - Edad (o grupos etarios)
+        #   - NivelEducativo
+        #   - Estrato (zona, distrito)
+     ---tengo un docu aparte para ver las anotaciones en relación a esto
 
 #OUTPUT
+
+# CREACIÓN DE TABLAS DATAFRAMES GRAFICOS
+
+  #Tenemos distintos tipos de indicadores creados. Crear distintos tipos de output para cada uno.
+
+  # Evolución temporal
+    #
+
+  # Estructura del voto
+
+  # Cruce de voto anterior / voto actual 
+
+
+  # EXPORT
+  #   - Gráficos de series temporales
+  #   - Tablas en CSV o Excel
+  #   - Dashboard ?
+  
+  
+
