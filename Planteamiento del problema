@@ -12,67 +12,66 @@ Planteamiento del problema
   # Encuestas sucesivas con columnas:
   # Fecha, Encuesta, Estrato, Sexo, Edad, NivelEducativo, IntegrantesHogar, ImagenCandidato, Voto, VotoAnterior
 
-
-#Fecha
-#Variable: fecha
-#Tipo: datetime (formato yyyy-mm-dd)
-#utilidad: ordenar temporalmente las encuestas, construir series cronológicas y agrupar por ola o periodo.
-
-#Encuesta
-#Variable: encuesta_id
-#Tipo: string o int (CONSULTAR DUDA)
-#utilidad: identificador único de cada encuesta; permite distinguir fuentes y momentos de medición.
-
-#Estrato
-#Variable: estrato
-#Tipo: categórica
-#utilidad: segmentar por nivel socioeconómico, zona o tipo de localidad según el diseño muestral.
-
-#Sexo
-#Variable: sexo
-#Tipo: categórica (“Masculino”, “Femenino”, “Otro/NS”)
-#utilidad: desagregar resultados y comparar diferencias entre grupos de género.
-
-#Edad
-#Variable: edad
-#Tipo: numérica (int)
-#utilidad: base para construir el grupo etario; permite análisis de correlación con la imagen y el voto.
-
-#Grupo Etario (variable derivada)
-#Variable: grupo_etario
-#Tipo: categórica (intervalos: 18–24, 25–34, 35–44, 45–54, 55–64, 65+)
-#utilidad: segmentar tendencias por generación; visualizar diferencias etarias en voto e imagen.
-
-#Nivel Educativo
-#Variable: nivel_educativo
-#Tipo: categórica (“Primario”, “Secundario”, “Terciario”, “Universitario”)
-#utilidad: analizar comportamiento político según nivel de formación o capital cultural.
-
-#Cantidad de Integrantes en el Hogar
-#Variable: integrantes_hogar
-#Tipo: numérica (int)
-#utilidad: indicador demográfico.
-
-#Imagen del Candidato
-#Variable: imagen_candidato
-#Tipo: numérica (0–100)
-#utilidad: medir la valoración promedio y su evolución temporal; puede graficarse en tracking o correlacionarse con voto.
-#Variable PRINCIPAL
-
-#Voto
-#Variable: voto
-#Tipo: categórica (“Candidato_A”, “Candidato_B”, “Indeciso”, “Blanco”)
-#utilidad: variable central para estimar apoyo electoral y calcular intención de voto agregada.
-
-#Voto Anterior
-#Variable: voto_anterior
-#Tipo: categórica (mismo formato que voto)
-#utilidad: analizar transferencias de voto, fidelidad y cambios entre elecciones.
-
-#Ola o Periodo (DUDA CON ESTO)
-#Variable: ola 
-#Tipo: categórica o temporal (semana, quincena)
-#utilidad: agrupar encuestas por tramo temporal para suavizar fluctuaciones y comparar tendencias entre olas.
+      #Fecha
+      #Variable: fecha
+      #Tipo: datetime (formato yyyy-mm-dd)
+      #utilidad: ordenar temporalmente las encuestas, construir series cronológicas y agrupar por ola o periodo.
+      
+      #Encuesta
+      #Variable: encuesta_id
+      #Tipo: string o int (CONSULTAR DUDA)
+      #utilidad: identificador único de cada encuesta; permite distinguir fuentes y momentos de medición.
+      
+      #Estrato
+      #Variable: estrato
+      #Tipo: categórica
+      #utilidad: segmentar por nivel socioeconómico, zona o tipo de localidad según el diseño muestral.
+      
+      #Sexo
+      #Variable: sexo
+      #Tipo: categórica (“Masculino”, “Femenino”, “Otro/NS”)
+      #utilidad: desagregar resultados y comparar diferencias entre grupos de género.
+      
+      #Edad
+      #Variable: edad
+      #Tipo: numérica (int)
+      #utilidad: base para construir el grupo etario; permite análisis de correlación con la imagen y el voto.
+      
+      #Grupo Etario (variable derivada)
+      #Variable: grupo_etario
+      #Tipo: categórica (intervalos: 18–24, 25–34, 35–44, 45–54, 55–64, 65+)
+      #utilidad: segmentar tendencias por generación; visualizar diferencias etarias en voto e imagen.
+      
+      #Nivel Educativo
+      #Variable: nivel_educativo
+      #Tipo: categórica (“Primario”, “Secundario”, “Terciario”, “Universitario”)
+      #utilidad: analizar comportamiento político según nivel de formación o capital cultural.
+      
+      #Cantidad de Integrantes en el Hogar
+      #Variable: integrantes_hogar
+      #Tipo: numérica (int)
+      #utilidad: indicador demográfico.
+      
+      #Imagen del Candidato
+      #Variable: imagen_candidato
+      #Tipo: numérica (0–100)
+      #utilidad: medir la valoración promedio y su evolución temporal; puede graficarse en tracking o correlacionarse con voto.
+      #Variable PRINCIPAL
+      
+      #Voto
+      #Variable: voto
+      #Tipo: categórica (“Candidato_A”, “Candidato_B”, “Indeciso”, “Blanco”)
+      #utilidad: variable central para estimar apoyo electoral y calcular intención de voto agregada.
+      
+      #Voto Anterior
+      #Variable: voto_anterior
+      #Tipo: categórica (mismo formato que voto)
+      #utilidad: analizar transferencias de voto, fidelidad y cambios entre elecciones.
+      
+      #Ola o Periodo (DUDA CON ESTO)
+      #Variable: ola 
+      #Tipo: categórica o temporal (semana, quincena)
+      #utilidad: agrupar encuestas por tramo temporal para suavizar fluctuaciones y comparar tendencias entre olas.
 
 
 #PROCESAMIENTO
@@ -83,20 +82,33 @@ Planteamiento del problema
       # Uniformar nombres de columnas y formatos (fecha, categorías)
       # Eliminar duplicados y casos inválidos
 
-  # CREAR VARIABLES AUXILIARES:
-    #  Grupo Etario: dividir la variable Edad en intervalos estándar. 
-    #  Los grupos se definen como: 18-24, 25-34, 35-44, 45-54, 55-64 y 65 o más.
-    #  Esta variable permitirá analizar diferencias generacionales en la evolución del apoyo.
-    #  Periodo de Encuesta: crear un indicador temporal que agrupe las observaciones 
+  # 2) CREAR VARIABLES AUXILIARES:
+    # Grupo Etario: dividir la variable Edad en intervalos estándar. 
+    # Los grupos se definen como: 18-24, 25-34, 35-44, 45-54, 55-64 y 65 o más.
+    # Esta variable permitirá analizar diferencias generacionales en la evolución del apoyo.
+    # Periodo de Encuesta: crear un indicador temporal que agrupe las observaciones 
       # según el día de realización de la encuesta. 
  
     # Ordenar los datos en sentido temporal ascendente, asegurando que las encuestas más antiguas queden primero.
     # (por ejemplo, imagen del candidato o intención de voto) a lo largo de las distintas olas.
 
-  # PESOS Y CORRECCIONES:
-    # - Calcular pesos según distribución poblacional (sexo, edad, educación)
+  # 3) PESOS Y CORRECCIONES:
+    # - Calcular pesos según distribución poblacional (sexo, edad) (Hay que agregar alguna otra variable para los pesos?)
     # - Usar datos del INDEC o censo para definir proporciones esperadas.
     # - Calcular peso = proporción_poblacional / proporción_muestral
+
+ # 4) CALCULAR VARIABLES PRINCIPALES:
+    # Imagen del candidato (variable continua):
+    # Agrupar por Fecha → calcular media ponderada de ImagenCandidato
+    
+    # Intención de voto (variable categórica):
+    # Agrupar por Fecha y Voto → calcular proporciones ponderadas
+    
+    # Transferencia de voto:
+    # Cruzar VotoAnterior vs. Voto → matriz de flujos (% ponderados)
+      # La transferencia de voto mide hacia dónde se mueven los votantes entre dos momentos (antes y ahora), podemos mostrarla con un diagrama de Sankey
+
+
 
 
 #OUTPUT
