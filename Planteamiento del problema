@@ -44,7 +44,7 @@ Planteamiento del problema
       
       #Nivel Educativo
       #Variable: nivel_educativo
-      #Tipo: categórica (“Primario”, “Secundario”, “Terciario”, “Universitario”)
+      #Tipo: categórica (“Primario completo o incompleto”, “Secundario completo o incompleto”, “Terciario completo o incompleto”, “Universitario completo o incompleto”, "Ns/Nc")
       #utilidad: analizar comportamiento político según nivel de formación o capital cultural.
       
       #Cantidad de Integrantes en el Hogar
