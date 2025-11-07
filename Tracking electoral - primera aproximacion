@@ -1,0 +1,79 @@
+
+import pandas as pd
+import numpy as np
+from datetime import datetime
+from pathlib import Path
+import matplotlib.pyplot as plt
+import geopandas as gpd
+
+print ("Librerias importadas.")
+
+def read_survey_file(path):
+
+  path = Path(path)
+
+# Verificar que la extensión sea .csv
+if path.suffix.lower() != ".csv":
+        raise ValueError(f"Formato no soportado: {path.suffix}. Solo se admiten archivos .csv.")
+    
+    
+print ("Simulación iniciada, procedemos a importar Faker")
+
+from faker import Faker
+import pandas as pd
+from random import randint, choice
+from datetime import datetime, timedelta
+
+fake = Faker("es_AR")
+
+def generar_encuestas_falsas(n_registros=200):
+    """
+    Genera una base de datos falsa de encuestas políticas.
+    """
+
+    # --- Valores posibles para variables categóricas ---
+    estratos = ["Zona Norte", "Zona Sur", "Zona Oeste", "CABA"]
+    sexos = ["Masculino", "Femenino", "Otro"]
+    niveles_educativos = [
+        "Primario completo o incompleto",
+        "Secundario completo o incompleto",
+        "Terciario completo o incompleto",
+        "Universitario completo o incompleto",
+        "Ns/Nc"
+    ]
+    votos = ["Candidato_A", "Candidato_B", "Blanco", "Nulo", "Ns/Nc"]
+    votos_anteriores = ["Candidato_A", "Candidato_B", "No fue a votar", "Blanco", "Nulo", "Ns/Nc"]
+
+    # --- Rango temporal de las encuestas ---
+    fecha_base = datetime(2024, 1, 1)
+
+    # --- Generación de registros ---
+    registros = []
+    for i in range(n_registros):
+        registro = {
+            "fecha": (fecha_base + timedelta(days=randint(0, 300))).strftime("%Y-%m-%d"),
+            "encuesta_id": randint(1, 5),  # ID o número de ola
+            "estrato": choice(estratos),
+            "sexo": choice(sexos),
+            "edad": randint(16, 80),
+            "nivel_educativo": choice(niveles_educativos),
+            "integrantes_hogar": randint(1, 6),
+            "imagen_candidato": randint(0, 100),
+            "voto": choice(votos),
+            "voto_anterior": choice(votos_anteriores)
+        }
+        registros.append(registro)
+
+    # --- Convertir a DataFrame y exportar a CSV ---
+    df = pd.DataFrame(registros)
+    df.to_csv("encuestas_falsas.csv", index=False, encoding="utf-8")
+
+    print(f"✅ Archivo generado: encuestas_falsas.csv ({n_registros} filas)")
+    return df
+
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    generar_encuestas_falsas(200)
+
+
