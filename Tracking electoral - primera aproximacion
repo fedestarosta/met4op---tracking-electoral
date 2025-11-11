@@ -78,7 +78,7 @@ if __name__ == "__main__":
     # Convertir a formato datetime y validar
     df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
     if df["fecha"].isna().any():
-        print(f"⚠️ {df['fecha'].isna().sum()} registros con fecha inválida.")
+        print(f" {df['fecha'].isna().sum()} registros con fecha inválida.")
         df = df.dropna(subset=["fecha"])  # se pueden eliminar o revisar
     df = df.sort_values("fecha").reset_index(drop=True)
     
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     # Deben ser enteros (int)
     df["encuesta_id"] = pd.to_numeric(df["encuesta_id"], errors="coerce").astype("Int64")
     if df["encuesta_id"].isna().any():
-        print(f"⚠️ {df['encuesta_id'].isna().sum()} registros sin ID de encuesta.")
+        print(f" {df['encuesta_id'].isna().sum()} registros sin ID de encuesta.")
         # Generar ID automático 
         df["encuesta_id"] = df["encuesta_id"].fillna(method="ffill").astype(int)
     
