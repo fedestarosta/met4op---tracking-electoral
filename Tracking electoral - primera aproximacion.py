@@ -12,8 +12,10 @@ print ("Librerias importadas.")
 def read_survey_file(path):
 
   path = Path(path)
-    
-    # Verificar que la extensión sea .csv
-    if path.suffix.lower() != ".csv":
+<<<<<<< HEAD
+# Verificar que la extensión sea .csv
+if path.suffix.lower() != ".csv":
         raise ValueError(f"Formato no soportado: {path.suffix}. Solo se admiten archivos .csv.")
+    
+>>>>>>> 1546244178a8d5df454ac9176809403b14dc45f5
     

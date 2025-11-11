@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -6,13 +5,9 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import geopandas as gpd
 
-print ("Librerias importadas.")
+print("Librerias importadas.")
 
-def read_survey_file(path):
-
-  path = Path(path)
-    
-print ("Simulación iniciada, procedemos a importar Faker")
+print("Simulación iniciada, procedemos a importar Faker")
 
 from faker import Faker
 import pandas as pd
@@ -20,6 +15,7 @@ from random import randint, choice
 from datetime import datetime, timedelta
 
 fake = Faker("es_AR")
+
 
 def generar_encuestas_falsas(n_registros=200):
     """
@@ -34,19 +30,28 @@ def generar_encuestas_falsas(n_registros=200):
         "Secundario completo o incompleto",
         "Terciario completo o incompleto",
         "Universitario completo o incompleto",
-        "Ns/Nc"
+        "Ns/Nc",
     ]
     votos = ["Candidato_A", "Candidato_B", "Blanco", "Nulo", "Ns/Nc"]
-    votos_anteriores = ["Candidato_A", "Candidato_B", "No fue a votar", "Blanco", "Nulo", "Ns/Nc"]
+    votos_anteriores = [
+        "Candidato_A",
+        "Candidato_B",
+        "No fue a votar",
+        "Blanco",
+        "Nulo",
+        "Ns/Nc",
+    ]
 
-    # --- Rango temporal de las encuestas ---
+    # Rango temporal de las encuestas
     fecha_base = datetime(2024, 1, 1)
 
-    # --- Generación de registros ---
+    # Generación de registros
     registros = []
     for i in range(n_registros):
         registro = {
-            "fecha": (fecha_base + timedelta(days=randint(0, 300))).strftime("%Y-%m-%d"),
+            "fecha": (fecha_base + timedelta(days=randint(0, 300))).strftime(
+                "%Y-%m-%d"
+            ),
             "encuesta_id": i + 1,
             "estrato": choice(estratos),
             "sexo": choice(sexos),
@@ -55,11 +60,11 @@ def generar_encuestas_falsas(n_registros=200):
             "integrantes_hogar": randint(1, 6),
             "imagen_candidato": randint(0, 100),
             "voto": choice(votos),
-            "voto_anterior": choice(votos_anteriores)
+            "voto_anterior": choice(votos_anteriores),
         }
         registros.append(registro)
 
-    # --- Convertir a DataFrame y exportar a CSV ---
+    # Convertir a DataFrame y exportar a CSV
     df = pd.DataFrame(registros)
     df.to_csv("encuestas_falsas.csv", index=False, encoding="utf-8")
 
@@ -67,35 +72,26 @@ def generar_encuestas_falsas(n_registros=200):
     return df
 
 
-
-# Ejemplo de uso
 if __name__ == "__main__":
     df = generar_encuestas_falsas(200)
 
-#Procesamiento de variables
-
-# 1. FECHA 
-    # Convertir a formato datetime y validar
+    # 1. FECHA
     df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
     if df["fecha"].isna().any():
-        print(f" {df['fecha'].isna().sum()} registros con fecha inválida.")
-        df = df.dropna(subset=["fecha"])  # se pueden eliminar o revisar
+        print(f"{df['fecha'].isna().sum()} registros con fecha inválida.")
+        df = df.dropna(subset=["fecha"])
     df = df.sort_values("fecha").reset_index(drop=True)
-    
+
     print("Rango temporal de las encuestas:")
     print(f"Desde {df['fecha'].min().date()} hasta {df['fecha'].max().date()}")
 
-# 2. ENCUESTA_ID
-    # Deben ser enteros (int)
-    df["encuesta_id"] = pd.to_numeric(df["encuesta_id"], errors="coerce").astype("Int64")
+    # 2. ENCUESTA_ID
+    df["encuesta_id"] = pd.to_numeric(df["encuesta_id"], errors="coerce").astype(
+        "Int64"
+    )
     if df["encuesta_id"].isna().any():
-        print(f" {df['encuesta_id'].isna().sum()} registros sin ID de encuesta.")
-        # Generar ID automático 
+        print(f"{df['encuesta_id'].isna().sum()} registros sin ID de encuesta.")
         df["encuesta_id"] = df["encuesta_id"].fillna(method="ffill").astype(int)
-    
+
     print("\nCantidad de encuestas únicas registradas:")
-    print(df['encuesta_id'].nunique())
-
-    
-
-
+    print(df["encuesta_id"].nunique())
