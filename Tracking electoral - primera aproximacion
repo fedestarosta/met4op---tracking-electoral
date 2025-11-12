@@ -110,7 +110,7 @@ df["edad"] = pd.to_numeric(df["edad"], errors="coerce")
 fuera_rango = df[(df["edad"] < 16) | (df["edad"] > 100)]
 
 if not fuera_rango.empty:
-    print(f"⚠️ {len(fuera_rango)} registros con edad fuera de rango (menores de 16 o mayores de 90).")
+    print(f" {len(fuera_rango)} registros con edad fuera de rango (menores de 16 o mayores de 90).")
     # Eliminar los registros fuera de rango
     df = df.drop(fuera_rango.index)
     print("✔️ Registros fuera de rango eliminados del DataFrame.")
@@ -171,7 +171,7 @@ df["integrantes_hogar"] = pd.to_numeric(df["integrantes_hogar"], errors="coerce"
 fuera_rango = df[(df["integrantes_hogar"] <= 0) | (df["integrantes_hogar"] > 10)]
 
 if not fuera_rango.empty:
-    print(f"⚠️ {len(fuera_rango)} registros fuera del rango permitido (1–10) en 'integrantes_hogar'.")
+    print(f" {len(fuera_rango)} registros fuera del rango permitido (1–10) en 'integrantes_hogar'.")
     print("Estos registros serán eliminados.\n")
     df = df.drop(fuera_rango.index)
 
