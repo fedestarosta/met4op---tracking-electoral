@@ -155,7 +155,7 @@ votos_anteriores_unicos = df["voto_anterior"].unique().tolist()
 votos_no_validos = [v for v in votos_anteriores_unicos if v not in votos_anteriores_validos]
 
 if votos_no_validos:
-    print(f"⚠️ Categorías no reconocidas en 'voto_anterior': {votos_no_validos}")
+    print(f" Categorías no reconocidas en 'voto_anterior': {votos_no_validos}")
 else:
     print("Categorías de voto_anterior verificadas correctamente.")
 
@@ -190,7 +190,7 @@ votos_unicos = df["voto"].unique().tolist()
 votos_no_validos = [v for v in votos_unicos if v not in votos_validos]
 
 if votos_no_validos:
-    print(f"⚠️ Categorías no reconocidas en 'voto': {votos_no_validos}")
+    print(f" Categorías no reconocidas en 'voto': {votos_no_validos}")
 else:
     print("Categorías de voto verificadas correctamente.")
 
@@ -214,7 +214,7 @@ df["imagen_candidato"] = pd.to_numeric(df["imagen_candidato"], errors="coerce")
 fuera_rango_img = df[(df["imagen_candidato"] < 0) | (df["imagen_candidato"] > 100)]
 
 if not fuera_rango_img.empty:
-    print(f"⚠️ {len(fuera_rango_img)} registros fuera del rango permitido (0–100) en 'imagen_candidato'.")
+    print(f" {len(fuera_rango_img)} registros fuera del rango permitido (0–100) en 'imagen_candidato'.")
     print("Estos registros serán eliminados.\n")
     df = df.drop(fuera_rango_img.index)
 
