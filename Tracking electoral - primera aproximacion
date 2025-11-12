@@ -71,7 +71,7 @@ def generar_encuestas_falsas(n_registros=200):
     df = pd.DataFrame(registros)
     df.to_csv("encuestas_falsas.csv", index=False, encoding="utf-8")
 
-    print(f"✅ Archivo generado: encuestas_falsas.csv ({n_registros} filas)")
+    print(f" Archivo generado: encuestas_falsas.csv ({n_registros} filas)")
     return df
 
 
