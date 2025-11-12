@@ -29,7 +29,7 @@ Planteamiento del problema
       
       #Sexo
       #Variable: sexo
-      #Tipo: categórica (“Masculino”, “Femenino”, “Otro”)
+      #Tipo: categórica (“Masculino”, “Femenino”)
       #utilidad: desagregar resultados y comparar diferencias entre grupos de género. También variable de control.
       
       #Edad
