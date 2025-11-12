@@ -24,7 +24,7 @@ def generar_encuestas_falsas(n_registros=200):
 
     # --- Valores posibles para variables categóricas ---
     estratos = ["Zona Norte", "Zona Sur", "Zona Oeste", "CABA"]
-    sexos = ["Masculino", "Femenino", "Otro"]
+    sexos = ["Masculino", "Femenino"]
     niveles_educativos = [
         "Primario completo o incompleto",
         "Secundario completo o incompleto",
