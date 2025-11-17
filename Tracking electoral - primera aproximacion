@@ -271,5 +271,28 @@ imagen_3d = (
     .reset_index(drop=True)
 )
 
+# Medir variabilidad de imagen
+
 print("\nTracking de imagen_candidato cada 3 días (media ponderada):")
 print(imagen_3d.head())
+
+plt.figure(figsize=(12,5))
+
+plt.bar(
+    imagen_3d["fecha_inicio"].astype(str), # convertir fechas a string para el eje x
+    imagen_3d["imagen_candidato_media_3d"],
+    width=0.8
+)
+
+plt.title("Tracking de imagen del candidato (ventanas de 3 días)")
+plt.xlabel("Fecha (inicio del grupo de 3 días)")
+plt.ylabel("Imagen promedio ponderada")
+plt.xticks(rotation=45, ha="right")
+plt.grid(True, axis="y", alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+
+
+
