@@ -99,11 +99,35 @@ if __name__ == "__main__":
 
     print("\nCantidad de encuestas únicas registradas:")
     print(df["encuesta_id"].nunique())
-
-
 #%% 
-# 3. EDAD
-# Convertir a numérico y controlar valores fuera de rango
+
+#3. SEXO
+# Normalización básica
+df["sexo"] = (
+    df["sexo"]
+    .astype(str)
+    .str.strip()
+    .str.capitalize()     # "masculino" → "Masculino"
+)
+
+sexos_validos = ["Masculino", "Femenino"]
+
+sexos_unicos = df["sexo"].unique().tolist()
+sexos_invalidos = [s for s in sexos_unicos if s not in sexos_validos]
+
+if sexos_invalidos:
+    print(f"Categorías no válidas en 'sexo': {sexos_invalidos}")
+    print("Estos registros serán eliminados para mantener consistencia.\n")
+    df = df[ df["sexo"].isin(sexos_validos) ]
+else:
+    print("Sexo validado correctamente.")
+
+# Mostrar distribución
+print("\nDistribución de sexo:")
+print(df["sexo"].value_counts())
+#%% 
+    # 3. EDAD
+    # Convertir a numérico y controlar valores fuera de rango
 df["edad"] = pd.to_numeric(df["edad"], errors="coerce")
 
 # Detectar valores fuera de rango (menores de 16 o mayores de 90)
@@ -121,7 +145,7 @@ print(df["edad"].describe().round(1))
 
 
 #%% 
-# 4. RECODIFICACIÓN DE EDAD EN RANGOS 
+# 3.1. RECODIFICACIÓN DE EDAD EN RANGOS 
 
 edad_rango = pd.cut(
     df["edad"],
@@ -133,7 +157,7 @@ edad_rango = pd.cut(
 
 df["edad_rango"] = edad_rango
 
-print("✔️ Variable 'edad_rango' creada correctamente.\n")
+print("Variable 'edad_rango' creada correctamente.\n")
 print("Distribución por rango etario (%):")
 print(df["edad_rango"].value_counts(normalize=True).mul(100).round(2).sort_index())
 
@@ -176,11 +200,11 @@ if not fuera_rango.empty:
     df = df.drop(fuera_rango.index)
 
 # Distribución de frecuencias
-print("📊 Distribución de la cantidad de integrantes en el hogar:")
+print(" Distribución de la cantidad de integrantes en el hogar:")
 print(df["integrantes_hogar"].value_counts().sort_index())
 
 # Distribución porcentual
-print("\n📈 Distribución porcentual (%):")
+print("\n Distribución porcentual (%):")
 print(df["integrantes_hogar"].value_counts(normalize=True).sort_index().mul(100).round(2))
 
 #%% # 6. VOTO
