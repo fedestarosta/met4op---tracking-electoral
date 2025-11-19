@@ -4,11 +4,11 @@ import numpy as np
 from datetime import datetime
 from pathlib import Path
 import matplotlib.pyplot as plt
-import geopandas as gpd
+import balance as bal
+
 
 #%%
 print("Librerias importadas.")
-
 print("Simulación iniciada, procedemos a importar Faker")
 
 #%%
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     print(df["encuesta_id"].nunique())
 #%% 
 
-#3. SEXO
+    #3. SEXO
 # Normalización básica
 df["sexo"] = (
     df["sexo"]

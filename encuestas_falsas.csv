@@ -1,201 +1,201 @@
 fecha,encuesta_id,estrato,sexo,edad,nivel_educativo,integrantes_hogar,imagen_candidato,voto,voto_anterior
-2024-01-20,1,Zona Oeste,Femenino,71,Secundario completo o incompleto,3,98,Candidato_A,Ns/Nc
-2024-01-08,2,Zona Sur,Masculino,59,Terciario completo o incompleto,1,7,Blanco,No fue a votar
-2024-01-04,3,Zona Sur,Masculino,49,Terciario completo o incompleto,4,100,Ns/Nc,Candidato_A
-2024-01-22,4,Zona Sur,Femenino,57,Terciario completo o incompleto,2,54,Candidato_A,No fue a votar
-2024-01-28,5,Zona Sur,Masculino,73,Universitario completo o incompleto,6,70,Candidato_B,Blanco
-2024-01-28,6,CABA,Masculino,41,Universitario completo o incompleto,3,36,Candidato_B,Blanco
-2024-01-08,7,CABA,Femenino,63,Primario completo o incompleto,1,54,Nulo,Candidato_A
-2024-01-12,8,Zona Oeste,Femenino,43,Terciario completo o incompleto,5,18,Blanco,Ns/Nc
-2024-01-05,9,CABA,Masculino,30,Ns/Nc,2,41,Candidato_A,No fue a votar
-2024-01-28,10,Zona Oeste,Masculino,61,Primario completo o incompleto,3,8,Candidato_A,Candidato_B
-2024-01-11,11,Zona Oeste,Masculino,74,Primario completo o incompleto,3,96,Blanco,Candidato_A
-2024-01-25,12,Zona Norte,Femenino,44,Terciario completo o incompleto,4,9,Blanco,Nulo
-2024-01-18,13,CABA,Femenino,63,Primario completo o incompleto,3,35,Candidato_A,Candidato_A
-2024-01-23,14,CABA,Masculino,22,Universitario completo o incompleto,2,37,Candidato_A,Candidato_A
-2024-01-19,15,Zona Sur,Femenino,69,Universitario completo o incompleto,2,93,Blanco,Ns/Nc
-2024-01-22,16,Zona Oeste,Femenino,19,Ns/Nc,2,99,Candidato_A,Candidato_A
-2024-01-25,17,CABA,Femenino,43,Universitario completo o incompleto,4,1,Candidato_A,Ns/Nc
-2024-01-11,18,Zona Sur,Masculino,36,Secundario completo o incompleto,6,92,Candidato_A,Blanco
-2024-01-28,19,Zona Oeste,Masculino,23,Primario completo o incompleto,6,17,Ns/Nc,Ns/Nc
-2024-01-29,20,Zona Norte,Masculino,47,Primario completo o incompleto,1,11,Nulo,Blanco
-2024-02-02,21,CABA,Masculino,35,Primario completo o incompleto,6,37,Candidato_A,Candidato_A
-2024-01-09,22,Zona Norte,Femenino,26,Ns/Nc,2,44,Candidato_A,Ns/Nc
-2024-01-20,23,CABA,Masculino,55,Terciario completo o incompleto,2,28,Ns/Nc,Blanco
-2024-01-20,24,Zona Oeste,Masculino,42,Ns/Nc,2,46,Candidato_B,No fue a votar
-2024-01-06,25,Zona Norte,Femenino,37,Universitario completo o incompleto,5,89,Ns/Nc,Candidato_A
-2024-01-04,26,CABA,Masculino,45,Primario completo o incompleto,1,34,Candidato_B,No fue a votar
-2024-01-16,27,CABA,Femenino,66,Primario completo o incompleto,3,5,Ns/Nc,Candidato_B
-2024-01-06,28,Zona Sur,Masculino,45,Universitario completo o incompleto,5,2,Blanco,No fue a votar
-2024-01-31,29,Zona Oeste,Femenino,53,Ns/Nc,4,78,Candidato_A,Candidato_A
-2024-01-18,30,Zona Oeste,Masculino,77,Ns/Nc,4,30,Blanco,Nulo
-2024-01-08,31,CABA,Femenino,22,Primario completo o incompleto,5,88,Nulo,Blanco
-2024-01-13,32,Zona Norte,Femenino,16,Primario completo o incompleto,6,42,Nulo,No fue a votar
-2024-01-10,33,CABA,Femenino,22,Secundario completo o incompleto,4,21,Nulo,Candidato_B
-2024-01-02,34,Zona Sur,Masculino,55,Primario completo o incompleto,2,99,Ns/Nc,Nulo
-2024-01-11,35,Zona Sur,Femenino,18,Universitario completo o incompleto,3,49,Ns/Nc,Nulo
-2024-01-08,36,Zona Oeste,Femenino,71,Terciario completo o incompleto,6,79,Candidato_A,Blanco
-2024-01-01,37,CABA,Masculino,79,Primario completo o incompleto,6,14,Candidato_B,No fue a votar
-2024-01-18,38,CABA,Femenino,73,Primario completo o incompleto,2,23,Ns/Nc,Candidato_B
-2024-01-31,39,Zona Sur,Masculino,35,Primario completo o incompleto,6,85,Ns/Nc,Candidato_B
-2024-01-10,40,CABA,Femenino,34,Primario completo o incompleto,5,95,Blanco,Candidato_B
-2024-02-01,41,CABA,Masculino,16,Primario completo o incompleto,4,24,Blanco,Nulo
-2024-01-02,42,CABA,Masculino,31,Universitario completo o incompleto,5,53,Candidato_A,Blanco
-2024-01-17,43,Zona Norte,Femenino,18,Ns/Nc,5,2,Nulo,Candidato_A
-2024-01-28,44,Zona Norte,Masculino,37,Primario completo o incompleto,1,10,Candidato_A,Ns/Nc
-2024-01-16,45,Zona Norte,Femenino,55,Universitario completo o incompleto,5,71,Blanco,Blanco
-2024-01-19,46,CABA,Masculino,18,Universitario completo o incompleto,2,19,Candidato_B,Blanco
-2024-01-09,47,CABA,Masculino,66,Primario completo o incompleto,2,9,Nulo,Ns/Nc
-2024-01-03,48,Zona Oeste,Masculino,53,Secundario completo o incompleto,6,71,Ns/Nc,Blanco
-2024-01-28,49,CABA,Masculino,70,Universitario completo o incompleto,1,55,Candidato_B,Blanco
-2024-01-17,50,Zona Sur,Masculino,72,Secundario completo o incompleto,3,22,Candidato_B,Nulo
-2024-01-12,51,Zona Norte,Femenino,64,Primario completo o incompleto,4,58,Ns/Nc,Ns/Nc
-2024-01-01,52,Zona Oeste,Masculino,70,Primario completo o incompleto,4,53,Candidato_A,Nulo
-2024-01-09,53,CABA,Femenino,65,Primario completo o incompleto,2,63,Blanco,Candidato_A
-2024-01-09,54,CABA,Femenino,59,Primario completo o incompleto,2,9,Nulo,Blanco
-2024-01-04,55,Zona Oeste,Femenino,71,Secundario completo o incompleto,1,78,Candidato_B,No fue a votar
-2024-01-14,56,Zona Norte,Femenino,22,Primario completo o incompleto,3,92,Ns/Nc,Candidato_A
-2024-01-26,57,Zona Oeste,Masculino,60,Primario completo o incompleto,3,43,Blanco,Nulo
-2024-01-05,58,Zona Sur,Masculino,31,Ns/Nc,5,67,Candidato_B,Nulo
-2024-01-15,59,Zona Sur,Masculino,54,Terciario completo o incompleto,5,77,Candidato_A,Ns/Nc
-2024-01-02,60,Zona Norte,Femenino,26,Universitario completo o incompleto,3,96,Blanco,Candidato_B
-2024-01-09,61,CABA,Masculino,80,Ns/Nc,4,50,Blanco,Ns/Nc
-2024-01-01,62,Zona Sur,Masculino,74,Terciario completo o incompleto,2,61,Ns/Nc,Candidato_B
-2024-01-21,63,Zona Oeste,Masculino,27,Terciario completo o incompleto,1,3,Ns/Nc,Candidato_B
-2024-02-02,64,Zona Oeste,Masculino,59,Primario completo o incompleto,1,15,Nulo,Ns/Nc
-2024-01-29,65,Zona Oeste,Masculino,31,Primario completo o incompleto,6,94,Candidato_A,No fue a votar
-2024-01-23,66,CABA,Masculino,27,Universitario completo o incompleto,2,62,Candidato_B,Nulo
-2024-01-23,67,CABA,Masculino,18,Ns/Nc,5,86,Ns/Nc,No fue a votar
-2024-01-08,68,Zona Norte,Femenino,45,Universitario completo o incompleto,6,41,Candidato_B,Blanco
-2024-01-05,69,CABA,Femenino,16,Ns/Nc,2,23,Nulo,Candidato_B
-2024-01-03,70,Zona Oeste,Femenino,29,Universitario completo o incompleto,5,96,Nulo,Blanco
-2024-01-09,71,Zona Norte,Femenino,48,Secundario completo o incompleto,2,92,Ns/Nc,Blanco
-2024-01-12,72,CABA,Masculino,55,Universitario completo o incompleto,3,2,Nulo,Blanco
-2024-01-09,73,Zona Sur,Femenino,68,Ns/Nc,1,55,Candidato_A,Blanco
-2024-01-02,74,Zona Oeste,Femenino,42,Ns/Nc,6,62,Candidato_A,Nulo
-2024-01-17,75,Zona Oeste,Femenino,38,Secundario completo o incompleto,4,34,Candidato_B,No fue a votar
-2024-01-21,76,Zona Sur,Masculino,66,Terciario completo o incompleto,2,22,Nulo,Ns/Nc
-2024-01-12,77,Zona Oeste,Femenino,73,Ns/Nc,3,92,Blanco,Ns/Nc
-2024-01-04,78,Zona Oeste,Masculino,74,Primario completo o incompleto,3,23,Candidato_A,Nulo
-2024-01-16,79,CABA,Femenino,26,Universitario completo o incompleto,1,0,Nulo,Candidato_B
-2024-01-17,80,Zona Norte,Femenino,55,Primario completo o incompleto,1,6,Nulo,Candidato_A
-2024-01-10,81,Zona Norte,Femenino,58,Ns/Nc,5,54,Ns/Nc,Candidato_A
-2024-01-14,82,Zona Norte,Femenino,72,Primario completo o incompleto,1,4,Ns/Nc,Candidato_A
-2024-01-28,83,Zona Oeste,Masculino,58,Universitario completo o incompleto,1,46,Candidato_A,No fue a votar
-2024-01-05,84,Zona Sur,Femenino,32,Universitario completo o incompleto,5,78,Ns/Nc,Nulo
-2024-01-17,85,CABA,Masculino,47,Primario completo o incompleto,5,25,Candidato_B,Candidato_B
-2024-01-28,86,CABA,Femenino,28,Universitario completo o incompleto,1,96,Ns/Nc,Candidato_B
-2024-01-19,87,CABA,Masculino,17,Ns/Nc,4,66,Candidato_A,Candidato_A
-2024-02-02,88,CABA,Femenino,54,Primario completo o incompleto,1,28,Candidato_A,Nulo
-2024-01-12,89,Zona Norte,Masculino,26,Terciario completo o incompleto,5,80,Ns/Nc,Nulo
-2024-01-08,90,Zona Oeste,Masculino,54,Terciario completo o incompleto,3,42,Ns/Nc,Candidato_A
-2024-01-03,91,Zona Oeste,Femenino,36,Ns/Nc,2,93,Nulo,Candidato_A
-2024-01-21,92,Zona Sur,Femenino,55,Primario completo o incompleto,1,61,Candidato_B,Blanco
-2024-01-08,93,Zona Oeste,Masculino,32,Primario completo o incompleto,6,23,Nulo,Nulo
-2024-01-18,94,Zona Sur,Femenino,76,Ns/Nc,2,43,Candidato_A,Nulo
-2024-01-02,95,Zona Sur,Femenino,53,Terciario completo o incompleto,3,87,Ns/Nc,No fue a votar
-2024-01-08,96,Zona Oeste,Masculino,37,Universitario completo o incompleto,5,5,Candidato_B,Nulo
-2024-01-11,97,Zona Sur,Masculino,67,Universitario completo o incompleto,6,15,Blanco,Nulo
-2024-01-07,98,CABA,Masculino,55,Universitario completo o incompleto,6,48,Nulo,Ns/Nc
-2024-01-10,99,Zona Norte,Femenino,62,Primario completo o incompleto,1,5,Blanco,No fue a votar
-2024-01-29,100,Zona Sur,Masculino,47,Terciario completo o incompleto,5,47,Ns/Nc,No fue a votar
-2024-01-05,101,CABA,Femenino,29,Primario completo o incompleto,4,69,Candidato_B,Ns/Nc
-2024-01-21,102,Zona Norte,Femenino,43,Ns/Nc,1,62,Candidato_B,No fue a votar
-2024-01-09,103,Zona Oeste,Masculino,43,Ns/Nc,4,29,Blanco,Candidato_A
-2024-01-21,104,Zona Norte,Masculino,73,Universitario completo o incompleto,6,38,Candidato_A,Candidato_B
-2024-01-16,105,CABA,Masculino,27,Ns/Nc,2,81,Blanco,Candidato_B
-2024-01-12,106,Zona Sur,Femenino,30,Secundario completo o incompleto,5,24,Blanco,Blanco
-2024-01-20,107,CABA,Masculino,20,Universitario completo o incompleto,3,29,Blanco,Candidato_A
-2024-01-03,108,Zona Norte,Femenino,66,Universitario completo o incompleto,6,62,Nulo,Ns/Nc
-2024-01-28,109,Zona Oeste,Masculino,17,Primario completo o incompleto,4,100,Nulo,Blanco
-2024-01-22,110,Zona Oeste,Masculino,46,Primario completo o incompleto,2,82,Ns/Nc,Candidato_B
-2024-01-16,111,Zona Sur,Masculino,41,Universitario completo o incompleto,2,65,Candidato_B,Nulo
-2024-01-12,112,Zona Oeste,Masculino,20,Ns/Nc,1,85,Ns/Nc,Candidato_B
-2024-01-30,113,Zona Norte,Masculino,44,Secundario completo o incompleto,1,96,Candidato_B,Blanco
-2024-01-19,114,Zona Norte,Femenino,47,Terciario completo o incompleto,5,87,Candidato_B,Ns/Nc
-2024-01-31,115,CABA,Femenino,16,Universitario completo o incompleto,3,93,Candidato_A,Candidato_A
-2024-01-25,116,Zona Norte,Femenino,57,Secundario completo o incompleto,3,4,Nulo,Candidato_B
-2024-01-22,117,Zona Oeste,Femenino,31,Primario completo o incompleto,2,57,Nulo,Candidato_A
-2024-01-21,118,CABA,Masculino,67,Secundario completo o incompleto,5,2,Blanco,Ns/Nc
-2024-01-17,119,Zona Sur,Masculino,71,Primario completo o incompleto,6,55,Nulo,Candidato_B
-2024-01-31,120,CABA,Masculino,71,Universitario completo o incompleto,5,15,Candidato_B,Candidato_B
-2024-01-15,121,Zona Norte,Femenino,29,Terciario completo o incompleto,3,29,Ns/Nc,Candidato_A
-2024-01-29,122,Zona Sur,Masculino,41,Secundario completo o incompleto,5,100,Ns/Nc,No fue a votar
-2024-01-04,123,Zona Oeste,Femenino,42,Primario completo o incompleto,1,35,Candidato_B,Ns/Nc
-2024-01-08,124,Zona Sur,Femenino,33,Secundario completo o incompleto,2,71,Nulo,Candidato_A
-2024-01-03,125,Zona Sur,Femenino,33,Universitario completo o incompleto,4,2,Ns/Nc,Candidato_B
-2024-01-28,126,Zona Oeste,Masculino,48,Terciario completo o incompleto,6,5,Candidato_B,Candidato_B
-2024-01-30,127,Zona Norte,Masculino,19,Primario completo o incompleto,5,14,Candidato_B,No fue a votar
-2024-01-09,128,Zona Norte,Femenino,50,Universitario completo o incompleto,4,16,Candidato_A,Ns/Nc
-2024-01-20,129,Zona Oeste,Femenino,37,Secundario completo o incompleto,6,74,Blanco,Candidato_B
-2024-01-20,130,Zona Sur,Masculino,25,Primario completo o incompleto,6,80,Candidato_B,Candidato_A
-2024-01-13,131,Zona Oeste,Masculino,53,Universitario completo o incompleto,3,37,Ns/Nc,Nulo
-2024-01-25,132,Zona Oeste,Masculino,18,Universitario completo o incompleto,6,86,Blanco,Nulo
-2024-01-05,133,CABA,Masculino,27,Secundario completo o incompleto,3,88,Ns/Nc,Blanco
-2024-01-09,134,Zona Norte,Masculino,45,Universitario completo o incompleto,4,90,Candidato_B,Candidato_B
-2024-01-31,135,CABA,Masculino,28,Universitario completo o incompleto,6,95,Candidato_B,Candidato_A
-2024-01-08,136,Zona Oeste,Masculino,78,Universitario completo o incompleto,4,39,Ns/Nc,No fue a votar
-2024-01-30,137,Zona Sur,Femenino,69,Ns/Nc,6,86,Blanco,Ns/Nc
-2024-01-31,138,Zona Sur,Femenino,60,Ns/Nc,2,97,Nulo,No fue a votar
-2024-01-21,139,Zona Norte,Femenino,46,Terciario completo o incompleto,2,19,Blanco,Candidato_B
-2024-01-04,140,Zona Norte,Masculino,64,Ns/Nc,4,2,Ns/Nc,No fue a votar
-2024-01-24,141,Zona Oeste,Femenino,49,Ns/Nc,4,74,Nulo,Ns/Nc
-2024-01-24,142,Zona Oeste,Femenino,63,Primario completo o incompleto,1,99,Blanco,Candidato_B
-2024-01-20,143,Zona Norte,Masculino,68,Secundario completo o incompleto,2,42,Candidato_B,Candidato_B
-2024-01-11,144,CABA,Femenino,47,Secundario completo o incompleto,5,94,Candidato_B,Candidato_A
-2024-01-13,145,Zona Norte,Femenino,59,Primario completo o incompleto,5,63,Ns/Nc,Candidato_A
-2024-01-12,146,Zona Oeste,Femenino,57,Terciario completo o incompleto,2,50,Blanco,Candidato_B
-2024-01-25,147,Zona Norte,Masculino,72,Universitario completo o incompleto,6,95,Ns/Nc,Nulo
-2024-01-28,148,Zona Norte,Masculino,39,Secundario completo o incompleto,1,21,Candidato_A,Blanco
-2024-02-01,149,Zona Oeste,Femenino,62,Terciario completo o incompleto,2,35,Ns/Nc,Blanco
-2024-01-18,150,Zona Norte,Masculino,62,Secundario completo o incompleto,2,36,Candidato_B,Candidato_A
-2024-01-19,151,Zona Oeste,Femenino,35,Ns/Nc,6,46,Candidato_B,Candidato_A
-2024-01-15,152,Zona Oeste,Femenino,73,Ns/Nc,6,74,Candidato_A,Nulo
-2024-01-24,153,CABA,Masculino,28,Terciario completo o incompleto,1,70,Candidato_A,Blanco
-2024-01-02,154,Zona Oeste,Femenino,51,Primario completo o incompleto,6,89,Ns/Nc,Candidato_B
-2024-01-14,155,CABA,Masculino,69,Secundario completo o incompleto,1,9,Blanco,Ns/Nc
-2024-01-10,156,Zona Sur,Femenino,48,Ns/Nc,2,46,Blanco,Candidato_A
-2024-01-23,157,Zona Sur,Femenino,66,Universitario completo o incompleto,4,60,Ns/Nc,No fue a votar
-2024-02-01,158,CABA,Masculino,64,Primario completo o incompleto,6,55,Blanco,Candidato_B
-2024-01-16,159,Zona Oeste,Femenino,53,Secundario completo o incompleto,6,21,Nulo,Nulo
-2024-01-05,160,CABA,Femenino,38,Universitario completo o incompleto,6,41,Candidato_A,No fue a votar
-2024-01-05,161,CABA,Femenino,45,Primario completo o incompleto,4,91,Candidato_A,Ns/Nc
-2024-01-03,162,Zona Sur,Masculino,79,Terciario completo o incompleto,6,94,Candidato_A,Blanco
-2024-01-31,163,Zona Oeste,Femenino,28,Universitario completo o incompleto,4,17,Nulo,Candidato_A
-2024-01-02,164,Zona Oeste,Femenino,62,Terciario completo o incompleto,1,51,Ns/Nc,Candidato_B
-2024-01-01,165,Zona Oeste,Femenino,29,Universitario completo o incompleto,5,94,Nulo,Blanco
-2024-01-15,166,CABA,Femenino,45,Terciario completo o incompleto,3,21,Nulo,Candidato_B
-2024-01-24,167,Zona Oeste,Femenino,55,Universitario completo o incompleto,3,25,Candidato_B,Candidato_B
-2024-01-30,168,Zona Sur,Masculino,34,Terciario completo o incompleto,6,5,Ns/Nc,Candidato_B
-2024-01-14,169,Zona Sur,Masculino,66,Universitario completo o incompleto,3,2,Candidato_B,Candidato_B
-2024-01-24,170,Zona Sur,Masculino,53,Primario completo o incompleto,5,23,Nulo,Candidato_B
-2024-01-13,171,CABA,Masculino,26,Primario completo o incompleto,2,38,Nulo,No fue a votar
-2024-01-03,172,Zona Oeste,Masculino,31,Ns/Nc,4,39,Candidato_A,No fue a votar
-2024-01-11,173,Zona Oeste,Femenino,55,Primario completo o incompleto,3,27,Blanco,No fue a votar
-2024-01-16,174,Zona Oeste,Femenino,18,Primario completo o incompleto,4,73,Blanco,Candidato_B
-2024-01-30,175,Zona Norte,Masculino,34,Secundario completo o incompleto,1,61,Candidato_B,Candidato_A
-2024-01-07,176,Zona Norte,Masculino,64,Universitario completo o incompleto,6,45,Candidato_B,No fue a votar
-2024-01-12,177,Zona Sur,Femenino,32,Ns/Nc,3,95,Nulo,Candidato_B
-2024-01-31,178,Zona Oeste,Masculino,77,Secundario completo o incompleto,5,70,Blanco,Candidato_B
-2024-01-15,179,Zona Sur,Femenino,31,Secundario completo o incompleto,2,27,Candidato_A,Nulo
-2024-01-18,180,Zona Sur,Femenino,29,Universitario completo o incompleto,1,94,Candidato_B,Candidato_B
-2024-01-25,181,Zona Oeste,Femenino,22,Secundario completo o incompleto,3,56,Blanco,Ns/Nc
-2024-01-07,182,CABA,Masculino,52,Secundario completo o incompleto,3,30,Candidato_A,Nulo
-2024-01-17,183,Zona Norte,Femenino,38,Ns/Nc,6,79,Ns/Nc,Candidato_A
-2024-01-11,184,Zona Oeste,Femenino,30,Primario completo o incompleto,2,37,Nulo,No fue a votar
-2024-01-19,185,Zona Norte,Masculino,71,Secundario completo o incompleto,5,23,Ns/Nc,Candidato_A
-2024-01-18,186,CABA,Masculino,80,Secundario completo o incompleto,1,81,Ns/Nc,Candidato_A
-2024-01-15,187,Zona Sur,Masculino,21,Secundario completo o incompleto,2,35,Ns/Nc,Candidato_A
-2024-01-17,188,Zona Oeste,Femenino,42,Universitario completo o incompleto,3,23,Ns/Nc,Candidato_A
-2024-01-16,189,Zona Norte,Femenino,64,Terciario completo o incompleto,3,6,Ns/Nc,Blanco
-2024-01-14,190,CABA,Masculino,36,Terciario completo o incompleto,5,30,Candidato_B,Candidato_A
-2024-01-31,191,Zona Norte,Masculino,23,Primario completo o incompleto,4,76,Nulo,Candidato_B
-2024-01-13,192,Zona Sur,Masculino,71,Universitario completo o incompleto,6,55,Candidato_B,Blanco
-2024-01-22,193,Zona Sur,Masculino,66,Ns/Nc,2,43,Candidato_A,Blanco
-2024-01-22,194,CABA,Masculino,49,Universitario completo o incompleto,1,98,Nulo,No fue a votar
-2024-01-21,195,Zona Norte,Masculino,49,Secundario completo o incompleto,3,54,Candidato_B,Ns/Nc
-2024-01-09,196,Zona Sur,Masculino,25,Universitario completo o incompleto,5,44,Candidato_B,Candidato_A
-2024-01-02,197,Zona Norte,Femenino,69,Terciario completo o incompleto,6,1,Candidato_B,Nulo
-2024-01-27,198,Zona Sur,Femenino,19,Primario completo o incompleto,2,59,Ns/Nc,Ns/Nc
-2024-01-06,199,Zona Oeste,Femenino,51,Universitario completo o incompleto,5,60,Candidato_B,Candidato_A
-2024-01-23,200,Zona Norte,Femenino,47,Universitario completo o incompleto,4,48,Nulo,No fue a votar
+2024-02-02,1,Zona Sur,Femenino,16,Ns/Nc,2,56,Ns/Nc,Nulo
+2024-01-23,2,CABA,Femenino,33,Terciario completo o incompleto,5,90,Nulo,Candidato_A
+2024-01-21,3,Zona Norte,Femenino,42,Ns/Nc,3,82,Candidato_A,No fue a votar
+2024-01-08,4,Zona Norte,Masculino,23,Secundario completo o incompleto,5,47,Candidato_B,Blanco
+2024-01-02,5,Zona Sur,Masculino,73,Secundario completo o incompleto,6,71,Ns/Nc,Nulo
+2024-01-18,6,Zona Oeste,Femenino,78,Universitario completo o incompleto,6,5,Blanco,Nulo
+2024-01-20,7,Zona Sur,Masculino,31,Terciario completo o incompleto,5,64,Ns/Nc,No fue a votar
+2024-01-17,8,Zona Norte,Femenino,54,Primario completo o incompleto,6,17,Ns/Nc,Candidato_B
+2024-01-31,9,CABA,Femenino,33,Terciario completo o incompleto,5,63,Blanco,Ns/Nc
+2024-01-26,10,Zona Norte,Masculino,19,Secundario completo o incompleto,6,89,Nulo,Blanco
+2024-01-05,11,Zona Sur,Femenino,44,Universitario completo o incompleto,2,50,Candidato_A,Ns/Nc
+2024-01-04,12,CABA,Masculino,41,Ns/Nc,1,6,Nulo,Candidato_B
+2024-01-20,13,Zona Norte,Masculino,70,Ns/Nc,1,65,Blanco,Nulo
+2024-01-17,14,Zona Sur,Masculino,75,Terciario completo o incompleto,5,38,Ns/Nc,No fue a votar
+2024-01-08,15,Zona Norte,Masculino,55,Universitario completo o incompleto,1,51,Nulo,Blanco
+2024-01-12,16,Zona Norte,Masculino,61,Terciario completo o incompleto,4,41,Blanco,Candidato_A
+2024-01-10,17,Zona Norte,Masculino,79,Ns/Nc,2,26,Nulo,Candidato_A
+2024-01-14,18,Zona Oeste,Masculino,75,Ns/Nc,2,33,Candidato_A,Nulo
+2024-01-14,19,Zona Oeste,Femenino,16,Primario completo o incompleto,5,67,Nulo,Candidato_B
+2024-01-06,20,Zona Norte,Femenino,17,Primario completo o incompleto,6,70,Blanco,Blanco
+2024-01-31,21,Zona Oeste,Femenino,79,Terciario completo o incompleto,4,22,Ns/Nc,Candidato_A
+2024-01-31,22,Zona Oeste,Femenino,37,Universitario completo o incompleto,2,41,Blanco,Blanco
+2024-01-19,23,CABA,Masculino,64,Secundario completo o incompleto,2,41,Ns/Nc,Ns/Nc
+2024-01-21,24,Zona Sur,Femenino,51,Primario completo o incompleto,3,8,Ns/Nc,No fue a votar
+2024-01-08,25,Zona Norte,Masculino,17,Primario completo o incompleto,4,22,Nulo,Candidato_A
+2024-01-16,26,Zona Norte,Masculino,33,Terciario completo o incompleto,4,0,Candidato_B,Candidato_B
+2024-01-30,27,Zona Oeste,Femenino,45,Universitario completo o incompleto,2,84,Nulo,No fue a votar
+2024-01-17,28,Zona Sur,Femenino,48,Primario completo o incompleto,5,29,Blanco,Candidato_B
+2024-01-10,29,Zona Norte,Femenino,57,Ns/Nc,2,17,Blanco,Candidato_A
+2024-01-05,30,Zona Sur,Femenino,28,Primario completo o incompleto,6,28,Candidato_A,Ns/Nc
+2024-01-25,31,CABA,Femenino,44,Universitario completo o incompleto,2,17,Candidato_A,Candidato_A
+2024-01-08,32,CABA,Femenino,44,Universitario completo o incompleto,5,21,Nulo,Blanco
+2024-01-27,33,Zona Sur,Femenino,26,Secundario completo o incompleto,4,18,Blanco,Blanco
+2024-01-10,34,Zona Sur,Femenino,73,Ns/Nc,1,68,Blanco,No fue a votar
+2024-01-21,35,Zona Sur,Femenino,35,Universitario completo o incompleto,5,17,Candidato_B,Nulo
+2024-01-20,36,Zona Sur,Femenino,43,Secundario completo o incompleto,3,11,Ns/Nc,Candidato_A
+2024-01-29,37,CABA,Masculino,21,Secundario completo o incompleto,3,9,Blanco,Candidato_A
+2024-02-01,38,Zona Norte,Femenino,18,Secundario completo o incompleto,6,29,Candidato_B,Blanco
+2024-01-30,39,CABA,Femenino,17,Universitario completo o incompleto,4,24,Nulo,Candidato_B
+2024-01-25,40,Zona Norte,Masculino,60,Primario completo o incompleto,3,4,Blanco,Blanco
+2024-02-01,41,Zona Norte,Femenino,52,Ns/Nc,4,22,Candidato_A,Blanco
+2024-01-31,42,Zona Sur,Femenino,71,Universitario completo o incompleto,5,52,Ns/Nc,Nulo
+2024-02-02,43,Zona Sur,Masculino,75,Primario completo o incompleto,1,77,Nulo,No fue a votar
+2024-01-03,44,Zona Oeste,Femenino,74,Universitario completo o incompleto,1,55,Candidato_B,Nulo
+2024-01-28,45,CABA,Masculino,69,Primario completo o incompleto,6,62,Candidato_A,Candidato_A
+2024-01-25,46,Zona Norte,Masculino,41,Universitario completo o incompleto,1,21,Blanco,Ns/Nc
+2024-01-11,47,Zona Oeste,Masculino,64,Terciario completo o incompleto,2,30,Nulo,Ns/Nc
+2024-02-01,48,Zona Norte,Femenino,58,Ns/Nc,5,84,Candidato_A,No fue a votar
+2024-01-07,49,CABA,Masculino,55,Terciario completo o incompleto,3,13,Nulo,Blanco
+2024-01-21,50,Zona Oeste,Masculino,45,Universitario completo o incompleto,4,1,Nulo,Candidato_A
+2024-01-20,51,CABA,Femenino,62,Secundario completo o incompleto,2,91,Ns/Nc,Candidato_A
+2024-01-27,52,Zona Sur,Masculino,20,Secundario completo o incompleto,1,69,Candidato_B,Candidato_A
+2024-01-02,53,Zona Oeste,Femenino,16,Secundario completo o incompleto,6,100,Candidato_B,Ns/Nc
+2024-01-11,54,Zona Sur,Masculino,75,Ns/Nc,4,24,Candidato_A,Candidato_B
+2024-01-22,55,Zona Norte,Masculino,20,Universitario completo o incompleto,2,21,Candidato_B,Blanco
+2024-01-01,56,Zona Norte,Femenino,27,Universitario completo o incompleto,5,33,Candidato_B,No fue a votar
+2024-01-05,57,CABA,Masculino,21,Ns/Nc,2,43,Candidato_A,No fue a votar
+2024-01-08,58,CABA,Masculino,74,Terciario completo o incompleto,4,46,Ns/Nc,Ns/Nc
+2024-01-17,59,Zona Oeste,Masculino,80,Terciario completo o incompleto,2,18,Candidato_A,Ns/Nc
+2024-01-25,60,Zona Sur,Masculino,76,Secundario completo o incompleto,3,36,Candidato_A,Candidato_A
+2024-02-02,61,Zona Oeste,Femenino,57,Ns/Nc,4,71,Blanco,Ns/Nc
+2024-01-17,62,Zona Norte,Masculino,38,Universitario completo o incompleto,4,100,Nulo,Candidato_B
+2024-01-29,63,Zona Oeste,Femenino,69,Secundario completo o incompleto,2,7,Candidato_A,Nulo
+2024-01-28,64,Zona Norte,Masculino,43,Universitario completo o incompleto,3,13,Candidato_A,Ns/Nc
+2024-01-10,65,Zona Norte,Femenino,57,Ns/Nc,1,91,Ns/Nc,Blanco
+2024-01-21,66,Zona Norte,Masculino,29,Secundario completo o incompleto,5,61,Nulo,Candidato_A
+2024-01-19,67,Zona Norte,Femenino,73,Primario completo o incompleto,1,91,Nulo,Blanco
+2024-01-05,68,Zona Sur,Masculino,48,Ns/Nc,4,46,Ns/Nc,Candidato_B
+2024-01-18,69,Zona Norte,Masculino,38,Terciario completo o incompleto,5,78,Candidato_B,Blanco
+2024-01-02,70,Zona Sur,Masculino,71,Ns/Nc,2,7,Blanco,Candidato_A
+2024-01-14,71,Zona Sur,Femenino,47,Secundario completo o incompleto,5,72,Candidato_A,Candidato_B
+2024-01-04,72,Zona Norte,Masculino,63,Ns/Nc,2,13,Candidato_B,No fue a votar
+2024-01-24,73,Zona Sur,Femenino,62,Secundario completo o incompleto,3,43,Ns/Nc,Blanco
+2024-01-26,74,Zona Oeste,Masculino,63,Terciario completo o incompleto,3,30,Nulo,Candidato_A
+2024-01-29,75,Zona Oeste,Femenino,39,Secundario completo o incompleto,3,89,Blanco,No fue a votar
+2024-01-25,76,Zona Oeste,Femenino,23,Terciario completo o incompleto,1,81,Ns/Nc,Blanco
+2024-01-14,77,Zona Oeste,Femenino,29,Universitario completo o incompleto,6,62,Blanco,Nulo
+2024-01-23,78,Zona Oeste,Masculino,75,Terciario completo o incompleto,5,44,Nulo,Candidato_B
+2024-01-04,79,Zona Norte,Masculino,62,Universitario completo o incompleto,6,47,Ns/Nc,Blanco
+2024-01-20,80,Zona Norte,Masculino,71,Ns/Nc,6,24,Nulo,Nulo
+2024-01-06,81,CABA,Masculino,58,Ns/Nc,5,28,Candidato_B,Candidato_A
+2024-01-25,82,Zona Sur,Femenino,46,Ns/Nc,2,85,Blanco,Candidato_A
+2024-01-20,83,Zona Sur,Masculino,64,Terciario completo o incompleto,5,92,Candidato_B,Nulo
+2024-01-07,84,Zona Sur,Masculino,40,Terciario completo o incompleto,2,4,Candidato_B,Candidato_A
+2024-01-29,85,CABA,Femenino,19,Terciario completo o incompleto,5,19,Blanco,Ns/Nc
+2024-01-28,86,Zona Oeste,Masculino,51,Terciario completo o incompleto,5,15,Blanco,Ns/Nc
+2024-01-13,87,Zona Norte,Femenino,45,Primario completo o incompleto,4,88,Candidato_A,Ns/Nc
+2024-01-14,88,Zona Oeste,Femenino,18,Terciario completo o incompleto,2,1,Blanco,Candidato_A
+2024-01-07,89,CABA,Femenino,27,Primario completo o incompleto,4,40,Nulo,Candidato_A
+2024-01-09,90,CABA,Masculino,60,Universitario completo o incompleto,1,1,Blanco,No fue a votar
+2024-01-28,91,Zona Oeste,Masculino,53,Primario completo o incompleto,3,78,Blanco,Blanco
+2024-01-16,92,Zona Norte,Masculino,52,Primario completo o incompleto,1,21,Blanco,Ns/Nc
+2024-01-08,93,Zona Oeste,Femenino,76,Primario completo o incompleto,1,2,Nulo,Nulo
+2024-01-29,94,CABA,Femenino,50,Universitario completo o incompleto,5,44,Ns/Nc,Blanco
+2024-01-19,95,CABA,Masculino,53,Terciario completo o incompleto,4,98,Ns/Nc,Candidato_A
+2024-01-19,96,Zona Norte,Femenino,78,Ns/Nc,2,48,Ns/Nc,Blanco
+2024-01-29,97,Zona Norte,Femenino,66,Secundario completo o incompleto,4,12,Candidato_A,Nulo
+2024-01-10,98,Zona Sur,Masculino,26,Terciario completo o incompleto,6,21,Candidato_B,Ns/Nc
+2024-01-04,99,CABA,Femenino,27,Terciario completo o incompleto,1,40,Ns/Nc,Candidato_B
+2024-01-25,100,Zona Sur,Masculino,21,Ns/Nc,6,97,Ns/Nc,Ns/Nc
+2024-01-15,101,Zona Sur,Masculino,32,Secundario completo o incompleto,1,91,Candidato_A,Candidato_B
+2024-01-01,102,Zona Sur,Masculino,49,Ns/Nc,6,13,Nulo,Candidato_A
+2024-01-07,103,Zona Norte,Masculino,35,Primario completo o incompleto,2,6,Candidato_B,Blanco
+2024-01-03,104,Zona Oeste,Femenino,54,Ns/Nc,2,82,Candidato_B,Ns/Nc
+2024-01-04,105,Zona Norte,Femenino,17,Ns/Nc,5,7,Blanco,Candidato_B
+2024-01-02,106,Zona Norte,Masculino,55,Secundario completo o incompleto,1,4,Candidato_A,Blanco
+2024-01-03,107,Zona Norte,Femenino,34,Ns/Nc,6,5,Candidato_A,Candidato_A
+2024-01-08,108,Zona Norte,Masculino,41,Ns/Nc,1,6,Ns/Nc,Candidato_B
+2024-01-27,109,Zona Sur,Femenino,34,Terciario completo o incompleto,2,73,Ns/Nc,Ns/Nc
+2024-01-02,110,Zona Sur,Femenino,33,Ns/Nc,5,5,Candidato_B,Candidato_A
+2024-01-22,111,Zona Norte,Masculino,30,Ns/Nc,2,0,Blanco,Candidato_B
+2024-01-10,112,Zona Norte,Masculino,77,Terciario completo o incompleto,4,36,Candidato_A,Candidato_B
+2024-01-23,113,Zona Norte,Masculino,69,Terciario completo o incompleto,4,45,Candidato_A,No fue a votar
+2024-01-15,114,CABA,Femenino,69,Ns/Nc,2,8,Ns/Nc,Ns/Nc
+2024-01-06,115,Zona Oeste,Femenino,36,Universitario completo o incompleto,5,17,Blanco,Candidato_A
+2024-01-01,116,Zona Norte,Masculino,51,Secundario completo o incompleto,5,72,Nulo,Candidato_B
+2024-01-23,117,Zona Norte,Femenino,24,Terciario completo o incompleto,2,72,Nulo,Candidato_B
+2024-01-31,118,Zona Sur,Masculino,30,Secundario completo o incompleto,5,18,Nulo,No fue a votar
+2024-01-05,119,CABA,Femenino,59,Universitario completo o incompleto,1,42,Ns/Nc,Blanco
+2024-01-30,120,Zona Sur,Femenino,74,Primario completo o incompleto,4,45,Blanco,Nulo
+2024-01-01,121,Zona Norte,Femenino,65,Secundario completo o incompleto,6,78,Blanco,Candidato_A
+2024-01-20,122,Zona Norte,Femenino,57,Ns/Nc,3,8,Candidato_B,No fue a votar
+2024-01-15,123,Zona Norte,Femenino,44,Universitario completo o incompleto,5,72,Blanco,Ns/Nc
+2024-02-02,124,Zona Sur,Femenino,74,Secundario completo o incompleto,2,96,Candidato_B,No fue a votar
+2024-01-08,125,CABA,Masculino,59,Ns/Nc,3,14,Candidato_A,Blanco
+2024-01-15,126,CABA,Femenino,48,Ns/Nc,2,46,Nulo,Blanco
+2024-01-22,127,Zona Norte,Masculino,42,Ns/Nc,1,52,Candidato_B,Nulo
+2024-01-28,128,Zona Sur,Masculino,76,Ns/Nc,6,67,Candidato_A,No fue a votar
+2024-01-18,129,Zona Oeste,Masculino,35,Universitario completo o incompleto,5,45,Candidato_A,Blanco
+2024-01-27,130,CABA,Femenino,29,Secundario completo o incompleto,4,70,Nulo,Blanco
+2024-01-05,131,Zona Sur,Masculino,26,Secundario completo o incompleto,5,77,Candidato_A,Candidato_B
+2024-01-11,132,Zona Norte,Masculino,23,Universitario completo o incompleto,5,37,Candidato_B,Nulo
+2024-01-15,133,Zona Oeste,Masculino,46,Terciario completo o incompleto,3,35,Candidato_A,Candidato_B
+2024-01-26,134,Zona Oeste,Masculino,28,Secundario completo o incompleto,4,66,Blanco,Candidato_A
+2024-01-08,135,Zona Oeste,Femenino,60,Secundario completo o incompleto,1,4,Candidato_A,No fue a votar
+2024-01-27,136,Zona Sur,Femenino,64,Primario completo o incompleto,5,87,Candidato_A,Blanco
+2024-01-28,137,Zona Oeste,Masculino,59,Terciario completo o incompleto,6,72,Ns/Nc,Blanco
+2024-01-04,138,CABA,Masculino,76,Primario completo o incompleto,6,98,Nulo,Nulo
+2024-01-16,139,CABA,Femenino,17,Secundario completo o incompleto,1,29,Ns/Nc,Blanco
+2024-01-24,140,Zona Oeste,Masculino,72,Primario completo o incompleto,3,15,Blanco,Blanco
+2024-01-15,141,CABA,Masculino,68,Secundario completo o incompleto,4,15,Candidato_B,Blanco
+2024-01-12,142,CABA,Masculino,20,Secundario completo o incompleto,2,40,Candidato_B,Candidato_A
+2024-01-28,143,CABA,Femenino,39,Terciario completo o incompleto,1,65,Blanco,Nulo
+2024-01-10,144,Zona Oeste,Masculino,42,Secundario completo o incompleto,4,52,Ns/Nc,Candidato_A
+2024-01-24,145,CABA,Femenino,25,Ns/Nc,5,59,Candidato_A,Candidato_B
+2024-01-18,146,Zona Norte,Masculino,76,Secundario completo o incompleto,4,25,Candidato_A,Candidato_B
+2024-01-28,147,CABA,Femenino,63,Primario completo o incompleto,2,95,Nulo,Nulo
+2024-01-08,148,Zona Sur,Femenino,52,Terciario completo o incompleto,3,58,Candidato_A,No fue a votar
+2024-01-25,149,Zona Oeste,Femenino,80,Ns/Nc,2,61,Candidato_A,Candidato_B
+2024-01-22,150,Zona Oeste,Femenino,75,Secundario completo o incompleto,1,53,Candidato_A,Candidato_A
+2024-01-10,151,CABA,Femenino,79,Terciario completo o incompleto,4,87,Blanco,Blanco
+2024-01-28,152,Zona Norte,Masculino,17,Terciario completo o incompleto,6,38,Ns/Nc,Candidato_B
+2024-01-12,153,Zona Oeste,Femenino,21,Terciario completo o incompleto,3,87,Candidato_B,Candidato_A
+2024-01-05,154,Zona Norte,Femenino,49,Ns/Nc,4,54,Ns/Nc,Nulo
+2024-01-07,155,Zona Oeste,Masculino,40,Secundario completo o incompleto,6,36,Nulo,Candidato_B
+2024-01-09,156,CABA,Masculino,59,Terciario completo o incompleto,5,83,Candidato_A,Blanco
+2024-01-17,157,Zona Sur,Masculino,18,Primario completo o incompleto,6,56,Blanco,Blanco
+2024-01-01,158,Zona Norte,Femenino,49,Ns/Nc,2,2,Candidato_A,No fue a votar
+2024-01-13,159,CABA,Femenino,50,Secundario completo o incompleto,2,20,Blanco,Candidato_B
+2024-01-27,160,Zona Oeste,Masculino,78,Primario completo o incompleto,2,3,Candidato_B,Blanco
+2024-01-08,161,Zona Oeste,Femenino,34,Primario completo o incompleto,3,35,Blanco,Nulo
+2024-01-07,162,CABA,Masculino,64,Secundario completo o incompleto,1,76,Ns/Nc,Candidato_B
+2024-01-08,163,Zona Sur,Masculino,51,Terciario completo o incompleto,3,60,Blanco,Candidato_B
+2024-01-30,164,Zona Sur,Femenino,23,Ns/Nc,5,39,Ns/Nc,Blanco
+2024-01-23,165,Zona Sur,Femenino,60,Universitario completo o incompleto,3,19,Ns/Nc,Nulo
+2024-01-05,166,Zona Norte,Masculino,29,Primario completo o incompleto,6,12,Candidato_A,Blanco
+2024-01-06,167,Zona Norte,Masculino,76,Universitario completo o incompleto,2,24,Candidato_B,Ns/Nc
+2024-01-28,168,CABA,Femenino,35,Primario completo o incompleto,4,65,Candidato_B,No fue a votar
+2024-01-21,169,Zona Sur,Femenino,19,Ns/Nc,3,90,Nulo,Blanco
+2024-01-17,170,Zona Oeste,Femenino,68,Ns/Nc,5,32,Candidato_A,No fue a votar
+2024-02-01,171,CABA,Masculino,77,Primario completo o incompleto,3,50,Candidato_B,Candidato_A
+2024-01-18,172,Zona Norte,Masculino,47,Terciario completo o incompleto,6,72,Blanco,Nulo
+2024-01-27,173,Zona Oeste,Femenino,69,Secundario completo o incompleto,6,46,Candidato_B,Blanco
+2024-01-16,174,Zona Oeste,Femenino,32,Primario completo o incompleto,1,62,Candidato_A,Candidato_B
+2024-01-21,175,Zona Oeste,Femenino,18,Secundario completo o incompleto,1,95,Ns/Nc,No fue a votar
+2024-01-18,176,Zona Norte,Masculino,31,Universitario completo o incompleto,6,56,Blanco,No fue a votar
+2024-01-01,177,CABA,Masculino,76,Primario completo o incompleto,4,24,Nulo,Nulo
+2024-01-14,178,CABA,Masculino,17,Secundario completo o incompleto,4,30,Candidato_A,No fue a votar
+2024-01-21,179,CABA,Femenino,50,Terciario completo o incompleto,4,68,Nulo,Blanco
+2024-02-01,180,CABA,Femenino,22,Ns/Nc,4,17,Blanco,Candidato_A
+2024-01-18,181,Zona Norte,Femenino,77,Terciario completo o incompleto,3,54,Candidato_A,No fue a votar
+2024-01-21,182,CABA,Femenino,16,Ns/Nc,4,59,Ns/Nc,Nulo
+2024-01-25,183,CABA,Masculino,71,Primario completo o incompleto,6,79,Nulo,No fue a votar
+2024-01-22,184,Zona Sur,Masculino,28,Universitario completo o incompleto,1,56,Candidato_A,Nulo
+2024-01-30,185,Zona Sur,Masculino,72,Terciario completo o incompleto,5,3,Nulo,Candidato_B
+2024-01-30,186,Zona Norte,Femenino,58,Primario completo o incompleto,1,6,Candidato_B,Blanco
+2024-01-23,187,Zona Norte,Masculino,35,Secundario completo o incompleto,3,50,Ns/Nc,Blanco
+2024-01-07,188,Zona Norte,Masculino,56,Primario completo o incompleto,5,16,Ns/Nc,Blanco
+2024-02-01,189,Zona Oeste,Femenino,47,Secundario completo o incompleto,2,66,Nulo,Candidato_B
+2024-01-19,190,CABA,Femenino,80,Terciario completo o incompleto,2,96,Blanco,Ns/Nc
+2024-01-16,191,CABA,Femenino,62,Secundario completo o incompleto,5,19,Candidato_B,Candidato_B
+2024-01-17,192,Zona Sur,Masculino,60,Secundario completo o incompleto,3,48,Ns/Nc,Candidato_B
+2024-02-02,193,CABA,Femenino,66,Terciario completo o incompleto,2,15,Blanco,Blanco
+2024-01-09,194,Zona Sur,Masculino,26,Universitario completo o incompleto,1,14,Candidato_B,Blanco
+2024-01-13,195,Zona Oeste,Femenino,22,Primario completo o incompleto,6,33,Nulo,Nulo
+2024-01-02,196,Zona Sur,Femenino,53,Universitario completo o incompleto,6,49,Ns/Nc,No fue a votar
+2024-01-29,197,Zona Oeste,Masculino,34,Secundario completo o incompleto,2,87,Nulo,Candidato_A
+2024-01-19,198,Zona Norte,Masculino,59,Terciario completo o incompleto,5,86,Blanco,Candidato_A
+2024-01-18,199,CABA,Femenino,42,Ns/Nc,1,19,Ns/Nc,Ns/Nc
+2024-02-02,200,Zona Sur,Masculino,22,Terciario completo o incompleto,4,89,Candidato_B,No fue a votar
