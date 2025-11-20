@@ -242,17 +242,6 @@ if not fuera_rango_img.empty:
     print("Estos registros serán eliminados.\n")
     df = df.drop(fuera_rango_img.index)
 
-# 6.3 Redondeo personalizado (<0.5 abajo, ≥0.5 arriba)
-def redondear_imagen(x):
-    if pd.isna(x):
-        return x
-    entero = int(np.floor(x))
-    frac = x - entero
-    if frac < 0.5:
-        return entero
-    else:
-        return entero + 1
-
 df["imagen_candidato"] = df["imagen_candidato"].apply(redondear_imagen).astype("Int64")
 
 print("\nResumen de 'imagen_candidato' ya redondeada:")
