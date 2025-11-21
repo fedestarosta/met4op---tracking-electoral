@@ -84,8 +84,8 @@ def limpiar_edad(df):
 
 
 # 3.5 RANGO ETARIO
-def crear_edad_rango(df):
-    df["edad_rango"] = pd.cut(
+def crear_rango_etario(df):
+    df["rango_etario"] = pd.cut(
         df["edad"],
         bins=[16, 24, 35, 45, 55, 75, float("inf")],
         labels=["16-24", "25-35", "36-45", "46-55", "56-75", "+76"],
@@ -142,16 +142,65 @@ def limpiar_imagen(df, redondear_imagen):
 
     return df
 
+# 3.10 NIVEL EDUCATIVO
+def limpiar_nivel_educativo(df):
+    # Normalización básica
+    df["nivel_educativo"] = (
+        df["nivel_educativo"]
+        .astype(str)
+        .str.strip()
+        .str.lower()
+    )
+
+    # Reemplazos y posibilidades para Ns/Nc
+    df.loc[
+        df["nivel_educativo"].str.contains("ns") |
+        df["nivel_educativo"].str.contains("nc") |
+        df["nivel_educativo"].str.contains("no sabe") |
+        df["nivel_educativo"].str.contains("no contesta"),
+        "nivel_educativo"
+    ] = "Ns/Nc"
+
+    # Lista de categorías válidas 
+    categorias_validas = {
+        "primario completo o incompleto": "Primario completo o incompleto",
+        "secundario completo o incompleto": "Secundario completo o incompleto",
+        "terciario completo o incompleto": "Terciario completo o incompleto",
+        "universitario completo o incompleto": "Universitario completo o incompleto",
+        "ns/nc": "Ns/Nc"
+    }
+
+    # Aplicar categorías válidas
+    df["nivel_educativo"] = df["nivel_educativo"].map(categorias_validas)
+
+    # Eliminar valores inválidos
+    df = df.dropna(subset=["nivel_educativo"])
+
+    return df
+
+
+# 3.11 ESTRATO (provincias)
+def limpiar_estrato(df):
+    # Normalización básica
+    df["estrato"] = (
+        df["estrato"]
+        .astype(str)
+        .str.strip()
+        .str.lower()
+    )
+
+    # Capitalizar (pone "Buenos Aires", "Cordoba", etc.)
+    df["estrato"] = df["estrato"].apply(lambda x: x.title())
+
+    return df
+
+
+
 
 # ----------------------------------------------------------
 # 4. VARIABLES AUXILIARES
 # ----------------------------------------------------------
-def generar_auxiliares(df):
-    # Periodo basado en fecha (YYYY-MM)
-    if "fecha" in df.columns:
-        df["periodo"] = df["fecha"].dt.to_period("M").astype(str)
 
-    return df
 
 
 # ----------------------------------------------------------
