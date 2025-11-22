@@ -16,3 +16,4 @@ if not os.path.exists(ruta_completa):
 else:
     df = pd.read_csv(ruta_completa)
     print(df.head())
+
