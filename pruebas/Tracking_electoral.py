@@ -59,10 +59,10 @@ def generar_faker_encuestas(n_registros=500):
 
     # --- Nivel educativo ---
     niveles_educativos = [
-        "Primario completo o incompleto",
-        "Secundario completo o incompleto",
-        "Terciario completo o incompleto",
-        "Universitario completo o incompleto",
+        "Primario completo","Primario incompleto"
+        "Secundario completo", "Secundario incompleto"
+        "Terciario completo", "Terciario incompleto"
+        "Universitario completo", "Universitario incompleto"
         "Ns/Nc",
     ]
 
@@ -108,6 +108,17 @@ def generar_faker_encuestas(n_registros=500):
 
     df = pd.DataFrame(registros)
     return df
+
+if __name__ == "__main__":
+    df = generar_faker_encuestas(500)
+
+    # Ruta absoluta al directorio /data
+    DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "encuestas_falsas.csv"
+
+    df.to_csv(DATA_PATH, index=False, encoding="utf-8")
+
+    print("Archivo faker guardado en:")
+    print(DATA_PATH)
 
 #%%
 
@@ -279,9 +290,6 @@ if not fuera_rango_img.empty:
     print("Estos registros serán eliminados.\n")
     df = df.drop(fuera_rango_img.index)
 
-df["imagen_candidato"] = df["imagen_candidato"].apply(redondear_imagen).astype("Int64")
-
-print("\nResumen de 'imagen_candidato' ya redondeada:")
 print(df["imagen_candidato"].describe())
 
 
