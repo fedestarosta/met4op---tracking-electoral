@@ -20,14 +20,44 @@ from datetime import datetime, timedelta
 fake = Faker("es_AR")
 
 #%%
-def generar_encuestas_falsas(n_registros=200):
-    """
-    Genera una base de datos falsa de encuestas políticas.
-    """
+import pandas as pd
+from random import randint, choice
+from datetime import datetime, timedelta
 
-    # --- Valores posibles para variables categóricas ---
-    estratos = ["Zona Norte", "Zona Sur", "Zona Oeste", "CABA"]
+def generar_faker_encuestas(n_registros=500):
+
+    # --- Estratos (Provincias de Argentina, limpias) ---
+    estratos = [
+        "Buenos Aires",
+        "Catamarca",
+        "Chaco",
+        "Chubut",
+        "Ciudad Autónoma de Buenos Aires",
+        "Corrientes",
+        "Córdoba",
+        "Entre Ríos",
+        "Formosa",
+        "Jujuy",
+        "La Pampa",
+        "La Rioja",
+        "Mendoza",
+        "Misiones",
+        "Neuquén",
+        "Río Negro",
+        "Salta",
+        "San Juan",
+        "San Luis",
+        "Santa Cruz",
+        "Santa Fe",
+        "Santiago del Estero",
+        "Tierra del Fuego",
+        "Antártida e Islas del Atlántico Sur",
+    ]
+
+    # --- Sexo ---
     sexos = ["Masculino", "Femenino"]
+
+    # --- Nivel educativo ---
     niveles_educativos = [
         "Primario completo o incompleto",
         "Secundario completo o incompleto",
@@ -35,49 +65,56 @@ def generar_encuestas_falsas(n_registros=200):
         "Universitario completo o incompleto",
         "Ns/Nc",
     ]
+
+    # --- Voto intención ---
     votos = ["Candidato_A", "Candidato_B", "Blanco", "Nulo", "Ns/Nc"]
+
+    # --- Voto anterior ---
     votos_anteriores = [
         "Candidato_A",
         "Candidato_B",
-        "No fue a votar",
+        "No Fue A Votar",
         "Blanco",
         "Nulo",
         "Ns/Nc",
     ]
 
-    # --- Rango temporal de las encuestas ---
+    # --- Rango de edad ---
+    # 16 a 90 según estándar demográfico
+    def generar_edad():
+        return randint(16, 90)
+
+    # --- Rango temporal ---
     inicio = datetime(2024, 1, 1)
     fin = datetime(2024, 2, 2)
-    diferencia_dias = (fin - inicio).days
+    diferencia = (fin - inicio).days
 
     # --- Generación de registros ---
     registros = []
     for i in range(n_registros):
         registro = {
-            "fecha": (inicio + timedelta(days=randint(0, diferencia_dias))).strftime("%Y-%m-%d"),
-            "encuesta_id": i + 1,
+            "fecha": (inicio + timedelta(days=randint(0, diferencia))).strftime("%Y-%m-%d"),
+            "encuesta_id": i + 1,  # único y secuencial
             "estrato": choice(estratos),
             "sexo": choice(sexos),
-            "edad": randint(16, 80),
+            "edad": generar_edad(),
             "nivel_educativo": choice(niveles_educativos),
             "integrantes_hogar": randint(1, 6),
             "imagen_candidato": randint(0, 100),
             "voto": choice(votos),
             "voto_anterior": choice(votos_anteriores),
         }
-        registros.append(registro)  # ← este append va dentro del for
+        registros.append(registro)
 
-    # --- Convertir a DataFrame y exportar a CSV ---
     df = pd.DataFrame(registros)
-    df.to_csv("encuestas_falsas.csv", index=False, encoding="utf-8")
-
-    print(f" Archivo generado: encuestas_falsas.csv ({n_registros} filas)")
     return df
+
+#%%
 
 
 
 if __name__ == "__main__":
-    df = generar_encuestas_falsas(200)
+    df = generar_faker_encuestas(500)
 
     # 1. FECHA
     df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
@@ -305,6 +342,7 @@ plt.grid(True, axis="y", alpha=0.3)
 
 plt.tight_layout()
 plt.show()
+
 
 
 

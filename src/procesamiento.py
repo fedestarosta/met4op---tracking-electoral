@@ -7,21 +7,25 @@ import matplotlib.pyplot as plt
 import balance as bal
 
 #Centralizamos las funciones de procesamiento aca
-
 def cargar_datos(file_paths):
-    
-#Lee múltiples archivos de encuestas y los ordena en un único DataFrame.
-#file_paths: lista de rutas de archivos a leer.
-    
+    #Lee múltiples archivos CSV y los concatena en un único DataFrame.
+    #file_paths: lista de rutas de archivos a leer
     data_frames = []
+
     for file in file_paths:
-# Leer cada archivo CSV.
-        df = pd.read_csv(file, na_values=["Ns/Nc", "No sabe", "No contesta"])
+        # Leer cada archivo CSV
+        df = pd.read_csv(
+            file,
+            na_values=["Ns/Nc", "No sabe", "No contesta"]
+        )
         data_frames.append(df)
-# Unir todos los DataFrames 
+
+    # Unir todos los DataFrames
     base = pd.concat(data_frames, ignore_index=True)
- # uniformar nombres de columnas a minúsculas y sin espacios
+
+    # Uniformar nombres de columnas
     base.columns = base.columns.str.lower().str.strip()
+
     return base
 
 # LIMPIEZA BÁSICA
@@ -125,20 +129,22 @@ def limpiar_voto(df):
     return df
 
 
-# 3.9 IMAGEN DEL CANDIDATO
-def limpiar_imagen(df, redondear_imagen):
+def limpiar_imagen(df):
+    # Normalización mínima
     df["imagen_candidato"] = (
         df["imagen_candidato"]
         .astype(str)
         .str.strip()
-        .str.replace(",", ".", regex=False)
     )
 
+    # Convertir a numérico
     df["imagen_candidato"] = pd.to_numeric(df["imagen_candidato"], errors="coerce")
 
+    # Mantener solo valores entre 0 y 100 (variable cerrada)
     df = df[(df["imagen_candidato"] >= 0) & (df["imagen_candidato"] <= 100)]
 
-    df["imagen_candidato"] = df["imagen_candidato"].apply(redondear_imagen).astype("Int64")
+    # Convertir a entero
+    df["imagen_candidato"] = df["imagen_candidato"].astype("Int64")
 
     return df
 
@@ -194,13 +200,34 @@ def limpiar_estrato(df):
 
     return df
 
-
-
-
 # ----------------------------------------------------------
-# 4. VARIABLES AUXILIARES
+# 4. TRATAMIENTO DE NaN
 # ----------------------------------------------------------
 
+def interpretar_nan(df):
+
+    # A) Variables criticas - eliminar fila 
+    criticas = ["fecha", "imagen_candidato"]
+    for col in criticas:
+        if col in df.columns:
+            df = df.dropna(subset=[col])
+
+    # B) Variables categoricas auxiliares → codificar missing como categoría
+    categoricas = [
+        "sexo",
+        "nivel_educativo",
+        "voto",
+        "voto_anterior",
+        "estrato"
+    ]
+    for col in categoricas:
+        if col in df.columns:
+            df[col] = df[col].fillna("Missing")
+
+    # C) Variables numericas auxiliares → dejar como NaN (no imputar)
+    # edad, integrantes_hogar quedan intactas
+    
+    return df
 
 
 # ----------------------------------------------------------
@@ -228,3 +255,46 @@ def calcular_imagen_promedio(df, peso_col=None):
         )
 
     return imagen_prom
+print ("no hay error hasta aca")
+
+#PRUEBA
+
+# ---------------------------------------------------------
+# RESUMEN AUTOMÁTICO DEL TRACKING
+# ---------------------------------------------------------
+def resumen_tracking(df):
+    """
+    Devuelve:
+    1. El DataFrame final ya procesado
+    2. Un gráfico de torta con la distribución de sexo
+    3. La media de imagen del candidato
+    """
+    
+    # 1. Mostrar tabla final (primeras filas)
+    print("\n----------------------------------------")
+    print("TABLA FINAL DE ENCUESTADOS (HEAD)")
+    print("----------------------------------------")
+    print(df.head())
+    
+    # 2. Gráfico de torta de SEXO
+    if "sexo" in df.columns:
+        plt.figure(figsize=(5, 5))
+        df["sexo"].value_counts().plot(kind="pie", autopct="%1.1f%%")
+        plt.title("Distribución por sexo")
+        plt.ylabel("")  # saca el label feo
+        plt.show()
+    else:
+        print("\n[ADVERTENCIA] La columna 'sexo' no está en el DataFrame.")
+    
+    # 3. Media de imagen del candidato
+    if "imagen_candidato" in df.columns:
+        media_img = df["imagen_candidato"].mean()
+        print("\n----------------------------------------")
+        print("MEDIA DE IMAGEN DEL CANDIDATO")
+        print("----------------------------------------")
+        print(f"{media_img:.2f}")
+    else:
+        print("\n[ADVERTENCIA] 'imagen_candidato' no está en el DataFrame.")
+    
+    return df
+
