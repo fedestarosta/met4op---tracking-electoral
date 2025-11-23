@@ -102,14 +102,14 @@ def crear_rango_etario(df):
 # 3.6 VOTO ANTERIOR
 def limpiar_voto_anterior(df):
     validos = [
-        "Candidato_A",
-        "Candidato_B",
-        "No Fue A Votar",
-        "Blanco",
-        "Nulo",
-        "Ns/Nc"
+        "candidato_a",
+        "candidato_b",
+        "no fue a votar",
+        "blanco",
+        "nulo",
+        "ns/nc"
     ]
-    df["voto_anterior"] = df["voto_anterior"].astype(str).str.strip()
+    df["voto_anterior"] = df["voto_anterior"].astype(str).str.strip().str.lower()
     df = df[df["voto_anterior"].isin(validos)]
     return df
 
@@ -123,8 +123,8 @@ def limpiar_integrantes_hogar(df):
 
 # 3.8 VOTO
 def limpiar_voto(df):
-    validos = ["Candidato_A", "Candidato_B", "Blanco", "Nulo", "Ns/Nc"]
-    df["voto"] = df["voto"].astype(str).str.strip()
+    validos = ["candidato_a", "candidato_b", "blanco", "nulo", "ns/nc"]
+    df["voto"] = df["voto"].astype(str).str.strip().str.lower()
     df = df[df["voto"].isin(validos)]
     return df
 
@@ -150,7 +150,7 @@ def limpiar_imagen(df):
 
 # 3.10 NIVEL EDUCATIVO
 def limpiar_nivel_educativo(df):
-    # Normalización básica
+
     df["nivel_educativo"] = (
         df["nivel_educativo"]
         .astype(str)
@@ -158,36 +158,27 @@ def limpiar_nivel_educativo(df):
         .str.lower()
     )
 
-    # Reemplazos y posibilidades para Ns/Nc
-    df.loc[
-        df["nivel_educativo"].str.contains("ns") |
-        df["nivel_educativo"].str.contains("nc") |
-        df["nivel_educativo"].str.contains("no sabe") |
-        df["nivel_educativo"].str.contains("no contesta"),
-        "nivel_educativo"
-    ] = "Ns/Nc"
-
-    # Lista de categorías válidas 
     categorias_validas = {
-        "primario completo o incompleto": "Primario completo o incompleto",
-        "secundario completo o incompleto": "Secundario completo o incompleto",
-        "terciario completo o incompleto": "Terciario completo o incompleto",
-        "universitario completo o incompleto": "Universitario completo o incompleto",
-        "ns/nc": "Ns/Nc"
+        "primario completo",
+        "primario incompleto",
+        "secundario completo",
+        "secundario incompleto",
+        "terciario completo",
+        "terciario incompleto",
+        "universitario completo",
+        "universitario incompleto",
+        "ns/nc"
     }
 
-    # Aplicar categorías válidas
-    df["nivel_educativo"] = df["nivel_educativo"].map(categorias_validas)
-
-    # Eliminar valores inválidos
-    df = df.dropna(subset=["nivel_educativo"])
+    df["nivel_educativo"] = df["nivel_educativo"].apply(
+        lambda x: x if x in categorias_validas else "Missing"
+    )
 
     return df
 
 
 # 3.11 ESTRATO (provincias)
 def limpiar_estrato(df):
-    # Normalización básica
     df["estrato"] = (
         df["estrato"]
         .astype(str)
@@ -195,15 +186,39 @@ def limpiar_estrato(df):
         .str.lower()
     )
 
-    # Capitalizar (pone "Buenos Aires", "Cordoba", etc.)
-    df["estrato"] = df["estrato"].apply(lambda x: x.title())
+    provincias_validas = {
+        "buenos aires",
+        "catamarca",
+        "chaco",
+        "chubut",
+        "ciudad autónoma de buenos aires",
+        "corrientes",
+        "córdoba",
+        "entre ríos",
+        "formosa",
+        "jujuy",
+        "la pampa",
+        "la rioja",
+        "mendoza",
+        "misiones",
+        "neuquén",
+        "río negro",
+        "salta",
+        "san juan",
+        "san luis",
+        "santa cruz",
+        "santa fe",
+        "santiago del estero",
+        "tierra del fuego",
+        "antártida e islas del atlántico sur",
+    }
+
+    df["estrato"] = df["estrato"].apply(
+        lambda x: x if x in provincias_validas else "Missing"
+    )
 
     return df
-
-# ----------------------------------------------------------
 # 4. TRATAMIENTO DE NaN
-# ----------------------------------------------------------
-
 def interpretar_nan(df):
 
     # A) Variables criticas - eliminar fila 
@@ -229,39 +244,60 @@ def interpretar_nan(df):
     
     return df
 
-
-# ----------------------------------------------------------
 # 5. IMAGEN PROMEDIO (MEDIA SIMPLE O PONDERADA)
-# ----------------------------------------------------------
-def calcular_imagen_promedio(df, peso_col=None):
-    """
-    Calcula la imagen promedio del candidato.
-    Si hay pesos, usa media ponderada.
-    """
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-    grupo = "fecha" if "fecha" in df.columns else "periodo"
+def tracking_imagen(df, peso_col=None, window=3):
+    #Tracking final de imagen del candidato.
+        # Calcula imagen diaria (ponderada o simple)
+        # Aplica rolling window
+        # Grafica ambas con seaborn
+    
+    # 1. Ponderación
+    if peso_col is None or peso_col not in df.columns:
+        df["peso_temp"] = 1
+        peso_col = "peso_temp"
 
-    if peso_col and peso_col in df.columns:
-        imagen = df.groupby(grupo).apply(
-            lambda g: np.average(g["imagen_candidato"], weights=g[peso_col])
-        )
-        imagen_prom = imagen.reset_index(name="imagen_promedio")
-    else:
-        imagen_prom = (
-            df.groupby(grupo)["imagen_candidato"]
-            .mean()
-            .reset_index()
-            .rename(columns={"imagen_candidato": "imagen_promedio"})
-        )
+    # 2. Imagen diaria (media ponderada)
+    diaria = (
+        df.groupby("fecha")
+          .apply(lambda g: (g["imagen_candidato"] * g[peso_col]).sum() / g[peso_col].sum())
+          .reset_index(name="imagen_diaria")
+    )
 
-    return imagen_prom
+    # Remover peso temporal si existiera - CORREGIR POST AGREGADO DE PESOS
+    if "peso_temp" in df.columns:
+        df.drop(columns=["peso_temp"], inplace=True)
+
+    # 3. Rolling window
+    diaria = diaria.sort_values("fecha")
+    diaria["imagen_rolling"] = diaria["imagen_diaria"].rolling(window, min_periods=1).mean()
+
+    # 4. Grafico
+    plt.figure(figsize=(12, 6))
+    sns.lineplot(data=diaria, x="fecha", y="imagen_diaria", label="Imagen diaria", alpha=0.4)
+    sns.lineplot(data=diaria, x="fecha", y="imagen_rolling", label=f"Rolling {window} días", linewidth=2)
+
+    plt.title("Tracking de Imagen del Candidato")
+    plt.xlabel("Fecha")
+    plt.ylabel("Imagen (0–100)")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+    return diaria
+
+
+
+
 print ("no hay error hasta aca")
 
-#PRUEBA
+#PRUEBAS - IMPORTANTE BORRAR
 
-# ---------------------------------------------------------
 # RESUMEN AUTOMÁTICO DEL TRACKING
-# ---------------------------------------------------------
+
 def resumen_tracking(df):
     """
     Devuelve:
@@ -286,15 +322,43 @@ def resumen_tracking(df):
     else:
         print("\n[ADVERTENCIA] La columna 'sexo' no está en el DataFrame.")
     
-    # 3. Media de imagen del candidato
-    if "imagen_candidato" in df.columns:
-        media_img = df["imagen_candidato"].mean()
-        print("\n----------------------------------------")
-        print("MEDIA DE IMAGEN DEL CANDIDATO")
-        print("----------------------------------------")
-        print(f"{media_img:.2f}")
-    else:
-        print("\n[ADVERTENCIA] 'imagen_candidato' no está en el DataFrame.")
-    
-    return df
+
+#PRUEBA CROSSTAB IMAGEN Y EDAD
+import pandas as pd
+import matplotlib.pyplot as plt
+from pandas.api.types import CategoricalDtype
+
+def plot_imagen_por_rango(df):
+
+    #Crea un crosstab de imagen promedio del candidato por rango etario 
+    # y genera un gráfico de barras.
+
+    # Orden explícito (como en tu recodificación)
+    orden = ["16-24", "25-35", "36-45", "46-55", "56-75", "+76"]
+    cat = CategoricalDtype(categories=orden, ordered=True)
+
+    df["rango_etario"] = df["rango_etario"].astype(cat)
+
+    # Crosstab con media de imagen
+    tabla = pd.crosstab(
+        df["rango_etario"],
+        columns="Imagen Promedio",
+        values=df["imagen_candidato"],
+        aggfunc="mean"
+    )
+
+    # Plot
+    plt.figure(figsize=(10, 6))
+    tabla["Imagen Promedio"].plot(kind="bar", edgecolor="black")
+
+    plt.title("Imagen Promedio del Candidato por Rango Etario")
+    plt.ylabel("Imagen Promedio (0-100)")
+    plt.xlabel("Rango Etario")
+    plt.xticks(rotation=0)
+    plt.grid(axis="y", linestyle="--", alpha=0.4)
+
+    plt.tight_layout()
+    plt.show()
+
+    return tabla
 

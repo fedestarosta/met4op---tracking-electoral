@@ -6,10 +6,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import balance as bal
 import os
+from pandas.api.types import CategoricalDtype
 
 #Importar procesamientos
 from procesamiento import (
-    cargar_datos,
     interpretar_nan,
     limpiar_fecha,
     limpiar_encuesta_id,
@@ -34,17 +34,9 @@ if not os.path.exists(ruta_completa):
 else:
     df = pd.read_csv(ruta_completa)
     print(df.head())
-
-# ---------------------------------------------------------
-# 3. MANEJO DE VALORES FALTANTES (PACZKOWSKI)
-# ---------------------------------------------------------
-
+# 3. MANEJO DE VALORES FALTANTES
 df = interpretar_nan(df)
-
-# ---------------------------------------------------------
-# 4. LIMPIEZA DE VARIABLES
-# ---------------------------------------------------------
-
+# 4. Importar funciones de limpieza
 df = limpiar_fecha(df)
 df = limpiar_encuesta_id(df)
 df = limpiar_sexo(df)
@@ -56,10 +48,22 @@ df = limpiar_voto(df)
 df = limpiar_voto_anterior(df)
 df = limpiar_estrato(df)
 df = limpiar_imagen(df)
-
-# ---------------------------------------------------------
-# 5. RESUMEN FINAL (TABLA / TORTA SEXO / MEDIA IMAGEN)
-# ---------------------------------------------------------
+# 5. RESUMEN INICIAL DE PRUEBA (TABLA / TORTA SEXO / MEDIA IMAGEN)
 
 resumen_tracking(df)
+#%%
+
+#OUTPUTS
+
+#Trackeo de imagen - rolling
+from procesamiento import tracking_imagen
+
+tabla_tracking = tracking_imagen(df, peso_col=None, window=3)
+print(tabla_tracking.head())
+
+
+    #CROSSTABLES Simples
+from procesamiento import plot_imagen_por_rango
+tabla_cruce = plot_imagen_por_rango(df)
+print(tabla_cruce) 
 
