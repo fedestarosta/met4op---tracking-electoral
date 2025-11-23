@@ -50,8 +50,7 @@ def generar_faker_encuestas(n_registros=500):
         "Santa Cruz",
         "Santa Fe",
         "Santiago del Estero",
-        "Tierra del Fuego",
-        "Antártida e Islas del Atlántico Sur",
+        "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
     ]
 
     # --- Sexo ---
