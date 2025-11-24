@@ -72,6 +72,6 @@ print(tabla_cruce)
         #Comparación entre voto pasado y actual (lealtad y cambio)
         #Evolución temporal de la intención de voto (tracking poll)
         #regresión logística
-
-
+        #matriz de transferencia de voto, segmentada por imagen
+        #Mapa geográfico de imagen + correlación con voto (GeoPandas)
 
