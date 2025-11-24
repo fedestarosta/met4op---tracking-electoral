@@ -48,6 +48,7 @@ df = limpiar_voto(df)
 df = limpiar_voto_anterior(df)
 df = limpiar_estrato(df)
 df = limpiar_imagen(df)
+
 # 5. RESUMEN INICIAL DE PRUEBA (TABLA / TORTA SEXO / MEDIA IMAGEN)
 
 resumen_tracking(df)
@@ -66,4 +67,11 @@ print(tabla_tracking.head())
 from procesamiento import plot_imagen_por_rango
 tabla_cruce = plot_imagen_por_rango(df)
 print(tabla_cruce) 
+
+    #Posibilidades a ejecutar
+        #Comparación entre voto pasado y actual (lealtad y cambio)
+        #Evolución temporal de la intención de voto (tracking poll)
+        #regresión logística
+
+
 

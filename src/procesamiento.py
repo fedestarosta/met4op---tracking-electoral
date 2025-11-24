@@ -101,16 +101,40 @@ def crear_rango_etario(df):
 
 # 3.6 VOTO ANTERIOR
 def limpiar_voto_anterior(df):
-    validos = [
-        "candidato_a",
-        "candidato_b",
-        "no fue a votar",
-        "blanco",
-        "nulo",
-        "ns/nc"
-    ]
-    df["voto_anterior"] = df["voto_anterior"].astype(str).str.strip().str.lower()
-    df = df[df["voto_anterior"].isin(validos)]
+
+    # Normalización básica
+    df["voto_anterior"] = (
+        df["voto_anterior"]
+        .astype(str)
+        .str.strip()
+        .str.lower()
+    )
+
+    # Categorías fijas que estan siempre
+    reemplazos_fijos = {
+        "blanco": "Blanco",
+        "nulo": "Nulo",
+        "ns/nc": "Ns/Nc",
+        "no sabe": "Ns/Nc",
+        "no contesta": "Ns/Nc",
+        "no fue a votar": "No Fue A Votar",
+        "no fue": "No Fue A Votar"
+    }
+
+    # Reemplazar categorías fijas y equivalentes
+    df["voto_anterior"] = df["voto_anterior"].replace(reemplazos_fijos)
+
+    # Set de categorías fijas ya normalizadas
+    categorias_fijas = set(reemplazos_fijos.values())
+
+    # Normalizar candidatos no fijos
+    def normalizar_candidato_anterior(v):
+        if v in categorias_fijas:
+            return v
+        return v.title()
+
+    df["voto_anterior"] = df["voto_anterior"].apply(normalizar_candidato_anterior)
+
     return df
 
 
@@ -123,10 +147,33 @@ def limpiar_integrantes_hogar(df):
 
 # 3.8 VOTO
 def limpiar_voto(df):
-    validos = ["candidato_a", "candidato_b", "blanco", "nulo", "ns/nc"]
+    # Normalización básica
     df["voto"] = df["voto"].astype(str).str.strip().str.lower()
-    df = df[df["voto"].isin(validos)]
+
+    # Categorías fijas que siempre existen
+    reemplazos_fijos = {
+        "blanco": "Blanco",
+        "nulo": "Nulo",
+        "ns/nc": "Ns/Nc",
+        "no sabe": "Ns/Nc",
+        "no contesta": "Ns/Nc"
+    }
+
+    # Reemplazar lo fijo
+    df["voto"] = df["voto"].replace(reemplazos_fijos)
+
+    # Candidatos: todo lo que no sea fijo, lo pasamos a formato Nombre Propio
+    categorias_fijas = set(reemplazos_fijos.values())
+
+    def normalizar_candidato(v):
+        if v in categorias_fijas:
+            return v
+        return v.title()      
+
+    df["voto"] = df["voto"].apply(normalizar_candidato)
+
     return df
+
 
 
 def limpiar_imagen(df):
@@ -209,8 +256,7 @@ def limpiar_estrato(df):
         "santa cruz",
         "santa fe",
         "santiago del estero",
-        "tierra del fuego",
-        "antártida e islas del atlántico sur",
+        "tierra del fuego, antartida e islas del atlántico sur",
     }
 
     df["estrato"] = df["estrato"].apply(
@@ -218,7 +264,7 @@ def limpiar_estrato(df):
     )
 
     return df
-# 4. TRATAMIENTO DE NaN
+# TRATAMIENTO DE NaN
 def interpretar_nan(df):
 
     # A) Variables criticas - eliminar fila 
@@ -244,41 +290,111 @@ def interpretar_nan(df):
     
     return df
 
-# 5. IMAGEN PROMEDIO (MEDIA SIMPLE O PONDERADA)
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+#INCORPORACION DE PESOS
+def peso_col
 
+df["peso"]
+
+#TRATAMIENTO DE VARIABLES CLAVE
+#IMAGEN CANDIDATO PROCESAMIENTO
 def tracking_imagen(df, peso_col=None, window=3):
-    #Tracking final de imagen del candidato.
-        # Calcula imagen diaria (ponderada o simple)
-        # Aplica rolling window
-        # Grafica ambas con seaborn
-    
-    # 1. Ponderación
-    if peso_col is None or peso_col not in df.columns:
-        df["peso_temp"] = 1
-        peso_col = "peso_temp"
+   # Tracking final de imagen del candidato.
+        #- Media ponderada
+        #- Varianza ponderada
+        #- SD ponderada
+        #- Error estándar
+        #- Intervalo de confianza 95%
+        #- Rolling window
+        #- Gráfico
 
-    # 2. Imagen diaria (media ponderada)
+    # 1. Validación de pesos
+    if peso_col is None or peso_col not in df.columns:
+        print("Advertencia: No se detectó columna de pesos. Se asumirá peso = 1.")
+        df["peso"] = 1
+        peso_col = "peso"
+
+    # 2. Estadísticos diarios
+    def stats_diarios(g):
+        w = g[peso_col]
+        x = g["imagen_candidato"]
+
+        # Media ponderada
+        mean = (x * w).sum() / w.sum()
+
+        # Varianza ponderada
+        var = (w * (x - mean)**2).sum() / w.sum()
+
+        # SD ponderada
+        sd = np.sqrt(var)
+
+        # n casos
+        n = len(g)
+
+        # Error estándar
+        se = sd / np.sqrt(n) if n > 1 else np.nan
+
+        # Intervalo de confianza del 95%
+        ic_inf = mean - 1.96 * se if n > 1 else np.nan
+        ic_sup = mean + 1.96 * se if n > 1 else np.nan
+
+        # Recorte por escala 0–100
+        if n > 1:
+            ic_inf = max(0, ic_inf)
+            ic_sup = min(100, ic_sup)
+
+        return pd.Series({
+            "imagen_diaria": mean,
+            "sd_diaria": sd,
+            "n_casos": n,
+            "se_diaria": se,
+            "ic_inf": ic_inf,
+            "ic_sup": ic_sup
+        })
+
+    # Aplicación
     diaria = (
         df.groupby("fecha")
-          .apply(lambda g: (g["imagen_candidato"] * g[peso_col]).sum() / g[peso_col].sum())
-          .reset_index(name="imagen_diaria")
+          .apply(stats_diarios)
+          .reset_index()
+          .sort_values("fecha")
     )
 
-    # Remover peso temporal si existiera - CORREGIR POST AGREGADO DE PESOS
-    if "peso_temp" in df.columns:
-        df.drop(columns=["peso_temp"], inplace=True)
-
     # 3. Rolling window
-    diaria = diaria.sort_values("fecha")
-    diaria["imagen_rolling"] = diaria["imagen_diaria"].rolling(window, min_periods=1).mean()
+    diaria["imagen_rolling"] = diaria["imagen_diaria"].rolling(
+        window,
+        min_periods=1
+    ).mean()
 
-    # 4. Grafico
+    # 4. Gráfico
     plt.figure(figsize=(12, 6))
-    sns.lineplot(data=diaria, x="fecha", y="imagen_diaria", label="Imagen diaria", alpha=0.4)
-    sns.lineplot(data=diaria, x="fecha", y="imagen_rolling", label=f"Rolling {window} días", linewidth=2)
+
+    # Banda del IC 95%
+    plt.fill_between(
+        diaria["fecha"],
+        diaria["ic_inf"],
+        diaria["ic_sup"],
+        alpha=0.2,
+        color="lightblue",
+        label="IC 95% (diario)"
+    )
+
+    # Línea imagen diaria
+    sns.lineplot(
+        data=diaria,
+        x="fecha",
+        y="imagen_diaria",
+        label="Imagen diaria",
+        alpha=0.4
+    )
+
+    # Línea rolling window
+    sns.lineplot(
+        data=diaria,
+        x="fecha",
+        y="imagen_rolling",
+        label=f"Rolling {window} días",
+        linewidth=2
+    )
 
     plt.title("Tracking de Imagen del Candidato")
     plt.xlabel("Fecha")
@@ -289,15 +405,20 @@ def tracking_imagen(df, peso_col=None, window=3):
 
     return diaria
 
+#INTENCION DE VOTO
+    #Posibilidades de analisis
+        #1) Matriz de Transferencia (voto anterior × voto actual)
+        #2) Voto según niveles de imagen (curva de conversión)
+        #3) Tracking de intención de voto con rolling
+        #4) Perfil de votante potencial (imagen × voto)
+
 
 
 
 print ("no hay error hasta aca")
 
-#PRUEBAS - IMPORTANTE BORRAR
-
-# RESUMEN AUTOMÁTICO DEL TRACKING
-
+#PRUEBAS - IMPORTANTE BORRAR CORREGIR
+#RESUMEN AUTOMÁTICO DEL TRACKING
 def resumen_tracking(df):
     """
     Devuelve:
@@ -321,8 +442,6 @@ def resumen_tracking(df):
         plt.show()
     else:
         print("\n[ADVERTENCIA] La columna 'sexo' no está en el DataFrame.")
-    
-
 #PRUEBA CROSSTAB IMAGEN Y EDAD
 import pandas as pd
 import matplotlib.pyplot as plt
