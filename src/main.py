@@ -94,8 +94,9 @@ fig_voto.savefig(ruta_guardado)
 plt.close(fig_voto) # Cierra la figura para liberar memoria
 
 #Heatmap transferencia de voto
-from procesamiento import heatmap_transferencia
+from procesamiento import heatmap_transferencia 
 
+# La función debe ser llamada con sus argumentos
 tabla_transf, fig_transf = heatmap_transferencia(df, peso_col="peso")
 
     #Guardado de heatmap
@@ -105,10 +106,12 @@ plt.close(fig_transf)
 
 
 #REGRESION LINEAL
-from procesamiento import regresion_imagen_voto
-tabla_reg, fig_reg = regresion_imagen_voto(df)
+from procesamiento import regresion_imagen_edad
+tabla_reg_edad, fig_reg_edad = regresion_imagen_edad(df)
 
     #Guardado de regresion
-ruta_guardado_reg = os.path.join(output_dir, "regresion_imagen_voto.png")
-fig_reg.savefig(ruta_guardado_reg)
-plt.close(fig_reg)
+ruta_guardado_reg = os.path.join(output_dir, "regresion_imagen_edad.png")
+tabla_reg_edad, fig_reg_edad.savefig(ruta_guardado_reg)
+plt.close(tabla_reg_edad, fig_reg_edad)
+
+

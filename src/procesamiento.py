@@ -318,12 +318,11 @@ def interpretar_nan(df):
     
     return df
 
-#INCORPORACION DE PESOS 
+#INCORPORACION DE PESOS - Ponderacion
 def peso_col(df, df_poblacion):
-    """
-    Aplica Raking (Iterative Proportional Fitting) de forma manual con Pandas.
-    Asegura la creación de la columna 'peso' con valor 1.0 como fallback si el Raking falla.
-    """
+    
+    #Aplica Raking (Iterative Proportional Fitting) de forma manual con Pandas.
+    #Asegura la creación de la columna 'peso' con valor 1.0 como fallback si el Raking falla.
     
     # 1. Inicialización
     df.columns = df.columns.str.lower()  # Normalizar nombres a minúsculas
@@ -632,30 +631,38 @@ def plot_imagen_por_rango(df):
 
     return tabla, fig
 
-# REGRESIÓN LINEAL SIMPLE: Imagen vs Intención de voto
-
-def regresion_imagen_voto(df):
-
-    # Regresión lineal simple entre imagen del candidato e intención de voto.
-
-    # 1. Crear variable binaria: vota A (1) vs no vota A (0)
+# REGRESIÓN LINEAL SIMPLE: Imagen vs edad
+def regresion_imagen_edad(df):
+    
+    #Regresión Lineal Simple Ponderada
+    
+    # Crear variable binaria: vota A (1) vs no vota A (0)
     df = df.copy()
     df["voto_A"] = (df["voto"] == "Candidato_A").astype(int)
 
-    # 2. Variables X e Y
-    x = df["imagen_candidato"]
+    # 2. Variables X (Edad) e Y (Voto A)
+    x = df["edad"]
     y = df["voto_A"]
+    
+    # Obtener pesos (si existen)
+    weights = df[peso_col] if peso_col and peso_col in df.columns else None
 
     # 3. Cálculo de correlación de Pearson
     pearson = x.corr(y)
-    print("CORRELACIÓN IMAGEN ↔ VOTO A")
+    print("CORRELACIÓN EDAD ↔ VOTO A")
     print(f"Coef. Pearson: {pearson:.4f}")
 
     # 4. Ajuste del modelo OLS
     X = sm.add_constant(x)        # agrega intercepto
-    modelo = sm.OLS(y, X).fit()
+    
+    # Aplicar pesos al modelo OLS
+    if weights is not None:
+         modelo = sm.OLS(y, X, weights=weights).fit()
+    else:
+         modelo = sm.OLS(y, X).fit()
 
-    print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Imagen)")
+
+    print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Edad)")
     print(modelo.summary())
 
     # 5. Generar recta de regresión
@@ -663,17 +670,47 @@ def regresion_imagen_voto(df):
     x_vals = np.linspace(x.min(), x.max(), 100)
     y_vals = intercepto + pendiente * x_vals
 
-    # 6. Gráfico
-    fig = plt.figure(figsize=(10,6))
-    sns.scatterplot(x=x, y=y, alpha=0.4, color="gray", label="Datos observados")
-    plt.plot(x_vals, y_vals, color="blue", linewidth=2,
+    # 6. Gráfico - FIX para el TypeError y uso de pesos
+    fig, ax = plt.subplots(figsize=(10,6)) # Crear figura y ejes
+    
+    if weights is not None:
+         # Plot scatterplot usando pesos para el tamaño. 
+         # Se usa legend=False para evitar el TypeError y luego se añade manualmente.
+         sns.scatterplot(
+             x=x, 
+             y=y, 
+             size=weights, 
+             sizes=(20, 200), # Rango de tamaño de los marcadores
+             alpha=0.4, 
+             color="gray", 
+             ax=ax,
+             legend=False # Deshabilita la leyenda automática que causa el error
+         )
+         
+         # Añadir una entrada de leyenda manual para los puntos
+         ax.scatter([], [], s=100, alpha=0.4, color="gray", label="Datos observados (Ponderado)")
+    else:
+         # Si no hay pesos, simple scatterplot
+         sns.scatterplot(
+             x=x, 
+             y=y, 
+             alpha=0.4, 
+             color="gray", 
+             label="Datos observados (No Ponderado)", 
+             ax=ax
+         )
+
+    # Plotear la recta de regresión
+    ax.plot(x_vals, y_vals, color="blue", linewidth=2,
              label=f"Recta de regresión\npendiente={pendiente:.3f}")
 
-    plt.title("Relación entre Imagen del Candidato e Intención de Voto (Candidato A)")
-    plt.xlabel("Imagen del candidato (0–100)")
-    plt.ylabel("Probabilidad de votar A (0-1)")
-    plt.grid(alpha=0.3)
-    plt.legend()
+    ax.set_title("Relación entre Edad del Votante e Intención de Voto (Candidato A)")
+    ax.set_xlabel("Edad del votante (años)")
+    ax.set_ylabel("Probabilidad de votar A (0-1)")
+    ax.grid(alpha=0.3)
+    ax.legend() # Genera la leyenda con las entradas manuales
     plt.tight_layout()
+    # plt.show()
 
     return modelo, fig
+    

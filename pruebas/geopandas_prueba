@@ -1,0 +1,88 @@
+#Mapas
+# MAPA DE IMAGEN POR PROVINCIA
+from procesamiento import mapa_imagen_provincia
+
+# [NOTA: Cambia la ruta por la ubicación real de tu archivo]
+SHP_PATH = "data/provincias.geojson" 
+
+# Llamamos a la función y capturamos la tabla/datos Y la figura
+tabla_mapa, fig_mapa = mapa_imagen_provincia(df, shapefile_path=SHP_PATH, peso_col="peso") 
+
+print("\n[OUTPUT] Imagen por Provincia:")
+print(tabla_mapa[['nombre', 'imagen_promedio']].head())
+
+# Guardado del Mapa
+ruta_guardado_mapa = os.path.join(output_dir, "mapa_imagen_provincia.png")
+fig_mapa.savefig(ruta_guardado_mapa)
+plt.close(fig_mapa)
+
+
+
+
+ # PRUEBA - MAPA DE IMAGEN POR PROVINCIA (GEO)  
+import geopandas as gpd
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def mapa_imagen_provincia(df, shapefile_path, peso_col=None, rango_etario=None):
+    # 1. Copia para no tocar DF original
+    data = df.copy()
+     # 2. Filtro por rango etario
+    if rango_etario is not None:
+        data = data[data["rango_etario"] == rango_etario]
+    # 3. Normalizar nombres de provincias para merge
+    data["estrato"] = (
+        data["estrato"]
+        .str.normalize("NFKD")
+        .str.replace("[^a-zA-Z0-9 ]", "", regex=True)
+        .str.lower()
+    )
+    # 4. Imagen ponderada por provincia
+    resumen = (
+        data.groupby("estrato")
+            .apply(lambda g: (g["imagen_candidato"] * g[peso_col]).sum() / g[peso_col].sum())
+            .reset_index(name="imagen_promedio")
+    )
+     # 5. Cargar shapefile
+    mapa = gpd.read_file(shapefile_path)
+
+        #normalizar provincias del shapefile también
+    mapa["nombre"] = (
+        mapa["nombre"]
+        .str.normalize("NFKD")
+        .str.replace("[^a-zA-Z0-9 ]", "", regex=True)
+        .str.lower()
+    )
+     # 6. Merge
+    mapa = mapa.merge(resumen, left_on="nombre", right_on="estrato", how="left")
+
+    # 7. Graficar
+    fig = plt.figure(figsize=(10,10))
+    mapa.plot(
+            column="imagen_promedio",
+            cmap="Blues",
+            legend=True,
+            edgecolor="black",
+            linewidth=0.7,
+            missing_kwds={
+                "color": "lightgrey",
+                "edgecolor": "black",
+                "hatch": "////",
+                "label": "Sin datos"
+            }
+        )
+
+    titulo = "Imagen promedio del candidato por provincia"
+    if rango_etario:
+        titulo += f"\n(Rango etario: {rango_etario})"
+
+    plt.title(titulo, fontsize=14)
+    plt.axis("off")
+    plt.tight_layout()
+    plt.show()
+
+    # Limpieza
+    if "peso_temp" in data.columns:
+            data.drop(columns=["peso_temp"], inplace=True)
+
+    return mapa, fig
