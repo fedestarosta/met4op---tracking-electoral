@@ -66,12 +66,13 @@ def generar_faker_encuestas(n_registros=500):
     ]
 
     # --- Voto intención ---
-    votos = ["Candidato_A", "Candidato_B", "Blanco", "Nulo", "Ns/Nc"]
+    votos = ["Candidato_A", "Candidato_B","candidato c", "Blanco", "Nulo", "Ns/Nc"]
 
     # --- Voto anterior ---
     votos_anteriores = [
         "Candidato_A",
         "Candidato_B",
+        "candidato d"
         "No Fue A Votar",
         "Blanco",
         "Nulo",

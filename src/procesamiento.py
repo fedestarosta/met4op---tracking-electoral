@@ -128,13 +128,10 @@ def limpiar_voto_anterior(df):
     categorias_fijas = set(reemplazos_fijos.values())
 
     # Normalizar candidatos no fijos
-    def normalizar_candidato_anterior(v):
-        if v in categorias_fijas:
-            return v
-        return v.title()
-
-    df["voto_anterior"] = df["voto_anterior"].apply(normalizar_candidato_anterior)
-
+    df["voto_anterior"] = df["voto_anterior"].where(
+        df["voto_anterior"].isin(categorias_fijas),
+        df["voto_anterior"].str.title()
+    )
     return df
 
 
@@ -165,12 +162,10 @@ def limpiar_voto(df):
     # Candidatos: todo lo que no sea fijo, lo pasamos a formato Nombre Propio
     categorias_fijas = set(reemplazos_fijos.values())
 
-    def normalizar_candidato(v):
-        if v in categorias_fijas:
-            return v
-        return v.title()      
-
-    df["voto"] = df["voto"].apply(normalizar_candidato)
+    df["voto"] = df["voto"].where(
+        df["voto"].isin(categorias_fijas),
+        df["voto"].str.title()
+    )
 
     return df
 
@@ -216,10 +211,20 @@ def limpiar_nivel_educativo(df):
         "universitario incompleto",
         "ns/nc"
     }
-
-    df["nivel_educativo"] = df["nivel_educativo"].apply(
-        lambda x: x if x in categorias_validas else "Missing"
+    # Reemplazos frecuentes
+    reemplazos = {
+        "no sabe": "ns/nc",
+        "no contesta": "ns/nc",
+        }
+    # Aplicar reemplazos básicos
+    df["nivel_educativo"] = df["nivel_educativo"].replace(reemplazos)
+    # Convertir a formato estandarizado: nombre propio
+    df["nivel_educativo"] = df["nivel_educativo"].where(
+        df["nivel_educativo"].isin(categorias_validas),
+        "Missing"
     )
+    # igualar formato por las dudas
+    df["nivel_educativo"] = df["nivel_educativo"].str.title()
 
     return df
 
@@ -258,10 +263,21 @@ def limpiar_estrato(df):
         "santiago del estero",
         "tierra del fuego, antartida e islas del atlántico sur",
     }
+    #reemplazos por las dudas
+    reemplazos = {
+        "caba": "ciudad autónoma de buenos aires",
+        "capital federal": "ciudad autónoma de buenos aires",
+        "tierra del fuego": "tierra del fuego, antártida e islas del atlántico sur",
+        "tdf": "tierra del fuego, antártida e islas del atlántico sur"
+        }
+    df["estrato"] = df["estrato"].replace(reemplazos)
 
-    df["estrato"] = df["estrato"].apply(
-        lambda x: x if x in provincias_validas else "Missing"
-    )
+    #normalizar
+    df["estrato"] = df["estrato"].where()
+    df["estrato"].isin(provincias_validas),
+    "Missing"
+    #Consistencia en los titulos
+    df["estrato"] = df["estrato"].str.title()
 
     return df
 # TRATAMIENTO DE NaN
@@ -291,11 +307,13 @@ def interpretar_nan(df):
     return df
 
 #INCORPORACION DE PESOS
-def peso_col
+def peso_col (df):
+peso_col=1
 
 df["peso"]
 
 #TRATAMIENTO DE VARIABLES CLAVE
+
 #IMAGEN CANDIDATO PROCESAMIENTO
 def tracking_imagen(df, peso_col=None, window=3):
    # Tracking final de imagen del candidato.
@@ -406,6 +424,59 @@ def tracking_imagen(df, peso_col=None, window=3):
     return diaria
 
 #INTENCION DE VOTO
+def tracking_voto(df, peso_col):
+#Tracking simple de intencion de voto
+    #ponderado por fecha.
+    #Incluye umbral mínimo de casos ponderados por fecha.
+    
+    # Suma de pesos por voto y fecha
+    if peso_col is None or peso_col not in df.columns:
+        print("Advertencia: No se detectó columna de pesos. Se asumirá peso = 1.")
+        df["peso"] = 1
+        peso_col = "peso"
+        
+    diario = (
+        df.groupby(["fecha", "voto"])[peso_col]
+          .sum()
+          .reset_index(name="peso_sumado")
+    )
+        
+
+    # Total de pesos por fecha (casos efectivos)
+    total_por_fecha = diario.groupby("fecha")["peso_sumado"].transform("sum")
+
+    diario["total_fecha"] = total_por_fecha
+
+    # Proporción ponderada
+    diario["porcentaje"] = diario["peso_sumado"] / diario["total_fecha"]
+
+    # Filtrar fechas que NO cumplen con el mínimo de casos
+    diario_filtrado = diario[diario["total_fecha"] >= umbral_minimo].copy()
+
+    return voto_diario_filtrado
+
+    #Grafico
+    
+    plt.figure(figsize=(12, 6))
+
+    sns.lineplot(
+        data=tabla_voto,
+        x="fecha",
+        y="porcentaje",
+        hue="voto",
+        linewidth=2,
+        marker="o"
+    )
+
+    plt.title("Tracking de Intención de Voto")
+    plt.xlabel("Fecha")
+    plt.ylabel("Porcentaje ponderado")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+
+    plt.show()
+
+
     #Posibilidades de analisis
         #1) Matriz de Transferencia (voto anterior × voto actual)
         #2) Voto según niveles de imagen (curva de conversión)
@@ -415,10 +486,13 @@ def tracking_imagen(df, peso_col=None, window=3):
 
 
 
+
 print ("no hay error hasta aca")
 
+
 #PRUEBAS - IMPORTANTE BORRAR CORREGIR
-#RESUMEN AUTOMÁTICO DEL TRACKING
+    
+    #RESUMEN AUTOMÁTICO DEL TRACKING
 def resumen_tracking(df):
     """
     Devuelve:
@@ -442,6 +516,7 @@ def resumen_tracking(df):
         plt.show()
     else:
         print("\n[ADVERTENCIA] La columna 'sexo' no está en el DataFrame.")
+
 #PRUEBA CROSSTAB IMAGEN Y EDAD
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -480,4 +555,3 @@ def plot_imagen_por_rango(df):
     plt.show()
 
     return tabla
-

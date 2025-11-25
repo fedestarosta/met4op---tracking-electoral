@@ -62,6 +62,17 @@ from procesamiento import tracking_imagen
 tabla_tracking = tracking_imagen(df, peso_col=None, window=3)
 print(tabla_tracking.head())
 
+#Trackeo de voto
+from procesamiento import tracking_voto
+
+tabla_voto = tracking_voto(df, peso_col="peso", umbral_minimo=150) #cambiar umbral segun sea conveniente
+print(tabla_voto.head())
+
+    #Grafico
+from procesamiento import grafico_tracking_voto
+grafico_tracking_voto(tabla_voto)
+
+
 
     #CROSSTABLES Simples
 from procesamiento import plot_imagen_por_rango
