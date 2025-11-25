@@ -1,0 +1,26 @@
+# Carga parametros poblacionales
+df_poblacion = pd.read_csv('src/PesosPoblacion - Hoja1.csv')
+
+def peso_col(df, df_poblacion):
+    df['Peso_Inicial'] = 1
+
+df['Parametro_Cruce'] = (
+    df['Estrato'].astype(str) + '_' + 
+    df['Sexo'].astype(str) + '_' + 
+    df['Edad'].astype(str)
+    )
+pesos_ajustados = raking(
+    data=df,
+    target=df_poblacion,
+    col_weight='Peso_Inicial',
+    col_variable='variable',
+    col_value='valor',
+    col_proportion='proporcion
+)
+df['peso'] = pesos_ajustados
+
+return df
+
+df_ponderado = peso_col(df, df_poblacion)
+
+Print("La muestra ponderada esta lista en df_ponderado")
