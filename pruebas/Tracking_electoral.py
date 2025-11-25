@@ -16,11 +16,11 @@ from faker import Faker
 import pandas as pd
 from random import randint, choice
 from datetime import datetime, timedelta
+from balance import raking
 
 fake = Faker("es_AR")
 
 #%%
-import pandas as pd
 from random import randint, choice
 from datetime import datetime, timedelta
 
