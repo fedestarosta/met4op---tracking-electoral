@@ -102,16 +102,15 @@ tabla_transf, fig_transf = heatmap_transferencia(df, peso_col="peso")
     #Guardado de heatmap
 ruta_guardado_heatmap = os.path.join(output_dir, "heatmap_transferencia.png")
 fig_transf.savefig(ruta_guardado_heatmap)
+print(tabla_transf)
 plt.close(fig_transf)
-
 
 #REGRESION LINEAL
 from procesamiento import regresion_imagen_edad
-tabla_reg_edad, fig_reg_edad = regresion_imagen_edad(df)
+tabla_reg_edad, fig_reg_edad = regresion_imagen_edad(df, peso_col="peso")
+print(tabla_reg_edad.summary())
 
     #Guardado de regresion
 ruta_guardado_reg = os.path.join(output_dir, "regresion_imagen_edad.png")
 tabla_reg_edad, fig_reg_edad.savefig(ruta_guardado_reg)
-plt.close(tabla_reg_edad, fig_reg_edad)
-
-
+plt.close(fig_reg_edad)

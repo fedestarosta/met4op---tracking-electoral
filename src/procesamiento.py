@@ -317,7 +317,7 @@ def interpretar_nan(df):
     # edad, integrantes_hogar quedan intactas
     
     return df
-
+#%%
 #INCORPORACION DE PESOS - Ponderacion
 df_poblacion = pd.read_csv("data/pesos_fuente_censo2022.csv", decimal='.')
 def peso_col(df, df_poblacion):
@@ -389,7 +389,7 @@ def peso_col(df, df_poblacion):
         pass
 
     return df
-
+#%%
 #TRATAMIENTO DE VARIABLES CLAVE
 
 #DESCRIPTIVOS DE IMAGEN
@@ -615,7 +615,7 @@ def plot_imagen_por_rango(df):
         df["rango_etario"],
         columns="Imagen Promedio",
         values=df["imagen_candidato"],
-        aggfunc="mean"
+        aggfunc="np.average"
     )
 
     # Plot
@@ -633,7 +633,7 @@ def plot_imagen_por_rango(df):
     return tabla, fig
 
 # REGRESIÓN LINEAL SIMPLE: Imagen vs edad
-def regresion_imagen_edad(df):
+def regresion_imagen_edad(df, peso_col=None):
     
     #Regresión Lineal Simple Ponderada
     
