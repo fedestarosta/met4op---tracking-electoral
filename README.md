@@ -16,13 +16,7 @@ El proyecto está hecho en Python. Las librerías clave que usamos para procesar
 * pandas y numpy: Para manejar las tablas de datos.
 * balance: Para hacer el ajuste de la muestra (Raking).
 * scipy: Para los tests estadísticos.
-* matplotlib y seaborn: Para hacer los gráficos.
-
-### Instalación rápida
-
-Para instalar todo lo necesario, corre este comando en la terminal:
-
-pip install -r requirements.txt
+* geopandas, matplotlib y seaborn: Para hacer los gráficos.
 
 ## Cómo funciona
 

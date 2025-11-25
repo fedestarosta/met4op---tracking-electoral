@@ -6,6 +6,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import balance as bal
 import scipy.stats as stats
+import seaborn as sns
 
 #Centralizamos las funciones de procesamiento aca
 def cargar_datos(file_paths):
@@ -183,9 +184,7 @@ def limpiar_voto(df):
     )
 
     return df
-
-
-
+# 3.9 IMAGEN
 def limpiar_imagen(df):
     # Normalización mínima
     df["imagen_candidato"] = (
@@ -246,7 +245,6 @@ def limpiar_nivel_educativo(df):
 
 # 3.11 ESTRATO (provincias)
 def limpiar_estrato(df):
-  def limpiar_estrato(df):
     # 1. Normalización inicial a minúsculas para limpieza
     df["estrato"] = df["estrato"].astype(str).str.strip().str.lower()
 
@@ -260,7 +258,7 @@ def limpiar_estrato(df):
     df["estrato"] = df["estrato"].replace(reemplazos)
 
     # 3. Diccionario de Mapeo FINAL (De minúscula -> Formato EXACTO del CSV de Pesos)
-    # Esto garantiza que coincida con tu archivo "Pesos- fuente censo 2022 .csv"
+    # Esto garantiza que coincida con tu archivo "data/pesos_fuente_censo2022.csv"
     mapeo_exacto = {
         "buenos aires": "Buenos Aires",
         "catamarca": "Catamarca",
@@ -320,64 +318,81 @@ def interpretar_nan(df):
     return df
 
 #INCORPORACION DE PESOS 
-# INCORPORACION DE PESOS (raking)
-from balance import Sample
-
-# Carga de parámetros poblacionales
-df_poblacion = pd.read_csv("data/pesos_fuente_censo2022.csv", decimal='.')
-
 def peso_col(df, df_poblacion):
+    """
+    Aplica Raking (Iterative Proportional Fitting) de forma manual con Pandas.
+    Asegura la creación de la columna 'peso' con valor 1.0 como fallback si el Raking falla.
+    """
     
-    #Aplica raking usando balance (Meta, 2023).
-    #Ajusta pesos en base a sexo, estrato y rango_etario.
+    # 1. Inicialización
+    df.columns = df.columns.str.lower()  # Normalizar nombres a minúsculas
+    df['peso'] = 1.0                     # Inicializar la columna de peso en 1.0 (este es el peso de fallback)
     
-
-    # 1. Preparamos la Muestra
-    df.columns = df.columns.str.lower()  # consistencia en nombres
-    df['peso_inicial'] = 1.0             # peso inicial uniforme
-    df['id'] = df.index                  # columna identificadora requerida
-
-    muestra = Sample.from_frame(
-        df,
-        weight_column='peso_inicial',
-        id_column='id'
-    )
-
-    # 2. Preparamos el Target
-    target = Sample.from_frame(
-        df_poblacion,
-        variable_column='variable',
-        value_column='valor',
-        proportion_column='proporcion',
-        format='long_proportions'
-    )
-
-    # 3. Establecemos target
-    muestra_con_target = muestra.set_target(target)
-
-    # 4. Aplicamos raking
-    variables_raking = df_poblacion['variable'].unique().tolist()
-
-    try:
-        muestra_ajustada = muestra_con_target.adjust(
-            method='Raking',
-            variables=variables_raking,
-            max_iteration=500,
-            convergence_rate=1e-5,
-            na_action='add_indicator'
-        )
-    except Exception as e:
-        print(f"Error en el ajuste por Raking: {e}")
-        df['peso'] = df['peso_inicial']
+    # Identificar las variables de raking disponibles en el archivo de población
+    variables_a_ajustar = df_poblacion['variable'].unique()
+    
+    # Filtrar solo las variables que existen en el DataFrame (df)
+    variables_validas = [v for v in variables_a_ajustar if v in df.columns]
+    
+    if not variables_validas:
+        print("Advertencia: No se encontraron variables de cruce válidas. Se retornan pesos = 1.")
         return df
 
-    # 5. Incorporamos pesos al DataFrame original
-    df['peso'] = muestra_ajustada.df['weight']
+    print(f"Iniciando Raking manual sobre: {variables_validas}")
+    
+    # Guardamos el total de casos para mantener el peso total de la muestra constante
+    total_muestra = len(df)
+    
+    # 2. Bloque TRY/EXCEPT para el Raking Iterativo
+    try:
+        # Ciclo Iterativo (IPF): 50 iteraciones para asegurar convergencia
+        for i in range(50):
+            
+            for var in variables_validas:
+                
+                # a) Obtener el Target para esta variable
+                datos_target = df_poblacion[df_poblacion['variable'] == var]
+                target_props = dict(zip(datos_target['valor'], datos_target['proporcion']))
+                
+                # b) Calcular la distribución actual de la muestra (suma de pesos)
+                peso_por_cat = df.groupby(var, observed=True)['peso'].sum()
+                total_peso_actual = peso_por_cat.sum()
+                current_props = peso_por_cat / total_peso_actual
+                
+                # c) Calcular Factores de Ajuste
+                factores = {}
+                for cat in current_props.index:
+                    if cat in target_props and current_props[cat] > 0:
+                        factores[cat] = target_props[cat] / current_props[cat]
+                    else:
+                        # Categoría sin objetivo o con 0 casos, no se ajusta (factor = 1.0)
+                        factores[cat] = 1.0
+                
+                # d) Aplicar el ajuste a los pesos (SOLUCIONES A CONFLICTOS DE TIPOS)
+                factores_ajuste = df[var].astype(str).map(factores).astype(float).fillna(1.0)
+                df['peso'] = df['peso'] * factores_ajuste
+            
+            # e) Re-normalización: Asegurar que la suma de pesos sea igual al total de casos original
+            suma_pesos_final = df['peso'].sum()
+            if suma_pesos_final > 0:
+                factor_correccion_total = total_muestra / suma_pesos_final
+                df['peso'] = df['peso'] * factor_correccion_total
+
+        print("Raking manual finalizado.")
+    
+    except Exception as e:
+        # Si ocurre cualquier error, el peso ya está en 1.0 y se imprime el error.
+        print(f"Error CRÍTICO durante el Raking Manual: {e}")
+        print("Se ha detenido el Raking. Se retornan pesos = 1.0.")
+        # No se necesita un 'else' porque la inicialización y el return ya lo manejan.
+        pass
 
     return df
 
-
 #TRATAMIENTO DE VARIABLES CLAVE
+
+#DESCRIPTIVOS DE IMAGEN
+#Incluye: moda, mediana, media, cuartiles, varianza, desvío estándar y CV.
 
 #IMAGEN CANDIDATO PROCESAMIENTO
 def tracking_imagen(df, peso_col=None, window=3):
@@ -432,7 +447,7 @@ def tracking_imagen(df, peso_col=None, window=3):
         # Aplicación
     diaria = (
          df.groupby("fecha")
-            .apply(stats_diarios)
+            .apply(stats_diarios, include_groups=False)
             .reset_index()
             .sort_values("fecha")
         )
@@ -444,7 +459,7 @@ def tracking_imagen(df, peso_col=None, window=3):
         ).mean()
 
     # 4. Gráfico
-    plt.figure(figsize=(12, 6))
+    fig = plt.figure(figsize=(12, 6))
 
     # Banda del IC 95%
     plt.fill_between(
@@ -481,10 +496,10 @@ def tracking_imagen(df, peso_col=None, window=3):
     plt.tight_layout()
     plt.show()
 
-    return diaria
+    return diaria,fig 
 
 #INTENCION DE VOTO
-def tracking_voto(df, peso_col):
+def tracking_voto(df, peso_col, umbral_minimo=0):
 #Tracking simple de intencion de voto
     #ponderado por fecha.
     #Incluye umbral mínimo de casos ponderados por fecha.
@@ -508,28 +523,34 @@ def tracking_voto(df, peso_col):
     # Filtrar fechas que NO cumplen con el mínimo de casos
     diario_filtrado = diario[diario["total_fecha"] >= umbral_minimo].copy()
 
-    return voto_diario_filtrado
+    return diario_filtrado
 
     #Grafico
-    
-    plt.figure(figsize=(12, 6))
+import seaborn as sns 
+import matplotlib.pyplot as plt
+def grafico_tracking_voto(tabla_voto):
+    #Genera el gráfico de líneas de tracking de intención de voto."""
 
-    sns.lineplot(
-        data=tabla_voto,
-        x="fecha",
-        y="porcentaje",
-        hue="voto",
-        linewidth=2,
-        marker="o"
-    )
+        fig = plt.figure(figsize=(12, 6))
 
-    plt.title("Tracking de Intención de Voto")
-    plt.xlabel("Fecha")
-    plt.ylabel("Porcentaje ponderado")
-    plt.grid(alpha=0.3)
-    plt.tight_layout()
+        sns.lineplot(
+            data=tabla_voto,
+            x="fecha",
+            y="porcentaje",
+            hue="voto",
+            linewidth=2,
+            marker="o"
+        )
 
-    plt.show()
+        plt.title("Tracking de Intención de Voto")
+        plt.xlabel("Fecha")
+        plt.ylabel("Porcentaje ponderado")
+        plt.grid(alpha=0.3)
+        plt.tight_layout()
+
+        plt.show()
+
+        return fig
 
 #TRANSFERENCIA DE VOTO
 def heatmap_transferencia(df, peso_col):
@@ -568,10 +589,11 @@ def heatmap_transferencia(df, peso_col):
     plt.tight_layout()
     plt.show()
 
-    return tabla_prop
+    return tabla_prop,
 
     print ("no hay error hasta aca")
-#PRUEBA CROSSTAB IMAGEN Y EDAD
+
+# CROSSTAB IMAGEN Y EDAD
 import pandas as pd
 import matplotlib.pyplot as plt
 from pandas.api.types import CategoricalDtype
@@ -610,3 +632,51 @@ def plot_imagen_por_rango(df):
 
     return tabla
 
+# REGRESIÓN LINEAL SIMPLE: Imagen vs Intención de voto
+
+def regresion_imagen_voto(df):
+
+    # Regresión lineal simple entre imagen del candidato e intención de voto.
+
+    # 1. Crear variable binaria: vota A (1) vs no vota A (0)
+    df = df.copy()
+    df["voto_A"] = (df["voto"] == "Candidato_A").astype(int)
+
+    # 2. Variables X e Y
+    x = df["imagen_candidato"]
+    y = df["voto_A"]
+
+    # 3. Cálculo de correlación de Pearson
+    pearson = x.corr(y)
+    print("CORRELACIÓN IMAGEN ↔ VOTO A")
+    print(f"Coef. Pearson: {pearson:.4f}")
+
+    # 4. Ajuste del modelo OLS
+    X = sm.add_constant(x)        # agrega intercepto
+    modelo = sm.OLS(y, X).fit()
+
+    print("\n---------------------------------------")
+    print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Imagen)")
+    print("---------------------------------------")
+    print(modelo.summary())
+
+    # 5. Generar recta de regresión
+    intercepto, pendiente = modelo.params
+    x_vals = np.linspace(x.min(), x.max(), 100)
+    y_vals = intercepto + pendiente * x_vals
+
+    # 6. Gráfico
+    fig = plt.figure(figsize=(10,6))
+    sns.scatterplot(x=x, y=y, alpha=0.4, color="gray", label="Datos observados")
+    plt.plot(x_vals, y_vals, color="blue", linewidth=2,
+             label=f"Recta de regresión\npendiente={pendiente:.3f}")
+
+    plt.title("Relación entre Imagen del Candidato e Intención de Voto (Candidato A)")
+    plt.xlabel("Imagen del candidato (0–100)")
+    plt.ylabel("Probabilidad de votar A (0-1)")
+    plt.grid(alpha=0.3)
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+    return modelo, fig
