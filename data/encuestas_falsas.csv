@@ -1,501 +1,501 @@
 fecha,encuesta_id,estrato,sexo,edad,nivel_educativo,integrantes_hogar,imagen_candidato,voto,voto_anterior
-2024-01-18,1,Misiones,Masculino,18,Primario completo,3,9,Candidato_B,Ns/Nc
-2024-01-08,2,La Rioja,Femenino,60,Universitario incompletoNs/Nc,4,15,Candidato_A,candidato dNo Fue A Votar
-2024-01-02,3,Mendoza,Femenino,43,Secundario incompletoTerciario completo,5,88,candidato c,Candidato_A
-2024-01-06,4,Chaco,Femenino,57,Primario incompletoSecundario completo,2,28,Candidato_B,Ns/Nc
-2024-01-09,5,Corrientes,Femenino,70,Primario incompletoSecundario completo,6,48,Ns/Nc,Blanco
-2024-02-01,6,Santiago del Estero,Masculino,59,Primario completo,5,85,Candidato_A,Candidato_B
-2024-01-05,7,Santa Fe,Masculino,48,Secundario incompletoTerciario completo,1,15,Blanco,Candidato_A
-2024-01-19,8,Ciudad Autónoma de Buenos Aires,Masculino,87,Primario incompletoSecundario completo,2,39,Candidato_A,Candidato_B
-2024-01-06,9,Catamarca,Masculino,48,Primario completo,6,74,Ns/Nc,Blanco
-2024-01-10,10,Chubut,Femenino,81,Universitario incompletoNs/Nc,4,98,Ns/Nc,Candidato_A
-2024-01-20,11,Jujuy,Masculino,90,Secundario incompletoTerciario completo,2,56,Blanco,Candidato_A
-2024-01-28,12,Buenos Aires,Femenino,41,Universitario incompletoNs/Nc,2,10,Candidato_A,Candidato_A
-2024-01-14,13,Catamarca,Femenino,53,Primario completo,1,53,candidato c,Candidato_B
-2024-01-09,14,Ciudad Autónoma de Buenos Aires,Masculino,29,Primario incompletoSecundario completo,6,0,Candidato_B,Candidato_A
-2024-01-19,15,La Pampa,Masculino,48,Primario completo,4,5,Candidato_A,Candidato_B
-2024-01-03,16,Jujuy,Masculino,21,Terciario incompletoUniversitario completo,6,16,Candidato_A,candidato dNo Fue A Votar
-2024-01-22,17,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,19,Primario completo,4,85,candidato c,candidato dNo Fue A Votar
-2024-01-28,18,Chubut,Femenino,85,Universitario incompletoNs/Nc,2,79,candidato c,Blanco
-2024-01-16,19,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,50,Universitario incompletoNs/Nc,6,47,candidato c,Candidato_A
-2024-01-29,20,Corrientes,Femenino,81,Secundario incompletoTerciario completo,6,72,Blanco,Candidato_B
-2024-01-05,21,Jujuy,Masculino,59,Primario incompletoSecundario completo,1,37,Candidato_B,Nulo
-2024-01-17,22,Ciudad Autónoma de Buenos Aires,Femenino,22,Primario incompletoSecundario completo,4,61,Candidato_A,Candidato_B
-2024-01-23,23,Formosa,Masculino,37,Secundario incompletoTerciario completo,1,94,Candidato_B,Nulo
-2024-01-01,24,Neuquén,Femenino,25,Primario incompletoSecundario completo,3,28,Blanco,candidato dNo Fue A Votar
-2024-01-23,25,Chubut,Masculino,46,Terciario incompletoUniversitario completo,4,21,Candidato_A,Nulo
-2024-01-27,26,San Luis,Masculino,66,Universitario incompletoNs/Nc,1,77,Candidato_B,Nulo
-2024-01-25,27,Corrientes,Femenino,81,Universitario incompletoNs/Nc,4,75,Blanco,Candidato_B
-2024-01-09,28,Buenos Aires,Masculino,22,Secundario incompletoTerciario completo,6,13,Nulo,Candidato_A
-2024-01-02,29,Neuquén,Femenino,78,Terciario incompletoUniversitario completo,1,35,candidato c,Blanco
-2024-01-18,30,Córdoba,Masculino,66,Primario completo,2,31,Blanco,Candidato_B
-2024-01-05,31,Chubut,Masculino,21,Primario incompletoSecundario completo,6,80,Nulo,Nulo
-2024-01-29,32,Corrientes,Femenino,90,Universitario incompletoNs/Nc,6,98,Candidato_A,Candidato_A
-2024-01-30,33,La Pampa,Femenino,27,Secundario incompletoTerciario completo,2,52,Blanco,Candidato_A
-2024-01-13,34,Buenos Aires,Femenino,21,Primario incompletoSecundario completo,5,2,Nulo,Candidato_B
-2024-01-19,35,Mendoza,Femenino,71,Primario completo,2,64,Nulo,Candidato_A
-2024-01-07,36,Río Negro,Femenino,22,Universitario incompletoNs/Nc,1,61,Nulo,Candidato_A
-2024-01-30,37,Corrientes,Femenino,53,Primario incompletoSecundario completo,3,0,Nulo,Nulo
-2024-01-20,38,Chaco,Masculino,68,Terciario incompletoUniversitario completo,3,87,Blanco,Blanco
-2024-01-04,39,San Juan,Masculino,89,Terciario incompletoUniversitario completo,3,13,Candidato_B,Ns/Nc
-2024-01-26,40,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,65,Primario completo,1,85,Nulo,Ns/Nc
-2024-01-14,41,Chubut,Masculino,87,Secundario incompletoTerciario completo,2,65,Blanco,candidato dNo Fue A Votar
-2024-01-08,42,Neuquén,Masculino,70,Primario incompletoSecundario completo,5,70,Nulo,Blanco
-2024-01-15,43,La Pampa,Masculino,53,Secundario incompletoTerciario completo,1,69,Blanco,Candidato_B
-2024-01-01,44,Corrientes,Femenino,63,Primario completo,2,11,Candidato_A,candidato dNo Fue A Votar
-2024-01-15,45,Jujuy,Femenino,72,Terciario incompletoUniversitario completo,6,78,candidato c,Candidato_B
-2024-01-09,46,Chaco,Femenino,53,Primario completo,4,82,Candidato_B,candidato dNo Fue A Votar
-2024-01-11,47,Neuquén,Femenino,19,Terciario incompletoUniversitario completo,4,55,Ns/Nc,candidato dNo Fue A Votar
-2024-01-30,48,Jujuy,Masculino,32,Primario completo,1,37,Candidato_A,Ns/Nc
-2024-01-17,49,La Rioja,Masculino,28,Primario incompletoSecundario completo,2,23,Nulo,Candidato_B
-2024-01-12,50,Salta,Masculino,63,Terciario incompletoUniversitario completo,1,87,Nulo,Candidato_B
-2024-01-18,51,San Juan,Masculino,58,Primario incompletoSecundario completo,5,1,Candidato_B,Candidato_A
-2024-01-25,52,Misiones,Masculino,26,Secundario incompletoTerciario completo,6,20,Blanco,Candidato_A
-2024-01-28,53,Ciudad Autónoma de Buenos Aires,Femenino,46,Universitario incompletoNs/Nc,1,69,Ns/Nc,Nulo
-2024-01-28,54,San Luis,Masculino,34,Terciario incompletoUniversitario completo,2,85,candidato c,Blanco
-2024-01-05,55,Río Negro,Masculino,68,Universitario incompletoNs/Nc,3,13,candidato c,Nulo
-2024-01-09,56,Buenos Aires,Masculino,44,Terciario incompletoUniversitario completo,2,86,Candidato_B,Nulo
-2024-01-20,57,Salta,Femenino,63,Terciario incompletoUniversitario completo,6,40,Ns/Nc,Ns/Nc
-2024-01-03,58,La Pampa,Femenino,61,Terciario incompletoUniversitario completo,5,81,Blanco,Nulo
-2024-01-13,59,San Juan,Femenino,85,Primario incompletoSecundario completo,1,5,Blanco,Blanco
-2024-01-27,60,La Rioja,Masculino,31,Universitario incompletoNs/Nc,6,28,candidato c,Nulo
-2024-01-15,61,Salta,Femenino,87,Primario incompletoSecundario completo,4,79,Candidato_A,Nulo
-2024-01-23,62,Formosa,Femenino,48,Primario incompletoSecundario completo,3,7,Candidato_A,Blanco
-2024-01-19,63,La Rioja,Masculino,40,Universitario incompletoNs/Nc,1,3,Ns/Nc,Candidato_A
-2024-01-27,64,Misiones,Femenino,64,Universitario incompletoNs/Nc,6,70,Nulo,Blanco
-2024-01-10,65,Ciudad Autónoma de Buenos Aires,Masculino,70,Terciario incompletoUniversitario completo,2,20,Blanco,Ns/Nc
-2024-01-21,66,San Juan,Femenino,90,Primario incompletoSecundario completo,4,64,Candidato_A,Candidato_B
-2024-01-12,67,Ciudad Autónoma de Buenos Aires,Femenino,37,Terciario incompletoUniversitario completo,5,94,Nulo,Ns/Nc
-2024-01-21,68,Misiones,Femenino,36,Primario incompletoSecundario completo,4,49,candidato c,Candidato_A
-2024-01-27,69,Mendoza,Masculino,60,Primario completo,4,5,Candidato_A,Candidato_B
-2024-01-23,70,Buenos Aires,Femenino,17,Universitario incompletoNs/Nc,2,2,candidato c,Candidato_B
-2024-01-23,71,La Rioja,Femenino,84,Primario completo,3,45,candidato c,Nulo
-2024-01-11,72,Formosa,Femenino,50,Secundario incompletoTerciario completo,2,49,Ns/Nc,Candidato_B
-2024-01-25,73,Santa Fe,Masculino,27,Terciario incompletoUniversitario completo,1,98,Ns/Nc,Candidato_A
-2024-01-10,74,La Pampa,Masculino,24,Universitario incompletoNs/Nc,3,88,Candidato_A,Ns/Nc
-2024-01-01,75,San Luis,Femenino,69,Secundario incompletoTerciario completo,3,11,Blanco,Candidato_B
-2024-01-09,76,Salta,Femenino,50,Primario incompletoSecundario completo,2,18,Ns/Nc,Candidato_A
-2024-01-03,77,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,80,Universitario incompletoNs/Nc,1,68,Candidato_B,Candidato_B
-2024-02-02,78,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,64,Primario incompletoSecundario completo,5,14,candidato c,Ns/Nc
-2024-01-23,79,Jujuy,Masculino,66,Primario incompletoSecundario completo,6,81,Candidato_A,Candidato_A
-2024-01-05,80,Formosa,Masculino,66,Terciario incompletoUniversitario completo,2,26,Candidato_A,Nulo
-2024-02-02,81,Santiago del Estero,Masculino,84,Terciario incompletoUniversitario completo,4,18,Blanco,Blanco
-2024-01-28,82,Formosa,Femenino,84,Terciario incompletoUniversitario completo,5,77,Ns/Nc,Ns/Nc
-2024-01-12,83,Neuquén,Masculino,21,Primario incompletoSecundario completo,4,75,Blanco,Candidato_A
-2024-01-19,84,Chubut,Masculino,67,Universitario incompletoNs/Nc,3,2,Ns/Nc,candidato dNo Fue A Votar
-2024-01-25,85,San Juan,Femenino,60,Primario incompletoSecundario completo,5,94,candidato c,Candidato_A
-2024-01-15,86,Neuquén,Masculino,81,Secundario incompletoTerciario completo,2,53,Candidato_B,Ns/Nc
-2024-01-07,87,La Pampa,Femenino,26,Primario completo,5,81,Candidato_B,Ns/Nc
-2024-02-01,88,Misiones,Masculino,71,Universitario incompletoNs/Nc,5,90,Ns/Nc,Ns/Nc
-2024-01-23,89,Jujuy,Femenino,30,Universitario incompletoNs/Nc,4,42,Ns/Nc,Nulo
-2024-01-03,90,Chubut,Masculino,76,Primario completo,6,85,Candidato_B,Candidato_A
-2024-01-24,91,Formosa,Masculino,45,Universitario incompletoNs/Nc,1,21,Blanco,Nulo
-2024-02-01,92,Chubut,Femenino,40,Primario incompletoSecundario completo,4,67,Nulo,candidato dNo Fue A Votar
-2024-02-02,93,Santa Cruz,Masculino,89,Primario completo,5,76,Ns/Nc,Candidato_A
-2024-01-02,94,Santa Cruz,Masculino,25,Universitario incompletoNs/Nc,5,33,candidato c,Nulo
-2024-01-19,95,Santa Cruz,Masculino,17,Primario incompletoSecundario completo,5,6,Nulo,Blanco
-2024-02-01,96,Neuquén,Femenino,18,Primario incompletoSecundario completo,3,20,Candidato_A,Blanco
-2024-01-28,97,Salta,Femenino,18,Terciario incompletoUniversitario completo,6,22,Candidato_A,Nulo
-2024-01-24,98,La Pampa,Masculino,67,Terciario incompletoUniversitario completo,5,44,Candidato_A,Candidato_B
-2024-01-05,99,Chaco,Femenino,66,Universitario incompletoNs/Nc,4,99,Ns/Nc,Candidato_A
-2024-01-25,100,Córdoba,Femenino,71,Universitario incompletoNs/Nc,5,83,Nulo,Ns/Nc
-2024-01-13,101,Río Negro,Masculino,64,Primario completo,2,90,Ns/Nc,Candidato_A
-2024-01-27,102,Ciudad Autónoma de Buenos Aires,Masculino,70,Secundario incompletoTerciario completo,2,22,Ns/Nc,Blanco
-2024-01-28,103,Buenos Aires,Masculino,59,Secundario incompletoTerciario completo,1,19,Nulo,Candidato_A
-2024-01-31,104,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,47,Terciario incompletoUniversitario completo,3,91,Blanco,Nulo
-2024-01-16,105,Misiones,Femenino,23,Primario completo,5,46,Candidato_A,Candidato_A
-2024-01-30,106,Córdoba,Masculino,62,Universitario incompletoNs/Nc,2,94,Ns/Nc,Ns/Nc
-2024-01-13,107,Ciudad Autónoma de Buenos Aires,Femenino,59,Primario completo,1,70,candidato c,Blanco
-2024-01-20,108,Santa Cruz,Masculino,85,Secundario incompletoTerciario completo,2,40,Blanco,Nulo
-2024-01-04,109,Santiago del Estero,Femenino,61,Universitario incompletoNs/Nc,5,23,Candidato_B,Ns/Nc
-2024-01-20,110,Río Negro,Femenino,26,Primario incompletoSecundario completo,1,77,Candidato_B,Nulo
-2024-01-02,111,San Luis,Masculino,79,Primario incompletoSecundario completo,2,61,Candidato_B,Ns/Nc
-2024-02-01,112,Jujuy,Femenino,64,Universitario incompletoNs/Nc,1,52,Candidato_A,Ns/Nc
-2024-01-31,113,Santa Cruz,Femenino,33,Universitario incompletoNs/Nc,5,78,Candidato_A,candidato dNo Fue A Votar
-2024-01-15,114,La Rioja,Masculino,29,Secundario incompletoTerciario completo,6,30,Nulo,Nulo
-2024-01-18,115,Santiago del Estero,Femenino,22,Primario completo,3,57,Candidato_A,Ns/Nc
-2024-01-31,116,Catamarca,Masculino,83,Primario completo,5,49,Nulo,Nulo
-2024-01-14,117,Santa Cruz,Femenino,52,Secundario incompletoTerciario completo,6,4,candidato c,Candidato_A
-2024-01-25,118,Mendoza,Masculino,26,Primario incompletoSecundario completo,1,78,Candidato_B,Candidato_B
-2024-01-26,119,Santiago del Estero,Masculino,74,Universitario incompletoNs/Nc,6,53,Candidato_B,Ns/Nc
-2024-01-15,120,San Juan,Masculino,43,Primario incompletoSecundario completo,1,50,Ns/Nc,Ns/Nc
-2024-01-19,121,Santiago del Estero,Femenino,47,Primario completo,6,30,Ns/Nc,Candidato_B
-2024-01-20,122,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,68,Primario incompletoSecundario completo,1,90,Nulo,Candidato_B
-2024-01-21,123,Catamarca,Femenino,81,Secundario incompletoTerciario completo,2,10,Blanco,Candidato_B
-2024-01-28,124,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,32,Primario completo,2,96,Nulo,Blanco
-2024-01-15,125,Santiago del Estero,Femenino,48,Primario completo,6,30,Candidato_B,Candidato_A
-2024-01-30,126,San Juan,Masculino,19,Primario completo,1,46,Nulo,Nulo
-2024-02-02,127,San Luis,Masculino,37,Terciario incompletoUniversitario completo,5,92,Nulo,Blanco
-2024-01-26,128,Córdoba,Femenino,87,Primario incompletoSecundario completo,3,53,candidato c,Blanco
-2024-01-24,129,Jujuy,Masculino,44,Primario incompletoSecundario completo,6,40,Ns/Nc,Candidato_B
-2024-02-01,130,Jujuy,Masculino,85,Universitario incompletoNs/Nc,4,88,candidato c,Ns/Nc
-2024-01-14,131,Neuquén,Femenino,62,Primario incompletoSecundario completo,2,20,Nulo,Nulo
-2024-01-15,132,Chubut,Femenino,64,Terciario incompletoUniversitario completo,6,68,Ns/Nc,Blanco
-2024-02-01,133,Chubut,Femenino,56,Terciario incompletoUniversitario completo,6,17,Candidato_A,Candidato_A
-2024-01-18,134,Mendoza,Masculino,84,Primario completo,6,83,Nulo,Candidato_A
-2024-01-29,135,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,37,Universitario incompletoNs/Nc,2,5,Nulo,Ns/Nc
-2024-01-15,136,La Rioja,Femenino,41,Primario completo,4,97,Candidato_A,candidato dNo Fue A Votar
-2024-01-16,137,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,39,Universitario incompletoNs/Nc,1,23,Candidato_B,Candidato_A
-2024-01-15,138,San Luis,Masculino,89,Secundario incompletoTerciario completo,2,61,Candidato_B,candidato dNo Fue A Votar
-2024-01-23,139,Jujuy,Femenino,37,Universitario incompletoNs/Nc,5,73,candidato c,Candidato_A
-2024-01-29,140,Chubut,Femenino,63,Terciario incompletoUniversitario completo,4,58,Candidato_A,Candidato_A
-2024-01-30,141,Ciudad Autónoma de Buenos Aires,Masculino,32,Universitario incompletoNs/Nc,4,90,candidato c,Blanco
-2024-01-30,142,San Juan,Femenino,51,Universitario incompletoNs/Nc,1,21,Nulo,Blanco
-2024-01-03,143,Misiones,Masculino,83,Primario incompletoSecundario completo,6,76,Candidato_A,Candidato_A
-2024-01-24,144,Ciudad Autónoma de Buenos Aires,Femenino,27,Universitario incompletoNs/Nc,5,90,candidato c,Candidato_B
-2024-01-28,145,Corrientes,Masculino,31,Secundario incompletoTerciario completo,5,77,Nulo,Candidato_B
-2024-01-15,146,Misiones,Femenino,35,Universitario incompletoNs/Nc,6,94,Nulo,candidato dNo Fue A Votar
-2024-01-13,147,Río Negro,Masculino,79,Primario incompletoSecundario completo,1,36,Nulo,Nulo
-2024-01-20,148,Corrientes,Masculino,25,Universitario incompletoNs/Nc,4,88,Nulo,Candidato_A
-2024-01-10,149,Corrientes,Femenino,26,Primario incompletoSecundario completo,1,84,Nulo,candidato dNo Fue A Votar
-2024-01-13,150,Catamarca,Masculino,25,Primario incompletoSecundario completo,2,15,Ns/Nc,Candidato_B
-2024-01-25,151,Santiago del Estero,Femenino,78,Universitario incompletoNs/Nc,5,86,Blanco,Candidato_B
-2024-01-23,152,Catamarca,Femenino,90,Terciario incompletoUniversitario completo,6,86,Candidato_A,candidato dNo Fue A Votar
-2024-01-01,153,San Luis,Masculino,29,Universitario incompletoNs/Nc,5,84,Nulo,Ns/Nc
-2024-01-10,154,Entre Ríos,Femenino,87,Primario completo,6,57,Nulo,Ns/Nc
-2024-01-13,155,La Pampa,Femenino,32,Terciario incompletoUniversitario completo,6,87,Candidato_B,Nulo
-2024-01-04,156,Buenos Aires,Femenino,85,Secundario incompletoTerciario completo,5,31,Candidato_B,Blanco
-2024-01-07,157,Río Negro,Masculino,75,Primario incompletoSecundario completo,2,11,Candidato_A,Blanco
-2024-01-09,158,Buenos Aires,Femenino,53,Secundario incompletoTerciario completo,4,53,Candidato_B,Nulo
-2024-01-18,159,San Luis,Masculino,25,Terciario incompletoUniversitario completo,6,22,candidato c,Candidato_A
-2024-01-27,160,Río Negro,Masculino,65,Universitario incompletoNs/Nc,4,42,candidato c,Ns/Nc
-2024-01-17,161,Santa Cruz,Femenino,79,Primario completo,1,87,Candidato_A,Ns/Nc
-2024-01-23,162,Santa Cruz,Femenino,89,Terciario incompletoUniversitario completo,2,40,Blanco,Candidato_A
-2024-02-01,163,Salta,Femenino,54,Primario incompletoSecundario completo,2,91,Candidato_B,Candidato_A
-2024-01-26,164,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,67,Universitario incompletoNs/Nc,4,1,Nulo,Nulo
-2024-02-02,165,San Luis,Femenino,90,Primario completo,2,32,Nulo,Candidato_A
-2024-01-25,166,Salta,Femenino,18,Secundario incompletoTerciario completo,4,87,candidato c,Blanco
-2024-01-01,167,La Pampa,Masculino,39,Secundario incompletoTerciario completo,4,45,Candidato_B,Nulo
-2024-01-14,168,Mendoza,Femenino,31,Primario incompletoSecundario completo,4,45,Ns/Nc,Candidato_A
-2024-01-21,169,Entre Ríos,Masculino,41,Primario incompletoSecundario completo,2,97,Ns/Nc,candidato dNo Fue A Votar
-2024-01-06,170,Misiones,Femenino,88,Secundario incompletoTerciario completo,6,98,Blanco,Blanco
-2024-01-07,171,La Rioja,Masculino,70,Terciario incompletoUniversitario completo,6,27,Candidato_A,candidato dNo Fue A Votar
-2024-01-12,172,Misiones,Masculino,42,Primario completo,1,29,candidato c,Candidato_A
-2024-01-22,173,Buenos Aires,Femenino,77,Universitario incompletoNs/Nc,1,3,Blanco,Nulo
-2024-01-12,174,Entre Ríos,Femenino,69,Secundario incompletoTerciario completo,3,29,Ns/Nc,candidato dNo Fue A Votar
-2024-01-02,175,Entre Ríos,Femenino,68,Primario incompletoSecundario completo,2,90,Candidato_A,Candidato_A
-2024-01-17,176,Chubut,Femenino,60,Secundario incompletoTerciario completo,5,3,Nulo,Candidato_A
-2024-01-30,177,San Juan,Masculino,32,Universitario incompletoNs/Nc,6,24,candidato c,candidato dNo Fue A Votar
-2024-01-23,178,Formosa,Femenino,52,Universitario incompletoNs/Nc,2,52,Candidato_B,Candidato_B
-2024-01-09,179,San Luis,Femenino,21,Primario incompletoSecundario completo,4,54,candidato c,Candidato_B
-2024-02-01,180,La Pampa,Masculino,35,Secundario incompletoTerciario completo,4,55,Candidato_B,Candidato_A
-2024-01-02,181,Misiones,Masculino,18,Secundario incompletoTerciario completo,3,24,Blanco,Candidato_B
-2024-01-22,182,Río Negro,Masculino,81,Universitario incompletoNs/Nc,6,11,candidato c,Ns/Nc
-2024-01-23,183,La Pampa,Masculino,46,Secundario incompletoTerciario completo,4,41,candidato c,Nulo
-2024-01-04,184,Ciudad Autónoma de Buenos Aires,Masculino,36,Terciario incompletoUniversitario completo,3,50,Candidato_A,Ns/Nc
-2024-01-28,185,La Rioja,Masculino,61,Terciario incompletoUniversitario completo,5,18,candidato c,candidato dNo Fue A Votar
-2024-01-27,186,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,34,Primario completo,5,1,Blanco,Candidato_B
-2024-01-22,187,Santa Fe,Femenino,24,Universitario incompletoNs/Nc,4,28,Candidato_A,Candidato_A
-2024-01-29,188,Misiones,Femenino,57,Terciario incompletoUniversitario completo,2,33,Ns/Nc,Candidato_A
-2024-01-03,189,Formosa,Femenino,63,Secundario incompletoTerciario completo,4,11,Ns/Nc,Nulo
-2024-01-27,190,Santa Fe,Masculino,78,Secundario incompletoTerciario completo,2,28,Candidato_A,candidato dNo Fue A Votar
-2024-01-05,191,San Juan,Femenino,38,Primario incompletoSecundario completo,4,40,Nulo,Candidato_B
-2024-01-04,192,La Rioja,Masculino,37,Secundario incompletoTerciario completo,1,44,Candidato_A,Nulo
-2024-01-05,193,La Rioja,Masculino,23,Primario incompletoSecundario completo,2,99,candidato c,Candidato_B
-2024-01-04,194,La Pampa,Femenino,43,Secundario incompletoTerciario completo,6,43,Blanco,Ns/Nc
-2024-01-11,195,Mendoza,Femenino,86,Primario completo,3,80,Blanco,Candidato_A
-2024-01-17,196,Corrientes,Masculino,22,Primario completo,5,71,Ns/Nc,candidato dNo Fue A Votar
-2024-01-08,197,Jujuy,Masculino,42,Universitario incompletoNs/Nc,4,19,Blanco,Candidato_A
-2024-02-02,198,Salta,Masculino,82,Primario incompletoSecundario completo,1,7,Candidato_B,Candidato_B
-2024-01-29,199,Ciudad Autónoma de Buenos Aires,Masculino,69,Secundario incompletoTerciario completo,4,49,Candidato_A,Blanco
-2024-01-14,200,Corrientes,Femenino,67,Primario incompletoSecundario completo,4,0,Candidato_B,Nulo
-2024-01-11,201,Jujuy,Masculino,67,Primario completo,5,5,Candidato_A,Ns/Nc
-2024-01-30,202,Buenos Aires,Masculino,33,Primario completo,3,73,Candidato_A,Nulo
-2024-01-20,203,Chaco,Masculino,76,Terciario incompletoUniversitario completo,4,28,Blanco,Ns/Nc
-2024-01-02,204,Río Negro,Masculino,64,Terciario incompletoUniversitario completo,3,29,candidato c,Blanco
-2024-01-07,205,Córdoba,Masculino,50,Terciario incompletoUniversitario completo,4,47,Nulo,Candidato_B
-2024-01-19,206,Río Negro,Femenino,59,Universitario incompletoNs/Nc,1,81,Nulo,Ns/Nc
-2024-01-19,207,San Luis,Masculino,27,Secundario incompletoTerciario completo,6,75,Ns/Nc,Ns/Nc
-2024-01-27,208,San Juan,Femenino,37,Primario completo,5,3,Blanco,Nulo
-2024-01-04,209,Mendoza,Masculino,58,Primario incompletoSecundario completo,6,57,Candidato_A,Nulo
-2024-01-05,210,Córdoba,Femenino,28,Primario incompletoSecundario completo,4,45,candidato c,Nulo
-2024-01-24,211,Santiago del Estero,Femenino,62,Primario completo,4,23,Candidato_B,Candidato_B
-2024-01-11,212,Chaco,Femenino,44,Terciario incompletoUniversitario completo,5,89,Blanco,Candidato_A
-2024-02-02,213,Salta,Femenino,79,Primario incompletoSecundario completo,3,79,Nulo,Blanco
-2024-01-23,214,Chubut,Femenino,79,Terciario incompletoUniversitario completo,1,66,Candidato_B,Candidato_A
-2024-01-26,215,Salta,Masculino,62,Terciario incompletoUniversitario completo,2,11,Blanco,Blanco
-2024-01-05,216,Chaco,Femenino,45,Primario completo,6,72,Candidato_A,Candidato_A
-2024-01-07,217,Santa Fe,Femenino,24,Universitario incompletoNs/Nc,2,7,Candidato_B,Nulo
-2024-02-01,218,Jujuy,Femenino,21,Primario incompletoSecundario completo,2,48,Blanco,candidato dNo Fue A Votar
-2024-01-30,219,Córdoba,Femenino,34,Universitario incompletoNs/Nc,2,46,Blanco,Candidato_B
-2024-01-06,220,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,80,Primario completo,5,25,Blanco,Nulo
-2024-01-14,221,Corrientes,Masculino,40,Primario incompletoSecundario completo,3,12,Candidato_B,Blanco
-2024-01-26,222,La Pampa,Femenino,36,Terciario incompletoUniversitario completo,4,89,candidato c,Ns/Nc
-2024-01-26,223,Ciudad Autónoma de Buenos Aires,Masculino,87,Universitario incompletoNs/Nc,4,58,Ns/Nc,Ns/Nc
-2024-01-29,224,Salta,Femenino,44,Terciario incompletoUniversitario completo,1,32,Candidato_A,Nulo
-2024-01-25,225,Ciudad Autónoma de Buenos Aires,Femenino,21,Primario incompletoSecundario completo,2,100,Ns/Nc,Blanco
-2024-01-14,226,Buenos Aires,Masculino,73,Primario completo,2,81,candidato c,Blanco
-2024-01-05,227,Salta,Masculino,20,Secundario incompletoTerciario completo,2,50,Ns/Nc,Candidato_B
-2024-01-08,228,Jujuy,Masculino,58,Terciario incompletoUniversitario completo,5,24,Nulo,Candidato_B
-2024-01-03,229,La Rioja,Masculino,76,Primario incompletoSecundario completo,6,36,Nulo,candidato dNo Fue A Votar
-2024-01-22,230,Chaco,Femenino,73,Universitario incompletoNs/Nc,3,73,Ns/Nc,Nulo
-2024-01-21,231,Córdoba,Femenino,84,Secundario incompletoTerciario completo,4,30,Ns/Nc,Ns/Nc
-2024-01-29,232,Neuquén,Masculino,55,Primario incompletoSecundario completo,5,61,Candidato_B,Ns/Nc
-2024-01-05,233,Entre Ríos,Femenino,69,Terciario incompletoUniversitario completo,4,35,candidato c,Nulo
-2024-01-09,234,San Juan,Femenino,57,Primario incompletoSecundario completo,1,47,Blanco,Candidato_B
-2024-01-25,235,Chubut,Masculino,60,Universitario incompletoNs/Nc,3,2,Blanco,Ns/Nc
-2024-01-05,236,Mendoza,Masculino,44,Universitario incompletoNs/Nc,5,6,candidato c,Ns/Nc
-2024-01-11,237,Catamarca,Femenino,87,Primario completo,3,62,Candidato_B,Nulo
-2024-01-01,238,Buenos Aires,Femenino,65,Primario completo,2,29,Blanco,Nulo
-2024-01-07,239,Neuquén,Masculino,63,Terciario incompletoUniversitario completo,5,75,Ns/Nc,Candidato_B
-2024-01-10,240,Mendoza,Masculino,23,Universitario incompletoNs/Nc,6,81,Candidato_A,Nulo
-2024-01-17,241,Río Negro,Femenino,36,Primario completo,6,11,Ns/Nc,Candidato_B
-2024-01-31,242,Chaco,Femenino,42,Primario incompletoSecundario completo,1,50,Blanco,Candidato_B
-2024-01-24,243,Chubut,Femenino,88,Terciario incompletoUniversitario completo,2,34,Nulo,candidato dNo Fue A Votar
-2024-01-27,244,Buenos Aires,Femenino,86,Primario incompletoSecundario completo,2,33,Candidato_A,Nulo
-2024-01-30,245,Chaco,Masculino,57,Terciario incompletoUniversitario completo,1,31,Candidato_B,Ns/Nc
-2024-01-27,246,Chubut,Femenino,32,Primario completo,1,100,Nulo,Candidato_A
-2024-01-09,247,Chubut,Femenino,29,Primario completo,1,99,Blanco,Candidato_A
-2024-01-22,248,Santa Fe,Masculino,33,Universitario incompletoNs/Nc,1,75,candidato c,Candidato_A
-2024-01-05,249,Ciudad Autónoma de Buenos Aires,Femenino,73,Terciario incompletoUniversitario completo,2,31,Ns/Nc,Ns/Nc
-2024-01-07,250,Neuquén,Masculino,51,Primario completo,5,61,Blanco,Candidato_B
-2024-01-04,251,Santa Cruz,Masculino,83,Terciario incompletoUniversitario completo,1,15,Ns/Nc,Ns/Nc
-2024-01-09,252,Córdoba,Masculino,51,Primario incompletoSecundario completo,6,40,Blanco,Blanco
-2024-01-24,253,Entre Ríos,Femenino,84,Primario incompletoSecundario completo,2,23,Ns/Nc,Candidato_A
-2024-02-01,254,Mendoza,Masculino,24,Primario incompletoSecundario completo,3,100,Nulo,Nulo
-2024-01-06,255,Córdoba,Femenino,83,Terciario incompletoUniversitario completo,4,10,candidato c,candidato dNo Fue A Votar
-2024-01-10,256,Chubut,Femenino,23,Terciario incompletoUniversitario completo,3,76,candidato c,Blanco
-2024-01-25,257,Ciudad Autónoma de Buenos Aires,Femenino,22,Secundario incompletoTerciario completo,1,41,Candidato_A,Blanco
-2024-01-06,258,Chaco,Masculino,45,Primario incompletoSecundario completo,4,63,Candidato_A,candidato dNo Fue A Votar
-2024-01-12,259,Misiones,Masculino,46,Primario completo,3,88,Nulo,Nulo
-2024-01-05,260,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,69,Primario incompletoSecundario completo,4,22,Candidato_A,Nulo
-2024-01-22,261,Mendoza,Femenino,80,Secundario incompletoTerciario completo,2,61,Candidato_A,Blanco
-2024-01-14,262,Chubut,Femenino,67,Secundario incompletoTerciario completo,4,95,Blanco,Candidato_B
-2024-01-13,263,Corrientes,Femenino,30,Universitario incompletoNs/Nc,1,16,Ns/Nc,Candidato_A
-2024-01-13,264,Jujuy,Masculino,48,Primario incompletoSecundario completo,1,81,Ns/Nc,Ns/Nc
-2024-01-29,265,La Pampa,Masculino,57,Secundario incompletoTerciario completo,5,32,Blanco,Nulo
-2024-01-05,266,San Juan,Femenino,76,Terciario incompletoUniversitario completo,1,33,Blanco,Blanco
-2024-01-02,267,Río Negro,Femenino,86,Universitario incompletoNs/Nc,4,83,Blanco,Ns/Nc
-2024-01-22,268,La Pampa,Femenino,23,Universitario incompletoNs/Nc,2,21,Blanco,Blanco
-2024-01-31,269,Corrientes,Masculino,67,Primario completo,6,35,Ns/Nc,Ns/Nc
-2024-01-05,270,Córdoba,Femenino,61,Primario completo,3,66,Candidato_B,Candidato_B
-2024-01-30,271,Misiones,Masculino,53,Primario completo,1,31,Nulo,Candidato_B
-2024-01-09,272,Río Negro,Masculino,78,Terciario incompletoUniversitario completo,3,17,Candidato_A,Ns/Nc
-2024-01-20,273,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,57,Primario incompletoSecundario completo,1,64,Nulo,Ns/Nc
-2024-01-16,274,Santiago del Estero,Femenino,63,Primario incompletoSecundario completo,5,42,Ns/Nc,candidato dNo Fue A Votar
-2024-01-31,275,Córdoba,Masculino,38,Secundario incompletoTerciario completo,5,27,Ns/Nc,Candidato_A
-2024-01-26,276,Neuquén,Masculino,33,Secundario incompletoTerciario completo,3,82,Candidato_A,candidato dNo Fue A Votar
-2024-01-02,277,La Rioja,Femenino,36,Secundario incompletoTerciario completo,6,42,Nulo,Ns/Nc
-2024-01-09,278,Mendoza,Femenino,21,Primario incompletoSecundario completo,3,57,Candidato_B,candidato dNo Fue A Votar
-2024-01-19,279,San Luis,Femenino,72,Terciario incompletoUniversitario completo,6,63,Candidato_A,Candidato_A
-2024-01-02,280,Santa Cruz,Masculino,33,Primario completo,2,74,Nulo,Blanco
-2024-01-13,281,Misiones,Femenino,22,Primario incompletoSecundario completo,4,68,Nulo,Candidato_A
-2024-02-01,282,San Luis,Femenino,71,Universitario incompletoNs/Nc,1,47,candidato c,Blanco
-2024-01-28,283,San Juan,Masculino,73,Primario completo,3,21,candidato c,Candidato_A
-2024-01-29,284,Catamarca,Masculino,17,Primario completo,4,68,Nulo,Blanco
-2024-01-10,285,Misiones,Masculino,21,Primario incompletoSecundario completo,2,69,Candidato_A,Candidato_A
-2024-01-20,286,San Luis,Femenino,18,Secundario incompletoTerciario completo,5,23,Candidato_B,candidato dNo Fue A Votar
-2024-01-02,287,Ciudad Autónoma de Buenos Aires,Femenino,81,Primario completo,3,10,Candidato_A,Nulo
-2024-02-01,288,Corrientes,Femenino,66,Secundario incompletoTerciario completo,5,25,candidato c,Ns/Nc
-2024-01-07,289,Jujuy,Femenino,27,Terciario incompletoUniversitario completo,2,4,Blanco,candidato dNo Fue A Votar
-2024-01-31,290,Neuquén,Masculino,49,Primario completo,2,69,Blanco,Ns/Nc
-2024-01-27,291,Salta,Femenino,32,Terciario incompletoUniversitario completo,1,48,Candidato_A,Candidato_A
-2024-02-02,292,Córdoba,Masculino,30,Secundario incompletoTerciario completo,3,57,Ns/Nc,Blanco
-2024-01-05,293,Corrientes,Masculino,73,Terciario incompletoUniversitario completo,4,99,Candidato_A,Nulo
-2024-01-10,294,Chaco,Femenino,76,Universitario incompletoNs/Nc,3,7,Candidato_A,Ns/Nc
-2024-01-07,295,Mendoza,Masculino,50,Terciario incompletoUniversitario completo,4,32,Candidato_B,Blanco
-2024-01-14,296,Santiago del Estero,Femenino,29,Terciario incompletoUniversitario completo,2,27,candidato c,Ns/Nc
-2024-02-02,297,San Luis,Femenino,75,Universitario incompletoNs/Nc,2,81,Candidato_A,candidato dNo Fue A Votar
-2024-01-07,298,Chaco,Femenino,35,Primario completo,2,60,Ns/Nc,Candidato_A
-2024-01-17,299,San Luis,Masculino,25,Terciario incompletoUniversitario completo,2,85,candidato c,candidato dNo Fue A Votar
-2024-01-15,300,Río Negro,Masculino,23,Universitario incompletoNs/Nc,3,4,candidato c,Candidato_B
-2024-01-13,301,La Rioja,Femenino,49,Terciario incompletoUniversitario completo,2,51,Candidato_B,Blanco
-2024-01-14,302,La Rioja,Femenino,30,Universitario incompletoNs/Nc,3,98,Ns/Nc,Blanco
-2024-01-18,303,Córdoba,Masculino,51,Universitario incompletoNs/Nc,3,77,Nulo,candidato dNo Fue A Votar
-2024-01-08,304,Formosa,Masculino,22,Primario completo,4,72,Candidato_A,Candidato_A
-2024-01-08,305,Córdoba,Masculino,56,Primario incompletoSecundario completo,2,85,Candidato_B,Nulo
-2024-01-15,306,Río Negro,Femenino,71,Primario completo,4,55,Blanco,Blanco
-2024-01-08,307,Santa Fe,Masculino,24,Primario completo,1,13,Nulo,candidato dNo Fue A Votar
-2024-02-01,308,Catamarca,Masculino,86,Secundario incompletoTerciario completo,6,8,Candidato_A,Candidato_B
-2024-01-30,309,Córdoba,Femenino,41,Primario completo,5,93,Candidato_A,Ns/Nc
-2024-02-01,310,Salta,Femenino,89,Primario completo,2,56,Candidato_B,Nulo
-2024-01-29,311,San Luis,Masculino,74,Primario incompletoSecundario completo,4,65,Ns/Nc,Candidato_B
-2024-02-01,312,Formosa,Femenino,37,Secundario incompletoTerciario completo,1,65,Blanco,Candidato_A
-2024-02-02,313,La Rioja,Femenino,16,Secundario incompletoTerciario completo,5,37,candidato c,Candidato_A
-2024-01-19,314,Corrientes,Femenino,20,Primario incompletoSecundario completo,3,40,Nulo,candidato dNo Fue A Votar
-2024-01-13,315,Salta,Masculino,24,Primario completo,5,11,Blanco,Candidato_B
-2024-01-15,316,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,53,Terciario incompletoUniversitario completo,3,88,Candidato_B,candidato dNo Fue A Votar
-2024-01-14,317,Chubut,Femenino,53,Primario completo,5,68,Blanco,candidato dNo Fue A Votar
-2024-01-26,318,Misiones,Masculino,16,Secundario incompletoTerciario completo,4,8,Candidato_A,Blanco
-2024-01-19,319,Entre Ríos,Masculino,73,Secundario incompletoTerciario completo,2,63,Nulo,Blanco
-2024-01-21,320,Mendoza,Masculino,71,Terciario incompletoUniversitario completo,2,42,Candidato_B,Candidato_B
-2024-01-04,321,Chaco,Femenino,25,Secundario incompletoTerciario completo,4,23,Candidato_B,Ns/Nc
-2024-01-06,322,Jujuy,Femenino,33,Primario completo,5,92,Nulo,Ns/Nc
-2024-01-19,323,Jujuy,Femenino,48,Secundario incompletoTerciario completo,1,19,Ns/Nc,Nulo
-2024-02-02,324,Mendoza,Masculino,67,Universitario incompletoNs/Nc,2,91,Blanco,Candidato_A
-2024-01-19,325,Misiones,Masculino,28,Secundario incompletoTerciario completo,5,71,Candidato_B,Candidato_A
-2024-01-17,326,Córdoba,Masculino,73,Universitario incompletoNs/Nc,2,93,Ns/Nc,Nulo
-2024-01-24,327,Jujuy,Masculino,40,Primario completo,6,7,Candidato_B,candidato dNo Fue A Votar
-2024-01-05,328,Misiones,Femenino,24,Universitario incompletoNs/Nc,2,61,Candidato_B,candidato dNo Fue A Votar
-2024-01-19,329,San Luis,Femenino,45,Universitario incompletoNs/Nc,5,57,candidato c,Candidato_A
-2024-01-04,330,Ciudad Autónoma de Buenos Aires,Masculino,18,Primario incompletoSecundario completo,4,96,candidato c,Candidato_B
-2024-01-25,331,San Luis,Masculino,81,Terciario incompletoUniversitario completo,1,59,candidato c,Ns/Nc
-2024-01-19,332,Corrientes,Femenino,82,Terciario incompletoUniversitario completo,6,78,Candidato_A,Candidato_B
-2024-01-19,333,Santa Fe,Masculino,45,Secundario incompletoTerciario completo,4,80,Candidato_B,Candidato_B
-2024-01-02,334,Catamarca,Femenino,74,Universitario incompletoNs/Nc,4,41,candidato c,Candidato_B
-2024-01-23,335,Salta,Masculino,26,Primario incompletoSecundario completo,2,58,Ns/Nc,Candidato_A
-2024-01-24,336,Buenos Aires,Femenino,62,Primario completo,1,42,Blanco,Blanco
-2024-01-25,337,San Luis,Masculino,82,Terciario incompletoUniversitario completo,4,21,Ns/Nc,Blanco
-2024-01-12,338,Misiones,Femenino,26,Primario incompletoSecundario completo,1,19,candidato c,Candidato_B
-2024-01-01,339,Misiones,Femenino,27,Terciario incompletoUniversitario completo,3,74,Blanco,Candidato_B
-2024-01-23,340,San Juan,Femenino,26,Secundario incompletoTerciario completo,6,95,Ns/Nc,Candidato_B
-2024-01-18,341,La Pampa,Masculino,75,Universitario incompletoNs/Nc,5,14,Candidato_A,Candidato_A
-2024-01-20,342,San Juan,Masculino,60,Universitario incompletoNs/Nc,4,12,Candidato_A,Blanco
-2024-01-03,343,Neuquén,Masculino,71,Terciario incompletoUniversitario completo,2,77,Ns/Nc,Nulo
-2024-01-16,344,Santiago del Estero,Femenino,67,Terciario incompletoUniversitario completo,2,96,Nulo,Ns/Nc
-2024-01-09,345,Neuquén,Masculino,76,Primario completo,4,19,candidato c,Ns/Nc
-2024-01-13,346,Córdoba,Femenino,48,Universitario incompletoNs/Nc,6,76,candidato c,Candidato_A
-2024-01-17,347,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,46,Primario incompletoSecundario completo,6,31,Blanco,Blanco
-2024-01-29,348,Chubut,Femenino,84,Terciario incompletoUniversitario completo,4,12,candidato c,Candidato_A
-2024-01-12,349,Misiones,Masculino,77,Secundario incompletoTerciario completo,3,26,candidato c,Nulo
-2024-01-30,350,Mendoza,Masculino,79,Secundario incompletoTerciario completo,5,33,candidato c,Candidato_B
-2024-02-01,351,La Pampa,Masculino,16,Terciario incompletoUniversitario completo,4,18,Candidato_B,Blanco
-2024-01-26,352,Neuquén,Femenino,17,Secundario incompletoTerciario completo,1,20,candidato c,Candidato_A
-2024-01-23,353,Jujuy,Femenino,57,Universitario incompletoNs/Nc,2,82,Nulo,Blanco
-2024-01-01,354,Ciudad Autónoma de Buenos Aires,Femenino,57,Universitario incompletoNs/Nc,6,15,Ns/Nc,Nulo
-2024-01-12,355,Chaco,Masculino,45,Universitario incompletoNs/Nc,1,87,Blanco,Nulo
-2024-01-18,356,Santiago del Estero,Femenino,74,Primario incompletoSecundario completo,3,56,Blanco,Candidato_A
-2024-01-20,357,Río Negro,Femenino,75,Universitario incompletoNs/Nc,2,43,candidato c,Ns/Nc
-2024-01-05,358,San Juan,Femenino,53,Primario completo,3,24,Candidato_A,Candidato_B
-2024-01-10,359,Jujuy,Femenino,77,Terciario incompletoUniversitario completo,6,78,Candidato_B,Blanco
-2024-01-10,360,Corrientes,Masculino,19,Terciario incompletoUniversitario completo,6,14,Candidato_B,Nulo
-2024-01-14,361,San Juan,Femenino,25,Terciario incompletoUniversitario completo,1,48,candidato c,Candidato_B
-2024-01-03,362,Catamarca,Masculino,60,Terciario incompletoUniversitario completo,3,25,Ns/Nc,Candidato_B
-2024-01-15,363,San Luis,Masculino,31,Terciario incompletoUniversitario completo,4,0,candidato c,Candidato_B
-2024-01-12,364,Misiones,Femenino,51,Primario incompletoSecundario completo,1,6,Nulo,Nulo
-2024-01-10,365,La Pampa,Masculino,22,Primario completo,5,39,Nulo,Blanco
-2024-01-04,366,Formosa,Femenino,85,Universitario incompletoNs/Nc,4,22,Nulo,Candidato_A
-2024-01-13,367,Formosa,Femenino,36,Terciario incompletoUniversitario completo,3,49,Candidato_A,Candidato_A
-2024-01-03,368,Corrientes,Femenino,74,Terciario incompletoUniversitario completo,6,95,Candidato_A,Candidato_B
-2024-01-06,369,Formosa,Masculino,83,Universitario incompletoNs/Nc,1,62,Candidato_B,Blanco
-2024-01-01,370,Jujuy,Femenino,50,Terciario incompletoUniversitario completo,4,77,Candidato_B,Blanco
-2024-01-03,371,Córdoba,Masculino,59,Universitario incompletoNs/Nc,2,34,Nulo,Nulo
-2024-01-22,372,Neuquén,Masculino,88,Primario incompletoSecundario completo,4,85,Candidato_A,candidato dNo Fue A Votar
-2024-01-31,373,San Juan,Femenino,88,Terciario incompletoUniversitario completo,2,56,Ns/Nc,candidato dNo Fue A Votar
-2024-01-11,374,Jujuy,Masculino,60,Primario incompletoSecundario completo,4,70,Candidato_A,Nulo
-2024-01-09,375,Santiago del Estero,Masculino,90,Secundario incompletoTerciario completo,3,5,Candidato_A,Ns/Nc
-2024-01-20,376,Entre Ríos,Femenino,30,Primario completo,3,9,Ns/Nc,Candidato_A
-2024-01-29,377,Santiago del Estero,Femenino,58,Primario completo,3,37,Candidato_B,Candidato_A
-2024-01-06,378,Buenos Aires,Masculino,38,Terciario incompletoUniversitario completo,6,61,Candidato_A,Ns/Nc
-2024-01-31,379,Entre Ríos,Femenino,47,Secundario incompletoTerciario completo,2,78,Candidato_A,Candidato_A
-2024-02-01,380,Corrientes,Femenino,53,Primario completo,3,26,Blanco,Ns/Nc
-2024-01-02,381,Ciudad Autónoma de Buenos Aires,Femenino,31,Universitario incompletoNs/Nc,3,94,Nulo,candidato dNo Fue A Votar
-2024-01-18,382,Formosa,Masculino,67,Primario completo,3,49,candidato c,Ns/Nc
-2024-01-26,383,Ciudad Autónoma de Buenos Aires,Masculino,32,Terciario incompletoUniversitario completo,1,95,Ns/Nc,Ns/Nc
-2024-01-02,384,Santiago del Estero,Masculino,83,Terciario incompletoUniversitario completo,6,32,Ns/Nc,Blanco
-2024-01-15,385,Chubut,Masculino,58,Universitario incompletoNs/Nc,5,11,candidato c,Blanco
-2024-01-03,386,Río Negro,Femenino,23,Terciario incompletoUniversitario completo,1,25,Candidato_A,Candidato_A
-2024-01-11,387,Santa Cruz,Masculino,30,Primario completo,5,70,Nulo,Candidato_A
-2024-01-12,388,Santa Fe,Masculino,90,Terciario incompletoUniversitario completo,4,24,Ns/Nc,Nulo
-2024-01-02,389,Santa Fe,Masculino,52,Secundario incompletoTerciario completo,2,84,Candidato_A,Candidato_B
-2024-01-25,390,Chubut,Masculino,87,Primario completo,2,43,Candidato_A,Nulo
-2024-01-10,391,Jujuy,Femenino,16,Universitario incompletoNs/Nc,1,37,candidato c,Candidato_B
-2024-01-28,392,La Rioja,Masculino,21,Primario completo,5,93,Nulo,Candidato_B
-2024-01-27,393,Chaco,Masculino,37,Universitario incompletoNs/Nc,4,71,Blanco,Ns/Nc
-2024-01-18,394,Chubut,Femenino,36,Primario completo,1,88,Candidato_A,Candidato_B
-2024-01-06,395,Santa Fe,Femenino,32,Terciario incompletoUniversitario completo,2,31,Candidato_B,Nulo
-2024-01-07,396,Santa Fe,Femenino,47,Terciario incompletoUniversitario completo,1,64,candidato c,Ns/Nc
-2024-01-05,397,Córdoba,Masculino,56,Universitario incompletoNs/Nc,5,98,Nulo,candidato dNo Fue A Votar
-2024-01-30,398,Neuquén,Masculino,24,Terciario incompletoUniversitario completo,3,63,Candidato_B,Candidato_B
-2024-01-30,399,Mendoza,Masculino,70,Universitario incompletoNs/Nc,5,49,Nulo,Nulo
-2024-01-13,400,Santa Cruz,Masculino,79,Universitario incompletoNs/Nc,1,74,Nulo,Candidato_B
-2024-01-12,401,Chubut,Femenino,46,Secundario incompletoTerciario completo,2,82,Blanco,Nulo
-2024-01-27,402,Catamarca,Masculino,68,Terciario incompletoUniversitario completo,6,68,Candidato_A,Ns/Nc
-2024-01-17,403,Neuquén,Masculino,42,Primario incompletoSecundario completo,6,73,Nulo,Candidato_B
-2024-01-25,404,Jujuy,Masculino,57,Terciario incompletoUniversitario completo,2,90,Ns/Nc,Candidato_B
-2024-01-31,405,Neuquén,Masculino,81,Terciario incompletoUniversitario completo,5,28,Candidato_A,Candidato_A
-2024-01-14,406,La Rioja,Masculino,50,Primario completo,4,21,Candidato_B,Candidato_A
-2024-01-15,407,Santa Fe,Masculino,85,Primario incompletoSecundario completo,3,31,Ns/Nc,Candidato_A
-2024-01-28,408,Chaco,Masculino,48,Primario incompletoSecundario completo,1,19,Ns/Nc,candidato dNo Fue A Votar
-2024-01-08,409,Corrientes,Masculino,86,Terciario incompletoUniversitario completo,3,48,Ns/Nc,Nulo
-2024-01-08,410,La Pampa,Femenino,30,Primario incompletoSecundario completo,2,0,candidato c,candidato dNo Fue A Votar
-2024-01-11,411,Ciudad Autónoma de Buenos Aires,Femenino,56,Primario incompletoSecundario completo,4,64,Candidato_B,Ns/Nc
-2024-01-22,412,San Luis,Femenino,35,Primario completo,5,42,Candidato_B,Candidato_A
-2024-01-27,413,Formosa,Femenino,62,Primario incompletoSecundario completo,6,74,candidato c,Blanco
-2024-01-26,414,Mendoza,Masculino,30,Primario incompletoSecundario completo,3,88,Ns/Nc,Blanco
-2024-01-09,415,Entre Ríos,Femenino,90,Secundario incompletoTerciario completo,2,83,Nulo,candidato dNo Fue A Votar
-2024-01-21,416,Catamarca,Femenino,77,Primario completo,2,71,Candidato_B,Ns/Nc
-2024-01-23,417,Corrientes,Masculino,42,Universitario incompletoNs/Nc,4,59,Candidato_B,Ns/Nc
-2024-01-17,418,Río Negro,Masculino,73,Secundario incompletoTerciario completo,4,40,Blanco,candidato dNo Fue A Votar
-2024-01-16,419,Santa Cruz,Femenino,48,Secundario incompletoTerciario completo,4,1,Blanco,candidato dNo Fue A Votar
-2024-01-11,420,Santa Fe,Masculino,42,Universitario incompletoNs/Nc,2,3,Candidato_A,Candidato_B
-2024-02-02,421,Jujuy,Femenino,80,Primario completo,3,52,candidato c,Candidato_B
-2024-01-17,422,Santiago del Estero,Masculino,19,Primario incompletoSecundario completo,5,2,Nulo,Candidato_B
-2024-01-09,423,Catamarca,Masculino,26,Primario incompletoSecundario completo,4,1,candidato c,Ns/Nc
-2024-01-27,424,Río Negro,Masculino,64,Secundario incompletoTerciario completo,1,81,Nulo,Blanco
-2024-01-27,425,Buenos Aires,Femenino,78,Universitario incompletoNs/Nc,4,31,Nulo,Ns/Nc
-2024-01-28,426,Neuquén,Masculino,88,Terciario incompletoUniversitario completo,1,14,Candidato_A,Candidato_A
-2024-01-11,427,Mendoza,Masculino,48,Universitario incompletoNs/Nc,1,94,candidato c,Candidato_A
-2024-01-21,428,Jujuy,Femenino,83,Primario completo,5,29,Candidato_A,Blanco
-2024-01-30,429,Neuquén,Femenino,71,Universitario incompletoNs/Nc,5,24,candidato c,Nulo
-2024-02-01,430,Santa Fe,Masculino,44,Primario incompletoSecundario completo,4,69,Ns/Nc,Blanco
-2024-02-02,431,La Rioja,Femenino,48,Secundario incompletoTerciario completo,3,31,candidato c,Candidato_B
-2024-01-19,432,Chaco,Femenino,64,Primario incompletoSecundario completo,5,100,Nulo,Blanco
-2024-01-22,433,La Rioja,Masculino,78,Universitario incompletoNs/Nc,5,100,candidato c,Candidato_A
-2024-01-22,434,San Luis,Masculino,28,Secundario incompletoTerciario completo,5,39,Blanco,Candidato_A
-2024-01-12,435,Jujuy,Masculino,42,Secundario incompletoTerciario completo,5,5,candidato c,Ns/Nc
-2024-01-01,436,Jujuy,Femenino,40,Primario completo,1,4,candidato c,Candidato_A
-2024-01-11,437,Santiago del Estero,Femenino,18,Primario completo,5,40,Candidato_B,Blanco
-2024-01-06,438,La Rioja,Masculino,29,Universitario incompletoNs/Nc,3,37,Nulo,Nulo
-2024-01-20,439,Neuquén,Masculino,23,Terciario incompletoUniversitario completo,2,24,candidato c,Nulo
-2024-01-28,440,Ciudad Autónoma de Buenos Aires,Femenino,66,Secundario incompletoTerciario completo,6,53,Candidato_A,Blanco
-2024-01-04,441,Córdoba,Masculino,88,Terciario incompletoUniversitario completo,4,39,Nulo,Candidato_B
-2024-02-02,442,San Juan,Masculino,47,Universitario incompletoNs/Nc,6,63,candidato c,Blanco
-2024-01-09,443,Chaco,Masculino,40,Secundario incompletoTerciario completo,3,36,Candidato_A,candidato dNo Fue A Votar
-2024-01-09,444,Neuquén,Femenino,24,Primario incompletoSecundario completo,1,14,Ns/Nc,Candidato_A
-2024-01-01,445,La Pampa,Masculino,29,Primario incompletoSecundario completo,1,11,Blanco,candidato dNo Fue A Votar
-2024-01-04,446,San Juan,Femenino,27,Terciario incompletoUniversitario completo,1,24,Nulo,Ns/Nc
-2024-01-02,447,La Pampa,Masculino,73,Secundario incompletoTerciario completo,2,74,candidato c,Ns/Nc
-2024-01-22,448,La Rioja,Femenino,41,Secundario incompletoTerciario completo,4,27,Ns/Nc,Blanco
-2024-01-08,449,San Juan,Masculino,36,Primario completo,4,76,candidato c,Nulo
-2024-01-16,450,Santa Fe,Femenino,23,Terciario incompletoUniversitario completo,5,52,Ns/Nc,Candidato_A
-2024-01-31,451,Chaco,Femenino,26,Terciario incompletoUniversitario completo,6,17,Nulo,Ns/Nc
-2024-01-10,452,Santa Cruz,Masculino,38,Secundario incompletoTerciario completo,2,29,Ns/Nc,Candidato_B
-2024-01-26,453,Chubut,Femenino,21,Terciario incompletoUniversitario completo,4,31,Candidato_A,Blanco
-2024-01-26,454,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,25,Universitario incompletoNs/Nc,5,83,Nulo,Candidato_B
-2024-01-07,455,Jujuy,Masculino,86,Primario incompletoSecundario completo,4,90,Candidato_A,Candidato_B
-2024-01-24,456,Chaco,Femenino,86,Terciario incompletoUniversitario completo,3,71,Nulo,Candidato_A
-2024-01-31,457,Santa Fe,Masculino,89,Terciario incompletoUniversitario completo,6,43,Candidato_A,Nulo
-2024-01-17,458,San Juan,Masculino,43,Primario incompletoSecundario completo,4,37,Candidato_A,Candidato_B
-2024-01-14,459,Entre Ríos,Femenino,45,Terciario incompletoUniversitario completo,3,18,candidato c,Nulo
-2024-01-13,460,Chubut,Masculino,37,Secundario incompletoTerciario completo,2,65,Candidato_A,Blanco
-2024-01-03,461,Buenos Aires,Femenino,55,Universitario incompletoNs/Nc,2,20,Blanco,Ns/Nc
-2024-01-31,462,La Pampa,Femenino,61,Primario completo,5,34,Candidato_A,Candidato_A
-2024-01-23,463,Chaco,Femenino,27,Primario completo,2,50,Nulo,Candidato_B
-2024-01-27,464,Jujuy,Masculino,59,Universitario incompletoNs/Nc,3,11,Ns/Nc,Nulo
-2024-02-01,465,Corrientes,Femenino,16,Terciario incompletoUniversitario completo,6,84,candidato c,Candidato_A
-2024-02-02,466,Formosa,Femenino,52,Primario incompletoSecundario completo,5,11,Blanco,Blanco
-2024-01-29,467,Mendoza,Femenino,76,Primario completo,3,84,Nulo,Blanco
-2024-01-04,468,Neuquén,Femenino,85,Universitario incompletoNs/Nc,1,71,Nulo,Candidato_B
-2024-01-02,469,San Juan,Femenino,70,Secundario incompletoTerciario completo,6,72,Nulo,Candidato_B
-2024-01-05,470,La Pampa,Femenino,84,Secundario incompletoTerciario completo,6,34,candidato c,Candidato_A
-2024-01-06,471,Entre Ríos,Femenino,16,Terciario incompletoUniversitario completo,4,41,Nulo,Candidato_A
-2024-01-22,472,Santa Cruz,Femenino,82,Primario incompletoSecundario completo,1,87,Ns/Nc,Nulo
-2024-01-11,473,Chaco,Femenino,51,Universitario incompletoNs/Nc,3,71,candidato c,Candidato_B
-2024-01-31,474,Misiones,Masculino,79,Primario completo,2,94,Candidato_A,Candidato_A
-2024-02-02,475,Santiago del Estero,Masculino,25,Terciario incompletoUniversitario completo,4,27,Nulo,Blanco
-2024-01-04,476,Chubut,Masculino,67,Secundario incompletoTerciario completo,4,19,Ns/Nc,candidato dNo Fue A Votar
-2024-01-27,477,Salta,Femenino,38,Terciario incompletoUniversitario completo,2,33,Nulo,Candidato_A
-2024-01-02,478,Catamarca,Femenino,42,Universitario incompletoNs/Nc,6,78,Blanco,Ns/Nc
-2024-01-11,479,Santa Fe,Masculino,66,Secundario incompletoTerciario completo,6,86,Candidato_B,Nulo
-2024-01-27,480,La Rioja,Femenino,66,Primario completo,5,62,Candidato_A,Candidato_B
-2024-02-01,481,Chubut,Femenino,30,Universitario incompletoNs/Nc,6,76,Candidato_A,Candidato_A
-2024-01-05,482,Mendoza,Masculino,72,Primario incompletoSecundario completo,3,100,Nulo,Ns/Nc
-2024-01-22,483,Chubut,Femenino,18,Universitario incompletoNs/Nc,4,56,Candidato_A,candidato dNo Fue A Votar
-2024-01-13,484,Entre Ríos,Femenino,62,Primario incompletoSecundario completo,4,18,Blanco,Blanco
-2024-02-01,485,Córdoba,Masculino,67,Universitario incompletoNs/Nc,4,51,candidato c,candidato dNo Fue A Votar
-2024-01-01,486,Río Negro,Masculino,43,Primario incompletoSecundario completo,1,39,Ns/Nc,Candidato_A
-2024-01-25,487,Jujuy,Femenino,40,Terciario incompletoUniversitario completo,6,94,candidato c,Ns/Nc
-2024-01-02,488,Chubut,Masculino,45,Terciario incompletoUniversitario completo,3,23,Ns/Nc,Candidato_B
-2024-01-06,489,Ciudad Autónoma de Buenos Aires,Masculino,20,Primario incompletoSecundario completo,3,15,Nulo,Blanco
-2024-01-08,490,Santiago del Estero,Femenino,16,Terciario incompletoUniversitario completo,2,13,candidato c,Nulo
-2024-01-29,491,Catamarca,Femenino,17,Terciario incompletoUniversitario completo,2,34,Nulo,Ns/Nc
-2024-01-08,492,Corrientes,Masculino,32,Terciario incompletoUniversitario completo,3,34,Candidato_B,Candidato_B
-2024-01-15,493,La Pampa,Femenino,58,Universitario incompletoNs/Nc,2,76,Nulo,Ns/Nc
-2024-01-15,494,Entre Ríos,Femenino,75,Secundario incompletoTerciario completo,2,50,Nulo,candidato dNo Fue A Votar
-2024-01-09,495,Misiones,Masculino,16,Primario completo,6,92,Nulo,Ns/Nc
-2024-01-05,496,Corrientes,Masculino,49,Terciario incompletoUniversitario completo,1,75,Nulo,candidato dNo Fue A Votar
-2024-01-13,497,Salta,Femenino,68,Secundario incompletoTerciario completo,6,62,Ns/Nc,Ns/Nc
-2024-01-10,498,Buenos Aires,Femenino,45,Terciario incompletoUniversitario completo,3,53,Candidato_B,Ns/Nc
-2024-01-22,499,Misiones,Femenino,42,Secundario incompletoTerciario completo,6,32,Nulo,Ns/Nc
-2024-01-23,500,Río Negro,Femenino,24,Secundario incompletoTerciario completo,1,66,Blanco,candidato dNo Fue A Votar
+2024-01-23,1,La Rioja,Femenino,41,Secundario incompletoTerciario completo,3,94,Ns/Nc,candidato d
+2024-01-09,2,Chaco,Femenino,62,Secundario incompletoTerciario completo,4,82,Candidato_B,Ns/Nc
+2024-02-01,3,Misiones,Masculino,89,Primario incompletoSecundario completo,1,47,Ns/Nc,Candidato_A
+2024-01-10,4,La Pampa,Masculino,22,Primario completo,5,38,Blanco,Candidato_A
+2024-01-14,5,San Juan,Masculino,17,Primario incompletoSecundario completo,5,82,Nulo,candidato d
+2024-01-18,6,Salta,Femenino,34,Primario incompletoSecundario completo,2,21,Ns/Nc,Candidato_B
+2024-01-19,7,Santiago del Estero,Femenino,88,Secundario incompletoTerciario completo,1,65,Nulo,Ns/Nc
+2024-02-02,8,Río Negro,Masculino,78,Primario completo,4,98,Nulo,Blanco
+2024-01-31,9,Chaco,Femenino,76,Secundario incompletoTerciario completo,1,10,Candidato_B,Candidato_B
+2024-01-22,10,Córdoba,Femenino,81,Primario incompletoSecundario completo,1,37,Ns/Nc,Blanco
+2024-01-28,11,Santa Fe,Femenino,23,Universitario incompletoNs/Nc,1,35,candidato c,candidato d
+2024-02-02,12,Misiones,Masculino,23,Terciario incompletoUniversitario completo,3,9,Ns/Nc,Nulo
+2024-01-24,13,Santiago del Estero,Masculino,45,Universitario incompletoNs/Nc,6,11,Blanco,Nulo
+2024-01-02,14,Mendoza,Femenino,38,Terciario incompletoUniversitario completo,1,95,Candidato_A,Candidato_A
+2024-01-11,15,Jujuy,Masculino,72,Terciario incompletoUniversitario completo,3,62,Candidato_B,Candidato_A
+2024-01-20,16,La Pampa,Femenino,53,Primario completo,4,14,candidato c,Ns/Nc
+2024-02-02,17,Santiago del Estero,Masculino,86,Terciario incompletoUniversitario completo,3,39,Candidato_A,candidato d
+2024-01-10,18,Ciudad Autónoma de Buenos Aires,Masculino,59,Primario completo,5,96,candidato c,Candidato_B
+2024-01-01,19,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,71,Secundario incompletoTerciario completo,6,41,Blanco,candidato d
+2024-01-13,20,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,30,Primario completo,5,58,candidato c,candidato d
+2024-02-02,21,Ciudad Autónoma de Buenos Aires,Masculino,30,Terciario incompletoUniversitario completo,1,65,Ns/Nc,Blanco
+2024-01-10,22,Santa Cruz,Masculino,50,Primario completo,2,58,Nulo,Ns/Nc
+2024-01-08,23,Buenos Aires,Femenino,89,Primario incompletoSecundario completo,3,37,Ns/Nc,No Fue A Votar
+2024-01-26,24,La Pampa,Femenino,78,Terciario incompletoUniversitario completo,6,5,Candidato_A,Candidato_A
+2024-01-22,25,La Pampa,Masculino,55,Terciario incompletoUniversitario completo,3,14,Ns/Nc,Blanco
+2024-01-03,26,Ciudad Autónoma de Buenos Aires,Masculino,60,Universitario incompletoNs/Nc,5,36,Blanco,Candidato_B
+2024-01-26,27,Salta,Masculino,28,Primario completo,5,45,Candidato_B,candidato d
+2024-01-11,28,Formosa,Femenino,58,Secundario incompletoTerciario completo,2,86,Blanco,No Fue A Votar
+2024-01-25,29,Corrientes,Femenino,77,Terciario incompletoUniversitario completo,2,85,Nulo,Blanco
+2024-01-20,30,Corrientes,Femenino,32,Universitario incompletoNs/Nc,4,34,Ns/Nc,No Fue A Votar
+2024-01-27,31,Neuquén,Femenino,85,Secundario incompletoTerciario completo,3,88,candidato c,Ns/Nc
+2024-01-11,32,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,22,Terciario incompletoUniversitario completo,5,75,Nulo,candidato d
+2024-01-19,33,Neuquén,Femenino,45,Secundario incompletoTerciario completo,5,64,Nulo,Candidato_B
+2024-01-11,34,Santa Cruz,Masculino,51,Terciario incompletoUniversitario completo,1,7,Candidato_B,Ns/Nc
+2024-01-26,35,Mendoza,Masculino,90,Primario completo,6,69,Nulo,Candidato_B
+2024-01-30,36,Chaco,Femenino,81,Terciario incompletoUniversitario completo,2,87,Nulo,Candidato_B
+2024-01-02,37,Catamarca,Masculino,51,Primario incompletoSecundario completo,5,18,Blanco,Candidato_B
+2024-01-01,38,Corrientes,Masculino,48,Primario incompletoSecundario completo,6,34,Ns/Nc,Candidato_B
+2024-01-09,39,Mendoza,Femenino,38,Terciario incompletoUniversitario completo,4,30,Nulo,candidato d
+2024-01-01,40,Chubut,Femenino,21,Primario incompletoSecundario completo,6,87,candidato c,Ns/Nc
+2024-01-23,41,Salta,Femenino,65,Primario completo,2,97,Candidato_B,No Fue A Votar
+2024-01-01,42,Chubut,Masculino,57,Primario completo,4,0,Candidato_A,candidato d
+2024-01-14,43,San Luis,Masculino,52,Secundario incompletoTerciario completo,1,92,candidato c,Candidato_B
+2024-01-20,44,Santa Cruz,Femenino,43,Terciario incompletoUniversitario completo,5,83,Candidato_B,Nulo
+2024-01-28,45,Formosa,Femenino,23,Secundario incompletoTerciario completo,3,92,candidato c,Blanco
+2024-01-14,46,Santiago del Estero,Masculino,40,Primario completo,3,60,Nulo,Ns/Nc
+2024-01-04,47,Río Negro,Masculino,85,Primario completo,1,23,Nulo,Nulo
+2024-01-22,48,Río Negro,Femenino,21,Secundario incompletoTerciario completo,2,91,candidato c,Candidato_B
+2024-01-04,49,Jujuy,Femenino,83,Universitario incompletoNs/Nc,1,78,Nulo,Blanco
+2024-01-17,50,La Pampa,Masculino,68,Primario incompletoSecundario completo,1,64,candidato c,No Fue A Votar
+2024-01-17,51,San Juan,Femenino,40,Primario completo,5,70,Nulo,No Fue A Votar
+2024-01-20,52,Neuquén,Femenino,65,Primario completo,1,16,candidato c,candidato d
+2024-02-02,53,Salta,Femenino,68,Primario incompletoSecundario completo,5,42,Nulo,Blanco
+2024-01-02,54,Chubut,Masculino,53,Terciario incompletoUniversitario completo,3,44,Candidato_B,Candidato_A
+2024-01-16,55,Corrientes,Masculino,65,Universitario incompletoNs/Nc,6,80,Nulo,Candidato_B
+2024-01-10,56,San Juan,Masculino,44,Primario completo,4,45,Nulo,Candidato_A
+2024-01-24,57,San Luis,Masculino,64,Secundario incompletoTerciario completo,3,37,Ns/Nc,Blanco
+2024-01-18,58,Río Negro,Masculino,36,Primario incompletoSecundario completo,3,43,Candidato_B,Candidato_B
+2024-02-01,59,San Juan,Femenino,39,Secundario incompletoTerciario completo,5,29,Blanco,Candidato_A
+2024-01-28,60,Chaco,Femenino,63,Primario completo,1,97,candidato c,Candidato_B
+2024-01-31,61,La Rioja,Masculino,75,Primario incompletoSecundario completo,1,72,Ns/Nc,candidato d
+2024-01-27,62,Río Negro,Masculino,21,Terciario incompletoUniversitario completo,3,56,candidato c,Ns/Nc
+2024-01-03,63,Jujuy,Masculino,89,Primario incompletoSecundario completo,2,83,Ns/Nc,No Fue A Votar
+2024-01-12,64,Formosa,Femenino,64,Primario completo,2,7,candidato c,Blanco
+2024-01-24,65,Neuquén,Femenino,38,Terciario incompletoUniversitario completo,3,12,Candidato_B,Blanco
+2024-01-27,66,Mendoza,Masculino,59,Primario completo,4,98,Ns/Nc,Nulo
+2024-01-29,67,Córdoba,Femenino,49,Primario incompletoSecundario completo,4,87,Candidato_A,Ns/Nc
+2024-01-03,68,Santa Cruz,Femenino,90,Secundario incompletoTerciario completo,6,74,Ns/Nc,Blanco
+2024-01-22,69,Neuquén,Masculino,23,Primario completo,3,9,Nulo,candidato d
+2024-01-13,70,Neuquén,Femenino,78,Universitario incompletoNs/Nc,5,9,Blanco,No Fue A Votar
+2024-02-02,71,Corrientes,Masculino,69,Terciario incompletoUniversitario completo,6,71,candidato c,No Fue A Votar
+2024-01-05,72,Córdoba,Femenino,71,Primario incompletoSecundario completo,3,8,Nulo,Blanco
+2024-01-14,73,Mendoza,Femenino,39,Secundario incompletoTerciario completo,4,37,candidato c,Ns/Nc
+2024-01-24,74,Chaco,Femenino,37,Universitario incompletoNs/Nc,4,97,candidato c,Candidato_B
+2024-01-28,75,Ciudad Autónoma de Buenos Aires,Masculino,27,Secundario incompletoTerciario completo,2,39,Nulo,Candidato_B
+2024-01-17,76,Misiones,Femenino,50,Primario completo,4,56,Candidato_B,Candidato_B
+2024-01-09,77,Salta,Femenino,34,Terciario incompletoUniversitario completo,6,56,Candidato_B,Nulo
+2024-01-01,78,Corrientes,Masculino,36,Terciario incompletoUniversitario completo,6,21,Candidato_A,No Fue A Votar
+2024-01-06,79,Buenos Aires,Femenino,41,Universitario incompletoNs/Nc,3,50,Nulo,Blanco
+2024-02-01,80,Formosa,Masculino,28,Terciario incompletoUniversitario completo,1,62,Candidato_B,Ns/Nc
+2024-01-03,81,Mendoza,Femenino,37,Secundario incompletoTerciario completo,5,59,Candidato_B,Blanco
+2024-02-01,82,Entre Ríos,Femenino,65,Universitario incompletoNs/Nc,5,78,Nulo,Nulo
+2024-01-17,83,Buenos Aires,Masculino,28,Universitario incompletoNs/Nc,2,71,candidato c,Candidato_A
+2024-01-19,84,San Juan,Femenino,85,Primario incompletoSecundario completo,1,42,Blanco,Ns/Nc
+2024-01-05,85,Entre Ríos,Masculino,17,Universitario incompletoNs/Nc,6,19,Ns/Nc,candidato d
+2024-01-29,86,San Juan,Masculino,52,Primario completo,1,12,candidato c,Candidato_B
+2024-01-05,87,Jujuy,Femenino,83,Universitario incompletoNs/Nc,4,18,Ns/Nc,Candidato_B
+2024-01-11,88,Misiones,Femenino,59,Primario completo,2,76,Blanco,No Fue A Votar
+2024-01-15,89,Mendoza,Masculino,30,Secundario incompletoTerciario completo,2,33,Ns/Nc,Candidato_B
+2024-01-08,90,Misiones,Femenino,43,Universitario incompletoNs/Nc,1,74,candidato c,candidato d
+2024-01-12,91,La Pampa,Masculino,69,Primario completo,1,62,Candidato_A,Candidato_A
+2024-01-18,92,La Rioja,Femenino,58,Universitario incompletoNs/Nc,6,1,Ns/Nc,No Fue A Votar
+2024-01-04,93,Misiones,Femenino,25,Primario completo,3,41,Candidato_A,Ns/Nc
+2024-01-17,94,Chubut,Femenino,33,Terciario incompletoUniversitario completo,3,100,Ns/Nc,candidato d
+2024-01-22,95,Río Negro,Femenino,26,Primario incompletoSecundario completo,6,84,Nulo,Ns/Nc
+2024-01-14,96,Neuquén,Femenino,64,Primario completo,3,1,Blanco,Nulo
+2024-02-02,97,Mendoza,Masculino,69,Universitario incompletoNs/Nc,1,66,Candidato_A,Candidato_A
+2024-01-10,98,Neuquén,Masculino,52,Secundario incompletoTerciario completo,4,11,Ns/Nc,Candidato_A
+2024-01-08,99,Santiago del Estero,Masculino,44,Secundario incompletoTerciario completo,6,63,Blanco,Blanco
+2024-02-02,100,Misiones,Femenino,41,Terciario incompletoUniversitario completo,1,26,Nulo,Candidato_B
+2024-01-27,101,Corrientes,Femenino,55,Primario completo,5,63,Candidato_A,Blanco
+2024-01-30,102,Neuquén,Femenino,88,Primario completo,3,14,Candidato_A,No Fue A Votar
+2024-01-28,103,Catamarca,Femenino,25,Primario incompletoSecundario completo,4,6,Ns/Nc,Blanco
+2024-01-25,104,Chubut,Masculino,60,Secundario incompletoTerciario completo,5,33,Blanco,Nulo
+2024-01-07,105,Mendoza,Femenino,65,Primario completo,6,73,Nulo,candidato d
+2024-01-14,106,Córdoba,Masculino,89,Universitario incompletoNs/Nc,3,39,Candidato_A,Candidato_A
+2024-01-27,107,Ciudad Autónoma de Buenos Aires,Masculino,25,Primario incompletoSecundario completo,4,59,Blanco,Candidato_B
+2024-01-04,108,Ciudad Autónoma de Buenos Aires,Femenino,54,Primario incompletoSecundario completo,5,57,candidato c,Ns/Nc
+2024-01-04,109,La Pampa,Femenino,71,Primario completo,2,88,Nulo,candidato d
+2024-01-21,110,Salta,Masculino,81,Primario incompletoSecundario completo,1,17,Candidato_A,Ns/Nc
+2024-01-24,111,Misiones,Masculino,20,Primario completo,5,61,Nulo,No Fue A Votar
+2024-01-10,112,San Juan,Femenino,33,Primario completo,3,73,Candidato_A,Ns/Nc
+2024-01-16,113,Ciudad Autónoma de Buenos Aires,Masculino,74,Primario incompletoSecundario completo,6,40,Candidato_B,Nulo
+2024-01-02,114,Misiones,Masculino,31,Primario completo,1,79,Candidato_B,Ns/Nc
+2024-01-19,115,Chaco,Femenino,63,Terciario incompletoUniversitario completo,2,39,Ns/Nc,Candidato_A
+2024-01-16,116,Córdoba,Masculino,45,Primario incompletoSecundario completo,3,99,Candidato_A,Nulo
+2024-01-02,117,Neuquén,Femenino,56,Primario completo,6,98,Blanco,Candidato_B
+2024-01-27,118,Jujuy,Masculino,76,Secundario incompletoTerciario completo,6,97,Nulo,Candidato_A
+2024-01-30,119,Salta,Femenino,44,Terciario incompletoUniversitario completo,6,100,Blanco,Blanco
+2024-01-26,120,Mendoza,Masculino,66,Universitario incompletoNs/Nc,4,3,Nulo,Candidato_A
+2024-01-19,121,Catamarca,Femenino,23,Secundario incompletoTerciario completo,6,6,Blanco,Blanco
+2024-01-15,122,Salta,Masculino,84,Terciario incompletoUniversitario completo,1,46,candidato c,Candidato_B
+2024-01-17,123,Corrientes,Femenino,39,Primario incompletoSecundario completo,6,30,Blanco,Candidato_B
+2024-01-29,124,San Juan,Masculino,47,Terciario incompletoUniversitario completo,4,3,Blanco,Candidato_B
+2024-01-12,125,Ciudad Autónoma de Buenos Aires,Femenino,19,Universitario incompletoNs/Nc,2,99,Blanco,Nulo
+2024-01-01,126,Neuquén,Masculino,25,Secundario incompletoTerciario completo,5,95,Blanco,Candidato_A
+2024-01-27,127,Misiones,Masculino,35,Primario incompletoSecundario completo,5,56,Candidato_A,Blanco
+2024-01-27,128,Formosa,Femenino,24,Universitario incompletoNs/Nc,3,46,Blanco,Candidato_A
+2024-01-25,129,Río Negro,Masculino,27,Secundario incompletoTerciario completo,2,86,Ns/Nc,Blanco
+2024-01-09,130,Ciudad Autónoma de Buenos Aires,Masculino,65,Universitario incompletoNs/Nc,2,51,Blanco,No Fue A Votar
+2024-01-13,131,Córdoba,Masculino,59,Secundario incompletoTerciario completo,2,36,Nulo,Candidato_B
+2024-01-02,132,La Pampa,Femenino,33,Terciario incompletoUniversitario completo,5,75,Candidato_A,candidato d
+2024-01-17,133,Córdoba,Femenino,60,Terciario incompletoUniversitario completo,1,48,candidato c,Candidato_B
+2024-01-27,134,San Luis,Femenino,50,Primario completo,1,20,Candidato_B,Ns/Nc
+2024-01-10,135,San Luis,Femenino,43,Primario completo,4,84,Ns/Nc,Nulo
+2024-01-29,136,Neuquén,Masculino,35,Primario incompletoSecundario completo,6,25,Blanco,No Fue A Votar
+2024-02-01,137,Buenos Aires,Femenino,38,Primario incompletoSecundario completo,1,3,Blanco,Candidato_A
+2024-02-02,138,Chubut,Masculino,45,Universitario incompletoNs/Nc,4,44,Candidato_B,No Fue A Votar
+2024-01-21,139,Corrientes,Femenino,40,Secundario incompletoTerciario completo,6,50,candidato c,Nulo
+2024-01-21,140,La Rioja,Masculino,20,Universitario incompletoNs/Nc,4,86,Candidato_B,Ns/Nc
+2024-01-13,141,Santiago del Estero,Femenino,21,Terciario incompletoUniversitario completo,5,90,Nulo,Candidato_A
+2024-01-04,142,San Luis,Femenino,40,Universitario incompletoNs/Nc,6,8,Blanco,Nulo
+2024-01-18,143,Córdoba,Masculino,76,Secundario incompletoTerciario completo,4,89,Candidato_B,Candidato_A
+2024-01-06,144,Santa Cruz,Femenino,82,Primario completo,5,53,Ns/Nc,No Fue A Votar
+2024-02-02,145,La Rioja,Masculino,55,Universitario incompletoNs/Nc,4,37,Candidato_B,No Fue A Votar
+2024-01-28,146,Mendoza,Masculino,81,Secundario incompletoTerciario completo,1,95,Candidato_B,candidato d
+2024-01-14,147,Corrientes,Femenino,41,Secundario incompletoTerciario completo,2,23,Blanco,candidato d
+2024-01-16,148,San Luis,Masculino,29,Primario incompletoSecundario completo,1,87,Ns/Nc,candidato d
+2024-01-21,149,Ciudad Autónoma de Buenos Aires,Femenino,72,Terciario incompletoUniversitario completo,2,43,Ns/Nc,Candidato_B
+2024-02-02,150,Neuquén,Femenino,72,Primario incompletoSecundario completo,3,96,Nulo,Candidato_A
+2024-02-02,151,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,42,Terciario incompletoUniversitario completo,6,12,Blanco,Ns/Nc
+2024-01-07,152,Neuquén,Femenino,87,Terciario incompletoUniversitario completo,3,61,Nulo,No Fue A Votar
+2024-01-18,153,Río Negro,Masculino,38,Primario completo,4,66,Blanco,Candidato_A
+2024-01-22,154,Buenos Aires,Masculino,85,Primario completo,2,55,Blanco,Ns/Nc
+2024-01-24,155,Ciudad Autónoma de Buenos Aires,Femenino,77,Primario incompletoSecundario completo,2,41,Candidato_A,No Fue A Votar
+2024-01-14,156,La Rioja,Masculino,28,Terciario incompletoUniversitario completo,1,78,candidato c,Candidato_B
+2024-01-18,157,Santiago del Estero,Masculino,51,Secundario incompletoTerciario completo,2,30,Candidato_A,Candidato_A
+2024-01-30,158,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,49,Universitario incompletoNs/Nc,2,36,Ns/Nc,No Fue A Votar
+2024-01-02,159,Chubut,Masculino,36,Terciario incompletoUniversitario completo,2,53,Ns/Nc,candidato d
+2024-01-31,160,San Luis,Femenino,36,Primario completo,3,91,Candidato_A,candidato d
+2024-01-20,161,Chaco,Femenino,64,Primario incompletoSecundario completo,3,23,Nulo,Nulo
+2024-01-11,162,Misiones,Femenino,81,Primario incompletoSecundario completo,4,52,candidato c,Nulo
+2024-01-15,163,Entre Ríos,Femenino,54,Primario incompletoSecundario completo,6,97,Candidato_B,Ns/Nc
+2024-01-23,164,Chubut,Femenino,86,Primario incompletoSecundario completo,3,48,Blanco,Nulo
+2024-01-03,165,Neuquén,Masculino,29,Primario completo,1,4,Ns/Nc,Candidato_B
+2024-01-18,166,Santa Fe,Femenino,70,Primario incompletoSecundario completo,6,55,Blanco,No Fue A Votar
+2024-01-18,167,Neuquén,Masculino,53,Secundario incompletoTerciario completo,5,10,Candidato_A,Nulo
+2024-01-11,168,Río Negro,Femenino,59,Terciario incompletoUniversitario completo,2,64,Blanco,Blanco
+2024-01-14,169,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,73,Universitario incompletoNs/Nc,5,4,Ns/Nc,Nulo
+2024-01-21,170,Jujuy,Masculino,80,Primario incompletoSecundario completo,5,45,candidato c,candidato d
+2024-02-01,171,Chubut,Masculino,63,Universitario incompletoNs/Nc,5,26,Nulo,Ns/Nc
+2024-01-18,172,Jujuy,Femenino,73,Secundario incompletoTerciario completo,6,6,Candidato_B,No Fue A Votar
+2024-01-08,173,La Pampa,Masculino,51,Primario incompletoSecundario completo,4,70,Nulo,Ns/Nc
+2024-01-30,174,Corrientes,Masculino,50,Terciario incompletoUniversitario completo,4,69,Candidato_B,Candidato_B
+2024-01-12,175,Neuquén,Femenino,70,Universitario incompletoNs/Nc,6,79,Candidato_A,candidato d
+2024-01-27,176,Chubut,Masculino,67,Primario completo,4,36,Ns/Nc,candidato d
+2024-01-16,177,Corrientes,Masculino,33,Primario completo,4,21,Candidato_B,Candidato_A
+2024-01-28,178,Corrientes,Femenino,27,Terciario incompletoUniversitario completo,6,89,Blanco,Nulo
+2024-01-20,179,Río Negro,Femenino,63,Secundario incompletoTerciario completo,6,46,Candidato_A,Candidato_A
+2024-01-15,180,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,52,Secundario incompletoTerciario completo,2,72,candidato c,Nulo
+2024-01-02,181,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,58,Primario completo,1,55,candidato c,Candidato_A
+2024-01-08,182,Entre Ríos,Masculino,60,Terciario incompletoUniversitario completo,2,23,Blanco,Nulo
+2024-01-26,183,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,17,Terciario incompletoUniversitario completo,4,98,Ns/Nc,Blanco
+2024-01-07,184,Entre Ríos,Femenino,56,Primario incompletoSecundario completo,1,38,Candidato_B,Ns/Nc
+2024-01-23,185,Formosa,Masculino,55,Primario completo,5,8,Ns/Nc,Candidato_A
+2024-01-30,186,Santa Cruz,Femenino,49,Primario incompletoSecundario completo,5,36,candidato c,candidato d
+2024-01-24,187,San Luis,Femenino,30,Secundario incompletoTerciario completo,3,60,Candidato_A,Candidato_A
+2024-01-18,188,San Luis,Femenino,17,Secundario incompletoTerciario completo,2,62,candidato c,Candidato_A
+2024-01-20,189,Jujuy,Femenino,16,Primario incompletoSecundario completo,1,83,Ns/Nc,Candidato_B
+2024-01-27,190,San Luis,Femenino,69,Primario incompletoSecundario completo,4,69,Blanco,Nulo
+2024-02-02,191,Jujuy,Femenino,69,Terciario incompletoUniversitario completo,5,38,Candidato_B,Blanco
+2024-01-22,192,Corrientes,Masculino,34,Secundario incompletoTerciario completo,1,12,Ns/Nc,Nulo
+2024-01-02,193,San Luis,Masculino,86,Universitario incompletoNs/Nc,3,47,Nulo,Candidato_A
+2024-01-17,194,Santa Fe,Masculino,81,Universitario incompletoNs/Nc,1,76,candidato c,Blanco
+2024-01-13,195,Corrientes,Masculino,64,Secundario incompletoTerciario completo,6,92,Blanco,candidato d
+2024-01-24,196,Salta,Masculino,70,Secundario incompletoTerciario completo,5,5,Blanco,Ns/Nc
+2024-01-31,197,Jujuy,Masculino,29,Secundario incompletoTerciario completo,4,77,Candidato_A,Nulo
+2024-01-06,198,Catamarca,Femenino,55,Terciario incompletoUniversitario completo,5,59,candidato c,candidato d
+2024-01-03,199,Formosa,Masculino,33,Primario completo,2,94,Nulo,Candidato_B
+2024-01-02,200,San Luis,Masculino,72,Primario incompletoSecundario completo,1,98,Ns/Nc,Blanco
+2024-01-22,201,Chubut,Femenino,56,Terciario incompletoUniversitario completo,5,68,Nulo,candidato d
+2024-01-05,202,La Pampa,Femenino,56,Secundario incompletoTerciario completo,2,37,Blanco,Blanco
+2024-01-02,203,Río Negro,Masculino,41,Secundario incompletoTerciario completo,6,71,Nulo,Blanco
+2024-01-16,204,Córdoba,Femenino,42,Universitario incompletoNs/Nc,6,80,Candidato_B,Candidato_A
+2024-01-15,205,Chaco,Femenino,80,Terciario incompletoUniversitario completo,2,48,candidato c,No Fue A Votar
+2024-01-27,206,Santa Fe,Femenino,28,Primario completo,5,28,Candidato_B,candidato d
+2024-01-16,207,Salta,Femenino,48,Primario incompletoSecundario completo,4,57,Candidato_A,Candidato_B
+2024-01-06,208,Catamarca,Femenino,18,Primario completo,5,65,Candidato_B,Candidato_B
+2024-01-31,209,Neuquén,Masculino,44,Secundario incompletoTerciario completo,4,31,Ns/Nc,candidato d
+2024-01-11,210,Río Negro,Femenino,61,Primario completo,4,31,Blanco,candidato d
+2024-01-12,211,Santa Fe,Masculino,43,Terciario incompletoUniversitario completo,1,92,Candidato_B,Blanco
+2024-01-21,212,Chubut,Femenino,57,Terciario incompletoUniversitario completo,5,83,Nulo,Ns/Nc
+2024-01-16,213,Santiago del Estero,Femenino,20,Terciario incompletoUniversitario completo,4,4,candidato c,Blanco
+2024-01-09,214,Chubut,Masculino,36,Primario completo,4,42,candidato c,Candidato_B
+2024-01-11,215,Santiago del Estero,Femenino,62,Universitario incompletoNs/Nc,3,29,candidato c,Candidato_B
+2024-01-05,216,San Juan,Femenino,44,Primario completo,5,44,Ns/Nc,Candidato_A
+2024-01-21,217,Río Negro,Masculino,23,Primario completo,1,12,Ns/Nc,Blanco
+2024-01-14,218,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,42,Terciario incompletoUniversitario completo,1,23,Candidato_A,Ns/Nc
+2024-01-24,219,Neuquén,Masculino,55,Terciario incompletoUniversitario completo,3,85,Candidato_A,Nulo
+2024-01-27,220,Corrientes,Femenino,21,Primario completo,2,84,Ns/Nc,Candidato_A
+2024-01-06,221,Buenos Aires,Masculino,89,Universitario incompletoNs/Nc,3,78,Candidato_B,Blanco
+2024-01-30,222,San Luis,Masculino,52,Primario incompletoSecundario completo,3,14,Candidato_B,Blanco
+2024-01-22,223,Neuquén,Masculino,68,Primario completo,2,19,Blanco,Nulo
+2024-01-28,224,Ciudad Autónoma de Buenos Aires,Masculino,16,Primario incompletoSecundario completo,5,64,Ns/Nc,No Fue A Votar
+2024-01-13,225,Catamarca,Femenino,28,Terciario incompletoUniversitario completo,1,3,Candidato_A,candidato d
+2024-01-26,226,Santa Cruz,Masculino,71,Primario incompletoSecundario completo,4,87,candidato c,candidato d
+2024-01-05,227,Río Negro,Masculino,84,Terciario incompletoUniversitario completo,4,83,Blanco,Candidato_A
+2024-01-11,228,Chaco,Femenino,83,Terciario incompletoUniversitario completo,1,96,Blanco,candidato d
+2024-01-22,229,Santiago del Estero,Masculino,48,Primario completo,3,1,candidato c,Nulo
+2024-01-14,230,San Luis,Masculino,40,Primario completo,6,46,Nulo,Nulo
+2024-01-28,231,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,72,Primario completo,3,64,Blanco,Nulo
+2024-02-01,232,Córdoba,Masculino,26,Primario completo,3,16,Candidato_B,No Fue A Votar
+2024-01-04,233,Santiago del Estero,Masculino,27,Terciario incompletoUniversitario completo,6,98,Candidato_B,candidato d
+2024-01-31,234,Córdoba,Masculino,19,Terciario incompletoUniversitario completo,4,39,Blanco,Nulo
+2024-01-16,235,La Pampa,Masculino,46,Universitario incompletoNs/Nc,6,12,Blanco,No Fue A Votar
+2024-01-19,236,Misiones,Masculino,80,Universitario incompletoNs/Nc,4,26,Ns/Nc,No Fue A Votar
+2024-01-04,237,Catamarca,Masculino,49,Primario completo,3,95,Blanco,Candidato_B
+2024-01-17,238,Corrientes,Femenino,21,Primario incompletoSecundario completo,2,83,candidato c,Candidato_B
+2024-01-16,239,Corrientes,Masculino,72,Secundario incompletoTerciario completo,1,95,Nulo,Candidato_B
+2024-01-08,240,Santa Fe,Masculino,64,Terciario incompletoUniversitario completo,4,27,candidato c,Candidato_B
+2024-01-01,241,Córdoba,Masculino,73,Terciario incompletoUniversitario completo,1,64,Blanco,Candidato_B
+2024-01-05,242,La Rioja,Masculino,32,Primario completo,1,45,Candidato_A,Blanco
+2024-01-12,243,Chaco,Masculino,41,Primario incompletoSecundario completo,2,29,Nulo,Blanco
+2024-01-14,244,Ciudad Autónoma de Buenos Aires,Masculino,27,Terciario incompletoUniversitario completo,5,1,Blanco,Blanco
+2024-01-25,245,Neuquén,Femenino,72,Primario incompletoSecundario completo,6,37,Blanco,Nulo
+2024-01-30,246,Catamarca,Masculino,23,Secundario incompletoTerciario completo,1,71,Candidato_B,No Fue A Votar
+2024-01-04,247,Chaco,Masculino,37,Terciario incompletoUniversitario completo,4,100,Ns/Nc,Nulo
+2024-01-05,248,San Luis,Femenino,24,Primario completo,6,35,Ns/Nc,Ns/Nc
+2024-01-31,249,Chubut,Femenino,50,Universitario incompletoNs/Nc,4,3,Ns/Nc,Candidato_B
+2024-01-22,250,Chubut,Masculino,78,Terciario incompletoUniversitario completo,6,35,candidato c,No Fue A Votar
+2024-01-21,251,Catamarca,Masculino,42,Secundario incompletoTerciario completo,2,65,Blanco,Candidato_B
+2024-01-05,252,Córdoba,Femenino,46,Universitario incompletoNs/Nc,2,31,candidato c,Blanco
+2024-01-14,253,La Rioja,Masculino,50,Universitario incompletoNs/Nc,1,99,candidato c,Blanco
+2024-01-24,254,Buenos Aires,Femenino,31,Primario incompletoSecundario completo,6,30,Candidato_A,candidato d
+2024-01-01,255,Santiago del Estero,Femenino,68,Primario completo,3,5,Blanco,Blanco
+2024-01-21,256,Santa Fe,Masculino,19,Secundario incompletoTerciario completo,1,38,Nulo,No Fue A Votar
+2024-01-05,257,Chubut,Femenino,36,Primario incompletoSecundario completo,3,24,Nulo,Blanco
+2024-01-06,258,La Pampa,Femenino,52,Primario completo,1,63,candidato c,candidato d
+2024-02-02,259,Córdoba,Femenino,75,Primario incompletoSecundario completo,2,14,Nulo,Candidato_B
+2024-01-28,260,Corrientes,Femenino,64,Primario completo,3,12,candidato c,No Fue A Votar
+2024-01-23,261,Mendoza,Femenino,45,Terciario incompletoUniversitario completo,1,21,Candidato_A,Nulo
+2024-01-01,262,La Pampa,Femenino,62,Primario incompletoSecundario completo,4,92,Nulo,No Fue A Votar
+2024-01-04,263,Córdoba,Femenino,65,Primario completo,4,33,candidato c,Candidato_B
+2024-01-20,264,Misiones,Femenino,47,Universitario incompletoNs/Nc,6,68,Ns/Nc,Nulo
+2024-01-25,265,Neuquén,Masculino,39,Secundario incompletoTerciario completo,3,13,Candidato_B,Blanco
+2024-01-29,266,San Luis,Masculino,59,Universitario incompletoNs/Nc,5,60,Nulo,candidato d
+2024-02-02,267,Río Negro,Masculino,90,Primario completo,5,84,Nulo,Ns/Nc
+2024-01-25,268,Catamarca,Masculino,87,Secundario incompletoTerciario completo,1,70,Ns/Nc,Ns/Nc
+2024-01-24,269,Santa Cruz,Femenino,29,Primario completo,6,40,Blanco,Candidato_A
+2024-01-22,270,San Luis,Femenino,83,Primario completo,5,43,Candidato_B,Ns/Nc
+2024-01-06,271,Santa Cruz,Masculino,28,Primario completo,4,32,Ns/Nc,Candidato_A
+2024-01-02,272,Córdoba,Femenino,64,Universitario incompletoNs/Nc,2,62,Blanco,Candidato_B
+2024-01-19,273,La Rioja,Masculino,38,Terciario incompletoUniversitario completo,3,49,Candidato_A,Candidato_A
+2024-01-16,274,San Luis,Femenino,72,Primario completo,5,31,Blanco,Nulo
+2024-01-09,275,Chaco,Femenino,20,Universitario incompletoNs/Nc,4,28,Nulo,Ns/Nc
+2024-01-29,276,Catamarca,Masculino,57,Primario completo,3,26,Ns/Nc,candidato d
+2024-01-14,277,Neuquén,Femenino,38,Terciario incompletoUniversitario completo,2,13,Candidato_B,candidato d
+2024-01-24,278,Corrientes,Masculino,31,Universitario incompletoNs/Nc,4,15,Nulo,No Fue A Votar
+2024-01-18,279,Santa Fe,Masculino,72,Primario incompletoSecundario completo,3,80,Nulo,Blanco
+2024-01-01,280,San Juan,Femenino,68,Primario incompletoSecundario completo,1,47,Nulo,No Fue A Votar
+2024-01-06,281,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,65,Universitario incompletoNs/Nc,6,66,candidato c,Ns/Nc
+2024-01-19,282,Entre Ríos,Femenino,55,Terciario incompletoUniversitario completo,5,25,Candidato_B,No Fue A Votar
+2024-01-30,283,La Pampa,Masculino,42,Universitario incompletoNs/Nc,2,31,Candidato_A,No Fue A Votar
+2024-01-05,284,Formosa,Masculino,67,Universitario incompletoNs/Nc,3,49,Nulo,candidato d
+2024-01-09,285,Chaco,Masculino,51,Secundario incompletoTerciario completo,2,74,candidato c,Candidato_B
+2024-02-02,286,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,33,Secundario incompletoTerciario completo,5,35,Ns/Nc,candidato d
+2024-01-10,287,Córdoba,Femenino,71,Terciario incompletoUniversitario completo,5,94,Nulo,Candidato_A
+2024-01-17,288,Buenos Aires,Masculino,43,Primario completo,4,99,Nulo,Blanco
+2024-01-22,289,La Pampa,Femenino,41,Primario completo,4,27,Ns/Nc,Blanco
+2024-01-30,290,San Luis,Masculino,20,Universitario incompletoNs/Nc,2,99,candidato c,Nulo
+2024-02-01,291,La Rioja,Masculino,22,Secundario incompletoTerciario completo,2,88,Candidato_B,Blanco
+2024-01-24,292,Córdoba,Masculino,51,Terciario incompletoUniversitario completo,4,55,Candidato_A,Candidato_A
+2024-01-02,293,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,52,Terciario incompletoUniversitario completo,4,33,Nulo,Candidato_B
+2024-01-29,294,Chaco,Masculino,30,Primario incompletoSecundario completo,6,21,Nulo,Candidato_A
+2024-01-10,295,Santiago del Estero,Femenino,21,Universitario incompletoNs/Nc,6,43,Nulo,Candidato_B
+2024-01-04,296,Buenos Aires,Femenino,53,Primario incompletoSecundario completo,2,5,candidato c,Blanco
+2024-01-24,297,San Juan,Masculino,52,Terciario incompletoUniversitario completo,5,40,Ns/Nc,candidato d
+2024-01-18,298,Mendoza,Femenino,66,Terciario incompletoUniversitario completo,2,21,Ns/Nc,Candidato_B
+2024-01-01,299,Ciudad Autónoma de Buenos Aires,Femenino,39,Terciario incompletoUniversitario completo,3,34,Ns/Nc,No Fue A Votar
+2024-01-19,300,Catamarca,Femenino,64,Universitario incompletoNs/Nc,4,47,Nulo,candidato d
+2024-01-13,301,San Luis,Masculino,29,Primario completo,5,88,Candidato_A,Nulo
+2024-01-02,302,Mendoza,Femenino,88,Secundario incompletoTerciario completo,2,15,candidato c,Candidato_B
+2024-01-22,303,Chaco,Femenino,77,Terciario incompletoUniversitario completo,5,45,Candidato_A,Candidato_B
+2024-02-01,304,Salta,Masculino,30,Universitario incompletoNs/Nc,4,46,candidato c,No Fue A Votar
+2024-01-09,305,San Juan,Femenino,58,Primario incompletoSecundario completo,3,5,Candidato_B,Candidato_B
+2024-01-02,306,Santa Fe,Masculino,79,Primario completo,1,69,Nulo,Nulo
+2024-01-04,307,Córdoba,Masculino,78,Universitario incompletoNs/Nc,2,24,Candidato_A,Nulo
+2024-01-13,308,Chaco,Femenino,83,Terciario incompletoUniversitario completo,5,59,Candidato_B,candidato d
+2024-01-11,309,La Rioja,Femenino,72,Terciario incompletoUniversitario completo,6,56,Candidato_A,Nulo
+2024-01-06,310,Buenos Aires,Masculino,20,Primario incompletoSecundario completo,6,43,Ns/Nc,Blanco
+2024-01-18,311,Santiago del Estero,Femenino,75,Primario completo,2,4,Nulo,candidato d
+2024-01-23,312,Catamarca,Femenino,73,Universitario incompletoNs/Nc,1,96,Candidato_B,Nulo
+2024-01-11,313,Córdoba,Masculino,20,Universitario incompletoNs/Nc,5,17,Candidato_A,Candidato_A
+2024-01-04,314,Jujuy,Masculino,44,Primario incompletoSecundario completo,5,81,Nulo,Candidato_B
+2024-01-01,315,San Luis,Masculino,73,Secundario incompletoTerciario completo,6,24,Blanco,No Fue A Votar
+2024-01-04,316,Chaco,Femenino,74,Terciario incompletoUniversitario completo,2,96,Nulo,Ns/Nc
+2024-01-22,317,Catamarca,Masculino,81,Secundario incompletoTerciario completo,2,52,Candidato_B,candidato d
+2024-01-27,318,Formosa,Masculino,22,Primario completo,5,75,Blanco,Candidato_B
+2024-01-14,319,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,58,Terciario incompletoUniversitario completo,3,53,Ns/Nc,Candidato_B
+2024-01-06,320,Formosa,Masculino,20,Universitario incompletoNs/Nc,2,39,Candidato_B,Nulo
+2024-01-01,321,Ciudad Autónoma de Buenos Aires,Masculino,45,Universitario incompletoNs/Nc,1,54,candidato c,Nulo
+2024-01-21,322,Salta,Femenino,83,Primario completo,4,12,Nulo,Candidato_A
+2024-01-11,323,Río Negro,Femenino,59,Universitario incompletoNs/Nc,1,51,candidato c,Blanco
+2024-01-07,324,Santiago del Estero,Femenino,70,Terciario incompletoUniversitario completo,1,45,Ns/Nc,Ns/Nc
+2024-01-26,325,Santa Cruz,Masculino,57,Terciario incompletoUniversitario completo,1,78,Nulo,Nulo
+2024-01-14,326,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,28,Universitario incompletoNs/Nc,5,7,Nulo,No Fue A Votar
+2024-02-02,327,Río Negro,Masculino,89,Primario incompletoSecundario completo,6,0,Candidato_B,Ns/Nc
+2024-01-27,328,Entre Ríos,Masculino,90,Universitario incompletoNs/Nc,3,52,candidato c,No Fue A Votar
+2024-02-02,329,Neuquén,Masculino,39,Terciario incompletoUniversitario completo,1,7,Blanco,Candidato_B
+2024-01-20,330,Chaco,Masculino,34,Primario completo,4,37,Blanco,No Fue A Votar
+2024-01-01,331,Catamarca,Femenino,60,Secundario incompletoTerciario completo,3,83,candidato c,Blanco
+2024-01-03,332,Buenos Aires,Masculino,35,Primario completo,4,36,Blanco,Nulo
+2024-01-27,333,Santa Cruz,Masculino,50,Terciario incompletoUniversitario completo,2,91,candidato c,candidato d
+2024-01-16,334,Buenos Aires,Femenino,30,Universitario incompletoNs/Nc,5,50,Candidato_B,Blanco
+2024-01-14,335,La Rioja,Masculino,66,Primario incompletoSecundario completo,4,43,Blanco,Blanco
+2024-01-02,336,San Luis,Femenino,82,Secundario incompletoTerciario completo,1,84,Ns/Nc,Blanco
+2024-01-06,337,Formosa,Masculino,20,Primario completo,5,65,Nulo,Blanco
+2024-01-20,338,Córdoba,Femenino,39,Terciario incompletoUniversitario completo,3,43,Nulo,Blanco
+2024-01-10,339,Río Negro,Masculino,18,Primario completo,3,49,Candidato_A,No Fue A Votar
+2024-01-18,340,Río Negro,Masculino,85,Primario incompletoSecundario completo,3,68,Blanco,Candidato_A
+2024-01-01,341,Salta,Masculino,36,Secundario incompletoTerciario completo,2,75,Blanco,Blanco
+2024-01-09,342,Entre Ríos,Masculino,57,Universitario incompletoNs/Nc,2,41,Blanco,Candidato_A
+2024-01-31,343,Chaco,Masculino,23,Terciario incompletoUniversitario completo,3,5,Candidato_A,Nulo
+2024-01-21,344,Neuquén,Masculino,16,Primario incompletoSecundario completo,5,86,Ns/Nc,Nulo
+2024-01-16,345,Jujuy,Femenino,83,Terciario incompletoUniversitario completo,5,97,candidato c,Nulo
+2024-01-19,346,Santa Fe,Masculino,47,Universitario incompletoNs/Nc,3,96,Ns/Nc,No Fue A Votar
+2024-02-02,347,Ciudad Autónoma de Buenos Aires,Femenino,17,Primario incompletoSecundario completo,1,28,Blanco,Ns/Nc
+2024-01-15,348,Formosa,Masculino,26,Universitario incompletoNs/Nc,2,5,Blanco,Candidato_A
+2024-01-03,349,La Rioja,Femenino,61,Secundario incompletoTerciario completo,6,91,Candidato_A,Ns/Nc
+2024-01-10,350,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,72,Universitario incompletoNs/Nc,6,89,Nulo,candidato d
+2024-01-06,351,La Pampa,Femenino,81,Secundario incompletoTerciario completo,6,73,Blanco,Candidato_B
+2024-01-16,352,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,40,Primario incompletoSecundario completo,4,47,Nulo,No Fue A Votar
+2024-01-06,353,Neuquén,Masculino,20,Terciario incompletoUniversitario completo,4,85,Candidato_A,Blanco
+2024-01-04,354,Jujuy,Femenino,20,Secundario incompletoTerciario completo,6,64,Ns/Nc,Ns/Nc
+2024-01-02,355,La Pampa,Femenino,20,Terciario incompletoUniversitario completo,2,96,Nulo,Ns/Nc
+2024-01-27,356,Buenos Aires,Masculino,16,Terciario incompletoUniversitario completo,1,58,Candidato_A,Blanco
+2024-01-16,357,La Pampa,Masculino,21,Secundario incompletoTerciario completo,1,39,Candidato_B,Candidato_B
+2024-01-06,358,Jujuy,Masculino,47,Terciario incompletoUniversitario completo,4,38,Candidato_B,Blanco
+2024-01-02,359,Santa Fe,Femenino,35,Terciario incompletoUniversitario completo,1,26,candidato c,Nulo
+2024-01-02,360,Formosa,Masculino,37,Universitario incompletoNs/Nc,1,47,candidato c,Ns/Nc
+2024-01-17,361,Jujuy,Femenino,53,Secundario incompletoTerciario completo,3,2,Candidato_A,Ns/Nc
+2024-01-18,362,La Rioja,Femenino,34,Primario completo,3,23,Candidato_A,candidato d
+2024-01-28,363,Catamarca,Masculino,45,Secundario incompletoTerciario completo,4,78,Nulo,Ns/Nc
+2024-01-19,364,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,79,Primario incompletoSecundario completo,3,55,Ns/Nc,Blanco
+2024-02-02,365,Catamarca,Femenino,49,Primario incompletoSecundario completo,4,22,candidato c,Nulo
+2024-01-03,366,Salta,Femenino,16,Primario incompletoSecundario completo,4,41,Candidato_B,candidato d
+2024-01-10,367,Catamarca,Femenino,64,Primario completo,6,89,Nulo,Nulo
+2024-01-02,368,Santiago del Estero,Femenino,74,Primario incompletoSecundario completo,1,86,Ns/Nc,No Fue A Votar
+2024-02-02,369,Ciudad Autónoma de Buenos Aires,Masculino,90,Primario incompletoSecundario completo,5,34,candidato c,Candidato_B
+2024-01-01,370,Formosa,Femenino,52,Primario completo,1,14,Candidato_B,Candidato_A
+2024-01-11,371,Mendoza,Masculino,62,Universitario incompletoNs/Nc,2,82,Nulo,No Fue A Votar
+2024-01-29,372,Buenos Aires,Femenino,18,Terciario incompletoUniversitario completo,5,5,Blanco,Nulo
+2024-02-02,373,Chaco,Femenino,64,Secundario incompletoTerciario completo,2,31,Candidato_A,candidato d
+2024-01-19,374,Chaco,Masculino,72,Secundario incompletoTerciario completo,1,49,Blanco,Ns/Nc
+2024-01-05,375,Neuquén,Femenino,71,Universitario incompletoNs/Nc,4,6,Candidato_A,Ns/Nc
+2024-01-09,376,Jujuy,Masculino,27,Terciario incompletoUniversitario completo,2,40,candidato c,Nulo
+2024-01-29,377,San Juan,Femenino,54,Terciario incompletoUniversitario completo,1,35,Ns/Nc,Nulo
+2024-01-09,378,Chubut,Femenino,79,Primario incompletoSecundario completo,5,55,Candidato_A,Candidato_A
+2024-01-28,379,Entre Ríos,Femenino,19,Primario incompletoSecundario completo,1,48,Ns/Nc,candidato d
+2024-01-30,380,Río Negro,Masculino,70,Primario completo,2,27,Candidato_A,candidato d
+2024-01-24,381,Mendoza,Masculino,86,Primario incompletoSecundario completo,6,95,Candidato_A,Ns/Nc
+2024-01-02,382,Salta,Femenino,87,Secundario incompletoTerciario completo,4,70,Ns/Nc,Candidato_B
+2024-02-01,383,La Rioja,Masculino,65,Universitario incompletoNs/Nc,1,63,Nulo,Candidato_A
+2024-02-01,384,Mendoza,Masculino,41,Universitario incompletoNs/Nc,3,0,candidato c,candidato d
+2024-02-01,385,Formosa,Femenino,81,Primario incompletoSecundario completo,3,15,Candidato_A,Nulo
+2024-01-03,386,Misiones,Masculino,78,Universitario incompletoNs/Nc,6,52,Nulo,Candidato_A
+2024-01-05,387,La Pampa,Femenino,70,Secundario incompletoTerciario completo,3,23,Candidato_A,Candidato_B
+2024-01-13,388,San Luis,Masculino,90,Terciario incompletoUniversitario completo,1,57,Candidato_A,Candidato_A
+2024-01-21,389,Chubut,Masculino,78,Secundario incompletoTerciario completo,4,20,candidato c,candidato d
+2024-01-11,390,San Juan,Femenino,23,Primario completo,2,9,candidato c,candidato d
+2024-01-31,391,La Pampa,Femenino,52,Terciario incompletoUniversitario completo,5,96,candidato c,candidato d
+2024-01-08,392,Entre Ríos,Femenino,65,Primario completo,1,100,Blanco,Blanco
+2024-01-05,393,Ciudad Autónoma de Buenos Aires,Femenino,36,Terciario incompletoUniversitario completo,5,93,Candidato_A,candidato d
+2024-01-05,394,Catamarca,Masculino,76,Secundario incompletoTerciario completo,1,4,Candidato_B,Candidato_B
+2024-01-06,395,Jujuy,Femenino,66,Secundario incompletoTerciario completo,2,78,Ns/Nc,Candidato_B
+2024-01-09,396,Corrientes,Femenino,61,Terciario incompletoUniversitario completo,5,58,Blanco,Blanco
+2024-01-14,397,Buenos Aires,Femenino,69,Terciario incompletoUniversitario completo,2,53,Nulo,Candidato_A
+2024-01-15,398,Buenos Aires,Masculino,78,Universitario incompletoNs/Nc,5,32,Blanco,Candidato_A
+2024-01-23,399,San Luis,Masculino,74,Primario completo,4,6,Candidato_A,No Fue A Votar
+2024-01-23,400,Santa Fe,Masculino,63,Terciario incompletoUniversitario completo,6,1,Candidato_A,No Fue A Votar
+2024-01-10,401,San Luis,Masculino,59,Terciario incompletoUniversitario completo,6,23,Candidato_B,Candidato_A
+2024-01-18,402,Santa Cruz,Masculino,55,Primario incompletoSecundario completo,3,81,candidato c,No Fue A Votar
+2024-01-10,403,Misiones,Femenino,78,Terciario incompletoUniversitario completo,5,29,Blanco,Nulo
+2024-01-04,404,Ciudad Autónoma de Buenos Aires,Masculino,18,Primario incompletoSecundario completo,3,67,Ns/Nc,Ns/Nc
+2024-01-20,405,Corrientes,Masculino,74,Universitario incompletoNs/Nc,1,44,Candidato_B,No Fue A Votar
+2024-01-10,406,Misiones,Masculino,33,Universitario incompletoNs/Nc,3,13,Blanco,Candidato_A
+2024-01-08,407,La Pampa,Femenino,67,Secundario incompletoTerciario completo,1,93,Blanco,Nulo
+2024-01-03,408,Neuquén,Masculino,24,Terciario incompletoUniversitario completo,5,80,Nulo,Blanco
+2024-01-17,409,Catamarca,Masculino,46,Terciario incompletoUniversitario completo,3,97,Candidato_A,Candidato_B
+2024-01-26,410,Formosa,Masculino,47,Universitario incompletoNs/Nc,6,84,Ns/Nc,Blanco
+2024-02-01,411,Chubut,Femenino,19,Terciario incompletoUniversitario completo,2,14,Nulo,Ns/Nc
+2024-01-13,412,Formosa,Femenino,51,Terciario incompletoUniversitario completo,1,87,Candidato_A,No Fue A Votar
+2024-01-23,413,Santiago del Estero,Femenino,54,Primario incompletoSecundario completo,3,17,Nulo,Ns/Nc
+2024-02-01,414,Santa Fe,Masculino,59,Terciario incompletoUniversitario completo,4,36,Ns/Nc,No Fue A Votar
+2024-01-20,415,Corrientes,Masculino,46,Universitario incompletoNs/Nc,5,60,Candidato_B,candidato d
+2024-02-01,416,Santiago del Estero,Femenino,65,Primario completo,1,65,Ns/Nc,Blanco
+2024-01-05,417,Chubut,Masculino,83,Universitario incompletoNs/Nc,5,88,Candidato_B,No Fue A Votar
+2024-01-26,418,Salta,Masculino,32,Primario incompletoSecundario completo,3,91,Nulo,Blanco
+2024-01-17,419,Buenos Aires,Femenino,87,Primario completo,1,2,Candidato_A,Candidato_A
+2024-01-22,420,Ciudad Autónoma de Buenos Aires,Femenino,66,Primario completo,2,47,Candidato_A,Blanco
+2024-01-05,421,Jujuy,Masculino,37,Universitario incompletoNs/Nc,5,95,Candidato_A,Blanco
+2024-01-17,422,Buenos Aires,Masculino,89,Secundario incompletoTerciario completo,2,59,Ns/Nc,No Fue A Votar
+2024-01-04,423,La Pampa,Masculino,61,Terciario incompletoUniversitario completo,4,38,candidato c,Candidato_B
+2024-01-09,424,La Rioja,Masculino,58,Primario incompletoSecundario completo,2,43,Candidato_A,No Fue A Votar
+2024-01-26,425,La Rioja,Femenino,27,Primario incompletoSecundario completo,3,68,Candidato_B,Blanco
+2024-01-14,426,San Juan,Masculino,17,Secundario incompletoTerciario completo,6,51,Blanco,candidato d
+2024-01-02,427,Ciudad Autónoma de Buenos Aires,Masculino,81,Primario completo,3,67,Nulo,No Fue A Votar
+2024-01-15,428,Santa Fe,Femenino,86,Primario incompletoSecundario completo,4,18,Blanco,Blanco
+2024-01-22,429,Entre Ríos,Masculino,68,Secundario incompletoTerciario completo,3,2,Nulo,Nulo
+2024-01-22,430,La Rioja,Femenino,31,Universitario incompletoNs/Nc,3,93,Candidato_B,candidato d
+2024-01-17,431,La Pampa,Masculino,58,Primario incompletoSecundario completo,6,14,Blanco,Candidato_B
+2024-01-29,432,Buenos Aires,Masculino,38,Primario completo,2,7,Ns/Nc,candidato d
+2024-01-18,433,Entre Ríos,Masculino,67,Primario incompletoSecundario completo,5,23,Ns/Nc,Candidato_B
+2024-01-06,434,Formosa,Masculino,48,Universitario incompletoNs/Nc,2,78,Nulo,candidato d
+2024-01-13,435,Santa Cruz,Femenino,68,Primario completo,5,48,Ns/Nc,No Fue A Votar
+2024-02-01,436,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Masculino,71,Primario incompletoSecundario completo,4,36,candidato c,candidato d
+2024-01-24,437,La Pampa,Femenino,73,Universitario incompletoNs/Nc,3,43,Nulo,Ns/Nc
+2024-01-12,438,San Luis,Masculino,22,Terciario incompletoUniversitario completo,5,65,Blanco,Candidato_B
+2024-01-25,439,Formosa,Masculino,78,Universitario incompletoNs/Nc,4,5,Blanco,candidato d
+2024-01-11,440,Chaco,Femenino,79,Primario completo,1,69,Candidato_B,Nulo
+2024-01-20,441,Santa Cruz,Masculino,72,Terciario incompletoUniversitario completo,3,86,Candidato_B,Blanco
+2024-02-01,442,Neuquén,Masculino,85,Secundario incompletoTerciario completo,3,42,Nulo,candidato d
+2024-01-13,443,San Luis,Femenino,25,Primario completo,5,58,Candidato_B,Candidato_B
+2024-01-31,444,Salta,Femenino,71,Terciario incompletoUniversitario completo,2,97,candidato c,Ns/Nc
+2024-01-12,445,Catamarca,Masculino,46,Universitario incompletoNs/Nc,6,85,Candidato_A,candidato d
+2024-01-21,446,Chaco,Masculino,16,Primario completo,1,58,candidato c,candidato d
+2024-01-17,447,Santa Fe,Femenino,39,Primario incompletoSecundario completo,2,2,Blanco,Ns/Nc
+2024-01-15,448,Formosa,Masculino,65,Primario completo,2,61,Blanco,Blanco
+2024-01-29,449,Chaco,Femenino,76,Primario incompletoSecundario completo,3,22,Candidato_B,Candidato_A
+2024-01-15,450,Santa Fe,Femenino,23,Primario incompletoSecundario completo,4,76,Candidato_B,Candidato_B
+2024-01-17,451,Formosa,Femenino,16,Primario incompletoSecundario completo,6,36,Candidato_A,Candidato_B
+2024-01-03,452,Buenos Aires,Femenino,68,Primario completo,4,38,Candidato_A,Blanco
+2024-01-28,453,Entre Ríos,Femenino,27,Secundario incompletoTerciario completo,4,17,Blanco,Blanco
+2024-01-09,454,Salta,Masculino,82,Primario incompletoSecundario completo,2,81,Nulo,Nulo
+2024-01-25,455,Córdoba,Masculino,71,Primario completo,4,82,candidato c,Blanco
+2024-01-31,456,Buenos Aires,Masculino,42,Terciario incompletoUniversitario completo,4,20,Candidato_B,candidato d
+2024-01-18,457,Corrientes,Femenino,75,Primario incompletoSecundario completo,1,25,Ns/Nc,candidato d
+2024-01-27,458,Santiago del Estero,Masculino,20,Primario completo,2,13,Candidato_A,Blanco
+2024-01-23,459,Formosa,Masculino,25,Primario incompletoSecundario completo,1,4,Candidato_A,Nulo
+2024-01-26,460,San Luis,Femenino,22,Terciario incompletoUniversitario completo,2,14,Candidato_A,Candidato_A
+2024-02-01,461,Misiones,Masculino,56,Primario incompletoSecundario completo,2,50,Candidato_B,candidato d
+2024-01-20,462,Mendoza,Femenino,19,Terciario incompletoUniversitario completo,3,43,Nulo,Candidato_A
+2024-01-07,463,Santiago del Estero,Femenino,78,Primario completo,4,26,Candidato_A,No Fue A Votar
+2024-01-15,464,Chaco,Femenino,45,Primario incompletoSecundario completo,3,17,Blanco,Candidato_A
+2024-01-19,465,Catamarca,Femenino,68,Secundario incompletoTerciario completo,2,53,Candidato_A,Nulo
+2024-01-22,466,Mendoza,Masculino,66,Secundario incompletoTerciario completo,6,82,Ns/Nc,No Fue A Votar
+2024-02-02,467,Entre Ríos,Masculino,51,Primario completo,3,48,Nulo,Candidato_B
+2024-01-03,468,Chubut,Femenino,32,Secundario incompletoTerciario completo,3,19,Nulo,Blanco
+2024-01-17,469,Jujuy,Masculino,52,Primario completo,1,13,Ns/Nc,Blanco
+2024-01-22,470,Santa Fe,Femenino,74,Primario completo,1,34,candidato c,Ns/Nc
+2024-01-07,471,La Pampa,Masculino,55,Universitario incompletoNs/Nc,2,73,Candidato_A,candidato d
+2024-01-30,472,Río Negro,Masculino,37,Secundario incompletoTerciario completo,4,45,Candidato_B,Ns/Nc
+2024-01-12,473,San Luis,Femenino,30,Primario completo,4,54,Nulo,Candidato_B
+2024-01-24,474,Catamarca,Masculino,27,Universitario incompletoNs/Nc,5,54,Ns/Nc,Ns/Nc
+2024-01-29,475,San Luis,Femenino,33,Primario completo,1,86,candidato c,Ns/Nc
+2024-01-27,476,La Rioja,Masculino,86,Primario completo,1,27,Candidato_B,candidato d
+2024-01-19,477,Ciudad Autónoma de Buenos Aires,Femenino,65,Terciario incompletoUniversitario completo,4,40,Candidato_A,Nulo
+2024-01-04,478,Entre Ríos,Masculino,22,Primario completo,5,49,Candidato_A,Candidato_B
+2024-02-02,479,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,55,Secundario incompletoTerciario completo,3,2,Ns/Nc,Candidato_B
+2024-01-15,480,Santiago del Estero,Femenino,60,Terciario incompletoUniversitario completo,1,63,Candidato_A,Ns/Nc
+2024-01-07,481,Misiones,Masculino,69,Secundario incompletoTerciario completo,2,25,candidato c,candidato d
+2024-01-05,482,Corrientes,Femenino,20,Universitario incompletoNs/Nc,6,5,Ns/Nc,Nulo
+2024-01-23,483,Chubut,Femenino,41,Primario incompletoSecundario completo,1,28,candidato c,Candidato_A
+2024-01-05,484,Santiago del Estero,Femenino,30,Primario incompletoSecundario completo,6,22,Candidato_B,Blanco
+2024-01-09,485,"Tierra del Fuego, Antártida e Islas del Atlántico Sur",Femenino,23,Primario completo,2,42,Nulo,No Fue A Votar
+2024-01-25,486,Jujuy,Femenino,75,Secundario incompletoTerciario completo,6,7,candidato c,No Fue A Votar
+2024-01-19,487,Santiago del Estero,Masculino,35,Primario completo,2,12,candidato c,No Fue A Votar
+2024-01-28,488,Santa Cruz,Masculino,65,Secundario incompletoTerciario completo,3,92,Candidato_A,candidato d
+2024-01-31,489,Santiago del Estero,Masculino,31,Universitario incompletoNs/Nc,4,50,Ns/Nc,Blanco
+2024-01-25,490,San Luis,Femenino,90,Primario completo,1,14,Candidato_A,candidato d
+2024-01-02,491,Ciudad Autónoma de Buenos Aires,Masculino,71,Secundario incompletoTerciario completo,6,43,Nulo,Ns/Nc
+2024-01-17,492,Misiones,Masculino,76,Secundario incompletoTerciario completo,3,6,Candidato_B,Nulo
+2024-01-17,493,Santiago del Estero,Femenino,73,Universitario incompletoNs/Nc,5,80,Ns/Nc,Candidato_B
+2024-01-06,494,Corrientes,Femenino,84,Universitario incompletoNs/Nc,3,100,Nulo,No Fue A Votar
+2024-01-02,495,San Juan,Femenino,75,Secundario incompletoTerciario completo,1,45,Nulo,Nulo
+2024-01-12,496,Santa Fe,Femenino,17,Primario completo,4,13,candidato c,Nulo
+2024-01-06,497,Neuquén,Femenino,17,Universitario incompletoNs/Nc,6,85,Ns/Nc,Candidato_A
+2024-01-31,498,La Rioja,Femenino,27,Primario incompletoSecundario completo,6,75,Candidato_A,Nulo
+2024-01-02,499,Salta,Femenino,26,Terciario incompletoUniversitario completo,5,66,Ns/Nc,Ns/Nc
+2024-01-02,500,Buenos Aires,Masculino,50,Universitario incompletoNs/Nc,3,80,Blanco,No Fue A Votar

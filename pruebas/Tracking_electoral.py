@@ -16,11 +16,11 @@ from faker import Faker
 import pandas as pd
 from random import randint, choice
 from datetime import datetime, timedelta
-from balance import raking
 
 fake = Faker("es_AR")
 
 #%%
+import pandas as pd
 from random import randint, choice
 from datetime import datetime, timedelta
 
@@ -72,7 +72,7 @@ def generar_faker_encuestas(n_registros=500):
     votos_anteriores = [
         "Candidato_A",
         "Candidato_B",
-        "candidato d"
+        "candidato d",
         "No Fue A Votar",
         "Blanco",
         "Nulo",

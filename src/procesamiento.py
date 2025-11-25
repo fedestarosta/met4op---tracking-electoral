@@ -306,13 +306,59 @@ def interpretar_nan(df):
     
     return df
 
-#INCORPORACION DE PESOS
-def peso_col (df):
-peso_col=1
+#INCORPORACION DE PESOS - RAKING DE PRUEBA FALSO
+from balance import Balance
+OBJETIVO_ESTRATO = {
+    "buenos aires": 0.37,
+    "ciudad autónoma de buenos aires": 0.07,
+    "santa fe": 0.085,
+    "córdoba": 0.085,
+    "resto": 0.39
+}
 
-df["peso"]
+OBJETIVO_SEXO = {
+    "masculino": 0.48,
+    "femenino": 0.52
+}
+
+OBJETIVO_EDAD = {
+    "16-24": 0.18,
+    "25-35": 0.19,
+    "36-45": 0.20,
+    "46-55": 0.18,
+    "56-75": 0.20,
+    "+76": 0.05
+}
+
+
+# -------------------------------
+# FUNCIÓN PRINCIPAL DE RAKING
+# -------------------------------
+
+def generar_pesos(df):
+    """
+    Aplica raking (IPF) usando 'balance' (Meta, 2023).
+    Utiliza objetivos poblacionales por defecto definidos arriba.
+    Devuelve df con columna 'peso'.
+    """
+
+    objetivos = {
+        "estrato": OBJETIVO_ESTRATO,
+        "sexo": OBJETIVO_SEXO,
+        "edad_rango": OBJETIVO_EDAD
+    }
+
+    bal = Balance(
+        covariates=["estrato", "sexo", "edad_rango"],
+        target=objetivos,
+        method="raking"
+    )
+
+    df["peso"] = bal.fit(df).weights_
+    return df
 
 #TRATAMIENTO DE VARIABLES CLAVE
+
 
 #IMAGEN CANDIDATO PROCESAMIENTO
 def tracking_imagen(df, peso_col=None, window=3):
@@ -476,6 +522,48 @@ def tracking_voto(df, peso_col):
 
     plt.show()
 
+#TRANSFERENCIA DE VOTO
+def heatmap_transferencia(df, peso_col):
+    #Filas = voto anterior
+    #Columnas = voto actual
+    #Valores = proporción ponderada
+
+    # tabla de contingencia ponderada
+    tabla = (
+        df.pivot_table(
+            index="voto_anterior",
+            columns="voto",
+            values=peso_col,
+            aggfunc="sum",
+            fill_value=0
+        )
+    )
+
+    # convertir a proporciones por fila (voto anterior)
+    tabla_prop = tabla.div(tabla.sum(axis=1), axis=0)
+
+    # gráfico
+    plt.figure(figsize=(10, 7))
+    sns.heatmap(
+        tabla_prop,
+        annot=True,
+        fmt=".2f",
+        cmap="Blues",
+        cbar=True
+    )
+
+    plt.title("Transferencia de voto (proporciones por voto anterior)")
+    plt.ylabel("Voto anterior")
+    plt.xlabel("Voto actual")
+
+    plt.tight_layout()
+    plt.show()
+
+    return tabla_prop
+
+
+
+
 
     #Posibilidades de analisis
         #1) Matriz de Transferencia (voto anterior × voto actual)
@@ -486,8 +574,7 @@ def tracking_voto(df, peso_col):
 
 
 
-
-print ("no hay error hasta aca")
+    print ("no hay error hasta aca")
 
 
 #PRUEBAS - IMPORTANTE BORRAR CORREGIR

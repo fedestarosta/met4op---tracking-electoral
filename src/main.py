@@ -48,6 +48,10 @@ df = limpiar_voto(df)
 df = limpiar_voto_anterior(df)
 df = limpiar_estrato(df)
 df = limpiar_imagen(df)
+# Manejo de pesos
+from procesamiento import generar_pesos
+df = generar_pesos(df)
+
 
 # 5. RESUMEN INICIAL DE PRUEBA (TABLA / TORTA SEXO / MEDIA IMAGEN)
 
@@ -68,9 +72,16 @@ from procesamiento import tracking_voto
 tabla_voto = tracking_voto(df, peso_col="peso", umbral_minimo=150) #cambiar umbral segun sea conveniente
 print(tabla_voto.head())
 
-    #Grafico
+    #Grafico tracking voto
 from procesamiento import grafico_tracking_voto
 grafico_tracking_voto(tabla_voto)
+
+#Heatmap transferencia de voto
+from procesamiento import heatmap_transferencia
+
+tabla_transf = heatmap_transferencia(df, peso_col="peso")
+print(tabla_transf)
+
 
 
 
