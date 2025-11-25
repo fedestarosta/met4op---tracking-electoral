@@ -406,7 +406,6 @@ def tracking_imagen(df, peso_col=None, window=3):
         #- Rolling window
         #- Gráfico
 
-
         # Estadísticos diarios
     def stats_diarios(g):
         w = g[peso_col]
@@ -512,7 +511,6 @@ def tracking_voto(df, peso_col, umbral_minimo=0):
           .reset_index(name="peso_sumado")
     )
         
-
     # Total de pesos por fecha (casos efectivos)
     total_por_fecha = diario.groupby("fecha")["peso_sumado"].transform("sum")
 
