@@ -319,6 +319,7 @@ def interpretar_nan(df):
     return df
 
 #INCORPORACION DE PESOS - Ponderacion
+df_poblacion = pd.read_csv("data/pesos_fuente_censo2022.csv", decimal='.')
 def peso_col(df, df_poblacion):
     
     #Aplica Raking (Iterative Proportional Fitting) de forma manual con Pandas.
@@ -352,7 +353,7 @@ def peso_col(df, df_poblacion):
                 
                 # a) Obtener el Target para esta variable
                 datos_target = df_poblacion[df_poblacion['variable'] == var]
-                target_props = dict(zip(datos_target['valor'], datos_target['proporcion']))
+                target_props = dict(zip(datos_target['valor'].astype(str), datos_target['proporcion']))
                 
                 # b) Calcular la distribución actual de la muestra (suma de pesos)
                 peso_por_cat = df.groupby(var, observed=True)['peso'].sum()
@@ -369,8 +370,8 @@ def peso_col(df, df_poblacion):
                         factores[cat] = 1.0
                 
                 # d) Aplicar el ajuste a los pesos (SOLUCIONES A CONFLICTOS DE TIPOS)
-                factores_ajuste = df[var].astype(str).map(factores).astype(float).fillna(1.0)
-                df['peso'] = df['peso'] * factores_ajuste
+                factores_ajuste = df[var].astype(str).map(factores).fillna(1.0)
+                df['peso'] = df['peso'] * factores_ajuste.astype(float)
             
             # e) Re-normalización: Asegurar que la suma de pesos sea igual al total de casos original
             suma_pesos_final = df['peso'].sum()
@@ -657,10 +658,9 @@ def regresion_imagen_edad(df):
     
     # Aplicar pesos al modelo OLS
     if weights is not None:
-         modelo = sm.OLS(y, X, weights=weights).fit()
+         modelo = sm.Logit(y, X, weights=weights).fit()
     else:
-         modelo = sm.OLS(y, X).fit()
-
+         modelo = sm.Logit(y, X).fit()
 
     print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Edad)")
     print(modelo.summary())
