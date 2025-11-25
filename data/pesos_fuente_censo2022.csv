@@ -1,0 +1,33 @@
+variable,valor,proporcion
+sexo,Femenino,0.5176
+sexo,Masculino,0.4824
+rango_etario,16-24,0.129
+rango_etario,25-35,0.177
+rango_etario,36-45,0.153
+rango_etario,46-55,0.138
+rango_etario,56-75,0.281
+rango_etario,+76,0.122
+estrato,Ciudad Autonoma de Buenos Aires,0.068
+estrato,Buenos Aires,0.382
+estrato,Catamarca,0.009
+estrato,Cordoba,0.084
+estrato,Corrientes,0.026
+estrato,Chaco,0.025
+estrato,Chubut,0.013
+estrato,Entre Rios,0.031
+estrato,Formosa,0.013
+estrato,Jujuy,0.018
+estrato,La Pampa,0.008
+estrato,La Rioja,0.008
+estrato,Mendoza,0.045
+estrato,Misiones,0.028
+estrato,Neuquen,0.015
+estrato,Rio Negro,0.016
+estrato,Salta,0.031
+estrato,San Juan,0.018
+estrato,San Luis,0.012
+estrato,Santa Cruz,0.007
+estrato,Santa Fe,0.077
+estrato,Santiago del Estero,0.023
+estrato,Tucuman,0.038
+"estrato,""Tierra del Fuego, Antartida e Islas del Atlantico Sur"",0.004"

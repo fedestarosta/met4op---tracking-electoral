@@ -9,7 +9,7 @@ df['Parametro_Cruce'] = (
     df['Sexo'].astype(str) + '_' + 
     df['Edad'].astype(str)
     )
-pesos_ajustados = (
+pesos_ajustados = raking(
     data=df,
     target=df_poblacion,
     col_weight='Peso_Inicial',

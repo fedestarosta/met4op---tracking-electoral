@@ -5,6 +5,7 @@ from datetime import datetime
 from pathlib import Path
 import matplotlib.pyplot as plt
 import balance as bal
+import scipy.stats as stats
 
 #Centralizamos las funciones de procesamiento aca
 def cargar_datos(file_paths):
@@ -27,6 +28,19 @@ def cargar_datos(file_paths):
     base.columns = base.columns.str.lower().str.strip()
 
     return base
+
+file_paths_a_cargar = ['data/encuestas_falsas.csv'] # Ejemplo de ruta
+df = cargar_datos(file_paths_a_cargar)
+
+# Le pedimos al df algunas informaciones basicas
+print ("Resumen de tipos de datos")
+print (df.info)        # Muestra el resumen de tipos de datos y NAs
+print ("Columnas de df")
+print(df.columns)  # Muestra la lista de columnas
+print ("Mostrar 10 filas aleatorias")
+df.sample(10)    # Muestra 10 filas aleatorias
+print ("Primer vistazo estadisticas descriptivas")
+print (df.describe)    # Muestra estadísticas descriptivas
 
 # LIMPIEZA BÁSICA
 def limpiar_datos(df):
@@ -58,6 +72,7 @@ def limpiar_datos(df):
 
 # 3.1 FECHA (ordenar y rango)
 def limpiar_fecha(df):
+    df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
     df = df.sort_values("fecha").reset_index(drop=True)
     return df
 
@@ -231,56 +246,53 @@ def limpiar_nivel_educativo(df):
 
 # 3.11 ESTRATO (provincias)
 def limpiar_estrato(df):
-    df["estrato"] = (
-        df["estrato"]
-        .astype(str)
-        .str.strip()
-        .str.lower()
-    )
+  def limpiar_estrato(df):
+    # 1. Normalización inicial a minúsculas para limpieza
+    df["estrato"] = df["estrato"].astype(str).str.strip().str.lower()
 
-    provincias_validas = {
-        "buenos aires",
-        "catamarca",
-        "chaco",
-        "chubut",
-        "ciudad autónoma de buenos aires",
-        "corrientes",
-        "córdoba",
-        "entre ríos",
-        "formosa",
-        "jujuy",
-        "la pampa",
-        "la rioja",
-        "mendoza",
-        "misiones",
-        "neuquén",
-        "río negro",
-        "salta",
-        "san juan",
-        "san luis",
-        "santa cruz",
-        "santa fe",
-        "santiago del estero",
-        "tierra del fuego, antartida e islas del atlántico sur",
-    }
-    #reemplazos por las dudas
+    # 2. Reemplazos de variaciones comunes a un estándar minúscula
     reemplazos = {
-        "caba": "ciudad autónoma de buenos aires",
-        "capital federal": "ciudad autónoma de buenos aires",
-        "tierra del fuego": "tierra del fuego, antártida e islas del atlántico sur",
-        "tdf": "tierra del fuego, antártida e islas del atlántico sur"
-        }
+        "caba": "ciudad autonoma de buenos aires",
+        "capital federal": "ciudad autonoma de buenos aires",
+        "tierra del fuego": "tierra del fuego, antartida e islas del atlantico sur",
+        "tdf": "tierra del fuego, antartida e islas del atlantico sur"
+    }
     df["estrato"] = df["estrato"].replace(reemplazos)
 
-    #normalizar
-    df["estrato"] = df["estrato"].where(
-        df["estrato"].isin(provincias_validas),
-    "Missing"
-    )
-    #Consistencia en los titulos
-    df["estrato"] = df["estrato"].str.title()
+    # 3. Diccionario de Mapeo FINAL (De minúscula -> Formato EXACTO del CSV de Pesos)
+    # Esto garantiza que coincida con tu archivo "Pesos- fuente censo 2022 .csv"
+    mapeo_exacto = {
+        "buenos aires": "Buenos Aires",
+        "catamarca": "Catamarca",
+        "chaco": "Chaco",
+        "chubut": "Chubut",
+        "ciudad autonoma de buenos aires": "Ciudad Autonoma de Buenos Aires", # Nota la 'd' minúscula
+        "corrientes": "Corrientes",
+        "córdoba": "Córdoba",
+        "entre ríos": "Entre Ríos",
+        "formosa": "Formosa",
+        "jujuy": "Jujuy",
+        "la pampa": "La Pampa",
+        "la rioja": "La Rioja",
+        "mendoza": "Mendoza",
+        "misiones": "Misiones",
+        "neuquén": "Neuquén",
+        "río negro": "Río Negro",
+        "salta": "Salta",
+        "san juan": "San Juan",
+        "san luis": "San Luis",
+        "santa cruz": "Santa Cruz",
+        "santa fe": "Santa Fe",
+        "santiago del estero": "Santiago del Estero",
+        "tierra del fuego, antartida e islas del atlantico sur": "Tierra del Fuego, Antartida e Islas del Atlantico Sur",
+        "tucuman": "Tucuman"
+    }
 
-    return df
+    # 4. Aplicar el mapeo
+    # Si algo no está en el mapa (no es provincia válida), se convierte en NaN o "Missing"
+    df["estrato"] = df["estrato"].map(mapeo_exacto).fillna("Missing")
+
+    return df    
 # TRATAMIENTO DE NaN
 def interpretar_nan(df):
 
@@ -308,33 +320,62 @@ def interpretar_nan(df):
     return df
 
 #INCORPORACION DE PESOS 
-from balance import raking
-# Carga parametros poblacionales
-df_poblacion = pd.read_csv('src/PesosPoblacion - Hoja1.csv')
+# INCORPORACION DE PESOS (raking)
+from balance import Sample
+
+# Carga de parámetros poblacionales
+df_poblacion = pd.read_csv("data/pesos_fuente_censo2022.csv", decimal='.')
 
 def peso_col(df, df_poblacion):
-    df['Peso_Inicial'] = 1
+    
+    #Aplica raking usando balance (Meta, 2023).
+    #Ajusta pesos en base a sexo, estrato y rango_etario.
+    
 
-    df['Parametro_Cruce'] = (
-        df['Estrato'].astype(str) + '_' + 
-        df['Sexo'].astype(str) + '_' + 
-        df['Edad'].astype(str)
-        )
-    pesos_ajustados = raking(
-        data=df,
-        target=df_poblacion,
-        col_weight='Peso_Inicial',
-        col_variable='variable',
-        col_value='valor',
-        col_proportion='proporcion'
+    # 1. Preparamos la Muestra
+    df.columns = df.columns.str.lower()  # consistencia en nombres
+    df['peso_inicial'] = 1.0             # peso inicial uniforme
+    df['id'] = df.index                  # columna identificadora requerida
+
+    muestra = Sample.from_frame(
+        df,
+        weight_column='peso_inicial',
+        id_column='id'
     )
-    df['peso'] = pesos_ajustados
 
-def peso_col(df, df_poblacion):
-    ...
+    # 2. Preparamos el Target
+    target = Sample.from_frame(
+        df_poblacion,
+        variable_column='variable',
+        value_column='valor',
+        proportion_column='proporcion',
+        format='long_proportions'
+    )
+
+    # 3. Establecemos target
+    muestra_con_target = muestra.set_target(target)
+
+    # 4. Aplicamos raking
+    variables_raking = df_poblacion['variable'].unique().tolist()
+
+    try:
+        muestra_ajustada = muestra_con_target.adjust(
+            method='Raking',
+            variables=variables_raking,
+            max_iteration=500,
+            convergence_rate=1e-5,
+            na_action='add_indicator'
+        )
+    except Exception as e:
+        print(f"Error en el ajuste por Raking: {e}")
+        df['peso'] = df['peso_inicial']
+        return df
+
+    # 5. Incorporamos pesos al DataFrame original
+    df['peso'] = muestra_ajustada.df['weight']
+
     return df
 
-print("La muestra ponderada esta lista en df_ponderado")
 
 #TRATAMIENTO DE VARIABLES CLAVE
 
@@ -349,13 +390,8 @@ def tracking_imagen(df, peso_col=None, window=3):
         #- Rolling window
         #- Gráfico
 
-    # 1. Validación de pesos
-    if peso_col is None or peso_col not in df.columns:
-        print("Advertencia: No se detectó columna de pesos. Se asumirá peso = 1.")
-        df["peso"] = 1
-        peso_col = "peso"
 
-    # 2. Estadísticos diarios
+        # Estadísticos diarios
     def stats_diarios(g):
         w = g[peso_col]
         x = g["imagen_candidato"]
@@ -393,19 +429,19 @@ def tracking_imagen(df, peso_col=None, window=3):
             "ic_sup": ic_sup
         })
 
-    # Aplicación
+        # Aplicación
     diaria = (
-        df.groupby("fecha")
-          .apply(stats_diarios)
-          .reset_index()
-          .sort_values("fecha")
-    )
+         df.groupby("fecha")
+            .apply(stats_diarios)
+            .reset_index()
+            .sort_values("fecha")
+        )
 
     # 3. Rolling window
     diaria["imagen_rolling"] = diaria["imagen_diaria"].rolling(
         window,
         min_periods=1
-    ).mean()
+        ).mean()
 
     # 4. Gráfico
     plt.figure(figsize=(12, 6))
@@ -453,12 +489,7 @@ def tracking_voto(df, peso_col):
     #ponderado por fecha.
     #Incluye umbral mínimo de casos ponderados por fecha.
     
-    # Suma de pesos por voto y fecha
-    if peso_col is None or peso_col not in df.columns:
-        print("Advertencia: No se detectó columna de pesos. Se asumirá peso = 1.")
-        df["peso"] = 1
-        peso_col = "peso"
-        
+    # Suma de pesos por voto y fecha    
     diario = (
         df.groupby(["fecha", "voto"])[peso_col]
           .sum()
@@ -539,49 +570,7 @@ def heatmap_transferencia(df, peso_col):
 
     return tabla_prop
 
-
-
-
-
-    #Posibilidades de analisis
-        #1) Matriz de Transferencia (voto anterior × voto actual)
-        #2) Voto según niveles de imagen (curva de conversión)
-        #3) Tracking de intención de voto con rolling
-        #4) Perfil de votante potencial (imagen × voto)
-
-
-
-
     print ("no hay error hasta aca")
-
-
-#PRUEBAS - IMPORTANTE BORRAR CORREGIR
-    
-    #RESUMEN AUTOMÁTICO DEL TRACKING
-def resumen_tracking(df):
-    """
-    Devuelve:
-    1. El DataFrame final ya procesado
-    2. Un gráfico de torta con la distribución de sexo
-    3. La media de imagen del candidato
-    """
-    
-    # 1. Mostrar tabla final (primeras filas)
-    print("\n----------------------------------------")
-    print("TABLA FINAL DE ENCUESTADOS (HEAD)")
-    print("----------------------------------------")
-    print(df.head())
-    
-    # 2. Gráfico de torta de SEXO
-    if "sexo" in df.columns:
-        plt.figure(figsize=(5, 5))
-        df["sexo"].value_counts().plot(kind="pie", autopct="%1.1f%%")
-        plt.title("Distribución por sexo")
-        plt.ylabel("")  # saca el label feo
-        plt.show()
-    else:
-        print("\n[ADVERTENCIA] La columna 'sexo' no está en el DataFrame.")
-
 #PRUEBA CROSSTAB IMAGEN Y EDAD
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -620,3 +609,4 @@ def plot_imagen_por_rango(df):
     plt.show()
 
     return tabla
+
