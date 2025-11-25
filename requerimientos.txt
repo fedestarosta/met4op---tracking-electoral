@@ -1,0 +1,9 @@
+pandas
+numpy
+balance
+scipy
+matplotlib
+seaborn
+pingouin
+scikit-learn
+openpyxl
