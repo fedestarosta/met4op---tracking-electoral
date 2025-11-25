@@ -65,7 +65,7 @@ def limpiar_fecha(df):
 # 3.2 ENCUESTA_ID
 def limpiar_encuesta_id(df):
     df["encuesta_id"] = pd.to_numeric(df["encuesta_id"], errors="coerce")
-    df["encuesta_id"] = df["encuesta_id"].fillna(method="ffill").astype(int)
+    df["encuesta_id"] = df["encuesta_id"].ffill().astype(int)
     return df
 
 
@@ -273,9 +273,10 @@ def limpiar_estrato(df):
     df["estrato"] = df["estrato"].replace(reemplazos)
 
     #normalizar
-    df["estrato"] = df["estrato"].where()
-    df["estrato"].isin(provincias_validas),
+    df["estrato"] = df["estrato"].where(
+        df["estrato"].isin(provincias_validas),
     "Missing"
+    )
     #Consistencia en los titulos
     df["estrato"] = df["estrato"].str.title()
 
@@ -306,59 +307,36 @@ def interpretar_nan(df):
     
     return df
 
-#INCORPORACION DE PESOS - RAKING DE PRUEBA FALSO
-from balance import Balance
-OBJETIVO_ESTRATO = {
-    "buenos aires": 0.37,
-    "ciudad autónoma de buenos aires": 0.07,
-    "santa fe": 0.085,
-    "córdoba": 0.085,
-    "resto": 0.39
-}
+#INCORPORACION DE PESOS 
+from balance import raking
+# Carga parametros poblacionales
+df_poblacion = pd.read_csv('src/PesosPoblacion - Hoja1.csv')
 
-OBJETIVO_SEXO = {
-    "masculino": 0.48,
-    "femenino": 0.52
-}
+def peso_col(df, df_poblacion):
+    df['Peso_Inicial'] = 1
 
-OBJETIVO_EDAD = {
-    "16-24": 0.18,
-    "25-35": 0.19,
-    "36-45": 0.20,
-    "46-55": 0.18,
-    "56-75": 0.20,
-    "+76": 0.05
-}
-
-
-# -------------------------------
-# FUNCIÓN PRINCIPAL DE RAKING
-# -------------------------------
-
-def generar_pesos(df):
-    """
-    Aplica raking (IPF) usando 'balance' (Meta, 2023).
-    Utiliza objetivos poblacionales por defecto definidos arriba.
-    Devuelve df con columna 'peso'.
-    """
-
-    objetivos = {
-        "estrato": OBJETIVO_ESTRATO,
-        "sexo": OBJETIVO_SEXO,
-        "edad_rango": OBJETIVO_EDAD
-    }
-
-    bal = Balance(
-        covariates=["estrato", "sexo", "edad_rango"],
-        target=objetivos,
-        method="raking"
+    df['Parametro_Cruce'] = (
+        df['Estrato'].astype(str) + '_' + 
+        df['Sexo'].astype(str) + '_' + 
+        df['Edad'].astype(str)
+        )
+    pesos_ajustados = raking(
+        data=df,
+        target=df_poblacion,
+        col_weight='Peso_Inicial',
+        col_variable='variable',
+        col_value='valor',
+        col_proportion='proporcion'
     )
+    df['peso'] = pesos_ajustados
 
-    df["peso"] = bal.fit(df).weights_
+def peso_col(df, df_poblacion):
+    ...
     return df
 
-#TRATAMIENTO DE VARIABLES CLAVE
+print("La muestra ponderada esta lista en df_ponderado")
 
+#TRATAMIENTO DE VARIABLES CLAVE
 
 #IMAGEN CANDIDATO PROCESAMIENTO
 def tracking_imagen(df, peso_col=None, window=3):

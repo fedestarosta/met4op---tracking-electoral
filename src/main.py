@@ -49,8 +49,14 @@ df = limpiar_voto_anterior(df)
 df = limpiar_estrato(df)
 df = limpiar_imagen(df)
 # Manejo de pesos
-from procesamiento import generar_pesos
-df = generar_pesos(df)
+from procesamiento import peso_col
+import pandas as pd
+
+df = cargar_datos([PATH])
+df_poblacion = pd.read_csv("src/PesosPoblacion - Hoja1.csv")
+
+df = peso_col(df, df_poblacion)
+
 
 
 # 5. RESUMEN INICIAL DE PRUEBA (TABLA / TORTA SEXO / MEDIA IMAGEN)
