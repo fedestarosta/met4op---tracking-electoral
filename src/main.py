@@ -8,6 +8,7 @@ import balance as bal
 import os
 from pandas.api.types import CategoricalDtype
 import seaborn as sns
+import statsmodels.api as sm
 
 #%%
 #Importar procesamientos
@@ -65,28 +66,29 @@ output_dir = "output/"
 from procesamiento import tracking_imagen
 
 df = peso_col(df, df_poblacion)
-tabla_tracking = tracking_imagen(df, peso_col="peso", window=3) 
+tabla_tracking, fig_tracking = tracking_imagen(df, peso_col="peso", window=3) 
 print("\n[OUTPUT] Tracking de Imagen:")
 print(tabla_tracking.head())
 
-# GUARDADO: Guardamos la figura que acaba de dibujar tracking_imagen
-plt.savefig(os.path.join(output_dir, "tracking_imagen_rolling.png"))
-plt.close() # Cierra la figura para liberar memoria
+    # GUARDADO: Guardamos la figura que acaba de dibujar tracking_imagen
+ruta_guardado = os.path.join(output_dir, "tracking_imagen_rolling.png")
+fig_tracking.savefig(ruta_guardado) 
+plt.close(fig_tracking)
 
 #Trackeo de voto
 from procesamiento import tracking_voto
 from procesamiento import grafico_tracking_voto
-# 1. Obtener la tabla de datos (Tracking)
+
+    # 1. Obtener la tabla de datos (Tracking)
+tabla_voto = tracking_voto(df, peso_col="peso", umbral_minimo=0) #cambiar umbral segun sea conveniente
 tabla_tracking, fig_tracking = tracking_imagen (df, peso_col="peso", window=3)
 print("\n[OUTPUT] Tracking de Voto:")
 print(tabla_voto.head())
 
-# 2. Generar el gráfico y capturar la figura
+    # 2. Generar el gráfico y capturar la figura
 fig_voto = grafico_tracking_voto(tabla_voto)
-tabla_voto = tracking_voto(df, peso_col="peso", umbral_minimo=0) #cambiar umbral segun sea conveniente
-print(tabla_voto.head())
 
-# 3. Guardado (usando el objeto figura)
+    # 3. Guardado (usando el objeto figura)
 ruta_guardado = os.path.join(output_dir, "tracking_voto.png")
 fig_voto.savefig(ruta_guardado)
 plt.close(fig_voto) # Cierra la figura para liberar memoria
@@ -94,9 +96,19 @@ plt.close(fig_voto) # Cierra la figura para liberar memoria
 #Heatmap transferencia de voto
 from procesamiento import heatmap_transferencia
 
-tabla_transf = heatmap_transferencia(df, peso_col="peso")
-print(tabla_transf)
+tabla_transf, fig_transf = heatmap_transferencia(df, peso_col="peso")
+
+    #Guardado de heatmap
+ruta_guardado_heatmap = os.path.join(output_dir, "heatmap_transferencia.png")
+fig_transf.savefig(ruta_guardado_heatmap)
+plt.close(fig_transf)
+
 
 #REGRESION LINEAL
 from procesamiento import regresion_imagen_voto
-regresion_imagen_voto(df)
+tabla_reg, fig_reg = regresion_imagen_voto(df)
+
+    #Guardado de regresion
+ruta_guardado_reg = os.path.join(output_dir, "regresion_imagen_voto.png")
+fig_reg.savefig(ruta_guardado_reg)
+plt.close(fig_reg)

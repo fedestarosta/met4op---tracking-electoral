@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import balance as bal
 import scipy.stats as stats
 import seaborn as sns
+import statsmodels.api as sm
 
 #Centralizamos las funciones de procesamiento aca
 def cargar_datos(file_paths):
@@ -573,13 +574,14 @@ def heatmap_transferencia(df, peso_col):
     tabla_prop = tabla.div(tabla.sum(axis=1), axis=0)
 
     # gráfico
-    plt.figure(figsize=(10, 7))
+    fig, ax = plt.subplots(figsize=(10, 7))
     sns.heatmap(
         tabla_prop,
         annot=True,
         fmt=".2f",
         cmap="Blues",
-        cbar=True
+        cbar=True,
+        ax=ax
     )
 
     plt.title("Transferencia de voto (proporciones por voto anterior)")
@@ -587,9 +589,8 @@ def heatmap_transferencia(df, peso_col):
     plt.xlabel("Voto actual")
 
     plt.tight_layout()
-    plt.show()
 
-    return tabla_prop,
+    return tabla_prop, fig
 
     print ("no hay error hasta aca")
 
@@ -618,7 +619,7 @@ def plot_imagen_por_rango(df):
     )
 
     # Plot
-    plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(10, 6))
     tabla["Imagen Promedio"].plot(kind="bar", edgecolor="black")
 
     plt.title("Imagen Promedio del Candidato por Rango Etario")
@@ -628,9 +629,8 @@ def plot_imagen_por_rango(df):
     plt.grid(axis="y", linestyle="--", alpha=0.4)
 
     plt.tight_layout()
-    plt.show()
 
-    return tabla
+    return tabla, fig
 
 # REGRESIÓN LINEAL SIMPLE: Imagen vs Intención de voto
 
@@ -655,9 +655,7 @@ def regresion_imagen_voto(df):
     X = sm.add_constant(x)        # agrega intercepto
     modelo = sm.OLS(y, X).fit()
 
-    print("\n---------------------------------------")
     print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Imagen)")
-    print("---------------------------------------")
     print(modelo.summary())
 
     # 5. Generar recta de regresión
@@ -677,6 +675,5 @@ def regresion_imagen_voto(df):
     plt.grid(alpha=0.3)
     plt.legend()
     plt.tight_layout()
-    plt.show()
 
     return modelo, fig
