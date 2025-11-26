@@ -30,7 +30,6 @@ def cargar_datos(file_paths):
     base.columns = base.columns.str.lower().str.strip()
 
     return base
-
 file_paths_a_cargar = ['data/encuestas_falsas.csv'] # Ejemplo de ruta
 df = cargar_datos(file_paths_a_cargar)
 
@@ -46,31 +45,12 @@ print (df.describe)    # Muestra estadísticas descriptivas
 
 # LIMPIEZA BÁSICA
 def limpiar_datos(df):
-    """ Limpieza inicial muy básica:
-    - convertir fecha si existe
-    - convertir edad si existe
-    - eliminar duplicados
-    - eliminar edades menores a 16
-    """
-    # Fecha
-    if "fecha" in df.columns:
-        df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
-        df = df.dropna(subset=["fecha"])
-
-    # Edad
-    if "edad" in df.columns:
-        df["edad"] = pd.to_numeric(df["edad"], errors="coerce")
-        df = df[df["edad"] >= 16]
-
     # Duplicados
     df = df.drop_duplicates()
 
     return df
 
-
-# ----------------------------------------------------------
-# 3. LIMPIEZAS ESPECÍFICAS POR VARIABLE
-# ----------------------------------------------------------
+# 2. LIMPIEZAS ESPECÍFICAS POR VARIABLE
 
 # 3.1 FECHA (ordenar y rango)
 def limpiar_fecha(df):
@@ -630,8 +610,8 @@ def plot_imagen_por_rango(df):
 
     return tabla, fig
 
-# REGRESIÓN LINEAL SIMPLE: Imagen vs edad
-def regresion_imagen_edad(df, peso_col=None):
+# REGRESIÓN LOGISTICA: Imagen vs rango etario
+def regresion_imagen_rango_etario(df, peso_col=None):
     
     #Regresión Lineal Simple Ponderada
     
@@ -639,20 +619,28 @@ def regresion_imagen_edad(df, peso_col=None):
     df = df.copy()
     df["voto_A"] = (df["voto"] == "Candidato_A").astype(int)
 
-    # 2. Variables X (Edad) e Y (Voto A)
-    x = df["edad"]
+    # Variables X (rango etario) e Y (Voto A)
+    x = df["rango_etario"]
     y = df["voto_A"]
     
-    # Obtener pesos (si existen)
-    weights = df[peso_col] if peso_col and peso_col in df.columns else None
+    # X: Crear variables dummy para 'rango_etario' (predictor categórico)
+    X_dummies = pd.get_dummies(df["rango_etario"], drop_first=True, prefix='rango').astype(int)
 
-    # 3. Cálculo de correlación de Pearson
-    pearson = x.corr(y)
-    print("CORRELACIÓN EDAD ↔ VOTO A")
-    print(f"Coef. Pearson: {pearson:.4f}")
+    # Obtener pesos 
+    crosstab_table = pd.crosstab(df['rango_etario'], df['voto_A'], 
+        normalize=False, 
+        weights=df[peso_col].fillna(1))
+    
+    # Calcular V de Cramer (Fuerza de asociación)
+    n = crosstab_table.sum().sum()
+    min_dim = min(crosstab_table.shape) - 1
+    cramers_v = np.sqrt(chi2 / (n * min_dim))
+    
+    print(f"Chi-cuadrado: {chi2:.2f}, p-valor: {p:.4f}")
+    print(f"V de Cramer (Fuerza): {cramers_v:.3f}")
 
-    # 4. Ajuste del modelo OLS
-    X = sm.add_constant(x)        # agrega intercepto
+   #  Ajuste del modelo LOGIT 
+    X = sm.add_constant(X_dummies)
     
     # Aplicar pesos al modelo OLS
     if weights is not None:
@@ -660,7 +648,111 @@ def regresion_imagen_edad(df, peso_col=None):
     else:
          modelo = sm.Logit(y, X).fit()
 
-    print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Edad)")
+    print("RESUMEN REGRESIÓN LINEAL (Voto_A ~ Rango Etario)")
+    print(modelo.summary())
+    # Asegurar que 'rango_etario' tenga el orden correcto para el gráfico
+    from pandas.api.types import CategoricalDtype
+    orden_rangos = ["16-24", "25-35", "36-45", "46-55", "56-75", "+76"]
+    cat_type = CategoricalDtype(categories=orden_rangos, ordered=True)
+    df["rango_etario"] = df["rango_etario"].astype(cat_type)
+
+   # Crear el X para predecir (una fila por rango)
+    pred_X_dummies = pd.get_dummies(pd.Series(orden_rangos), drop_first=True, prefix='rango').astype(int)
+    pred_X_dummies.index = orden_rangos
+    pred_X = sm.add_constant(pred_X_dummies, has_constant='add')
+    
+    # Predecir las probabilidades para cada rango
+    pred_probs = modelo.predict(pred_X)
+
+    # Convertir a DataFrame para plotear la línea de predicción
+    pred_df = pd.DataFrame({'rango_etario': orden_rangos, 'probabilidad_predicha': pred_probs})
+    pred_df['rango_etario'] = pred_df['rango_etario'].astype(cat_type)
+
+    # 4. Generación del gráfico
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    # Calcular la media ponderada de Voto_A por rango etario (para los puntos observados)
+    if weights is not None:
+        medias_ponderadas = df.groupby("rango_etario").apply(
+            lambda g: (g["voto_A"] * g[peso_col]).sum() / g[peso_col].sum()
+        ).reset_index(name="voto_promedio")
+        
+        sns.scatterplot(
+            x="rango_etario", 
+            y="voto_promedio", 
+            data=medias_ponderadas, 
+            color="red", 
+            s=150, 
+            marker='D', 
+            label="Probabilidad Observada Ponderada", 
+            ax=ax,
+            zorder=3
+        )
+    else:
+        medias_simples = df.groupby("rango_etario")["voto_A"].mean().reset_index(name="voto_promedio")
+        sns.scatterplot(
+            x="rango_etario", 
+            y="voto_promedio", 
+            data=medias_simples, 
+            color="red", 
+            s=150, 
+            marker='D', 
+            label="Probabilidad Observada", 
+            ax=ax,
+            zorder=3
+        )
+  # Plotear la línea de predicción del modelo Logit
+    sns.lineplot(
+        x='rango_etario', 
+        y='probabilidad_predicha', 
+        data=pred_df, 
+        color="blue", 
+        linewidth=2, 
+        marker='o', 
+        linestyle='--',
+        label="Predicción del Modelo Logit", 
+        ax=ax,
+        zorder=2
+    )
+    
+    ax.set_title("Regresión Logística: Probabilidad de Votar A por Rango Etario")
+    ax.set_xlabel("Rango Etario")
+    ax.set_ylabel("Probabilidad de Votar A (0-1)")
+    ax.set_ylim(0, 1)
+    ax.grid(alpha=0.3)
+    ax.legend()
+    plt.tight_layout()
+    return modelo, fig
+
+#PRUEBA REGRESION SIMPLE
+# REGRESIÓN LINEAL SIMPLE OLS: Imagen vs Edad (SOLO ESTA)
+def regresion_imagen_edad(df, peso_col="peso"):
+    
+    df = df.copy()
+    
+    # 2. Variables X e Y (Ambas continuas)
+    x = df["edad"]             # Predictor (Edad)
+    y = df["imagen_candidato"] # Dependiente (Imagen)
+    
+    # Obtener pesos (si existen)
+    weights = df[peso_col] if peso_col and peso_col in df.columns else None
+
+    # 3. Cálculo de correlación de Pearson
+    pearson = x.corr(y)
+    print("CORRELACIÓN IMAGEN ↔ EDAD")
+    print(f"Coef. Pearson: {pearson:.4f}")
+
+    # 4. Ajuste del modelo OLS
+    X = sm.add_constant(x)        # agrega intercepto
+    
+    # Aplicar pesos al modelo OLS
+    if weights is not None:
+         modelo = sm.OLS(y, X, weights=weights).fit()
+    else:
+         modelo = sm.OLS(y, X).fit()
+
+
+    print("RESUMEN REGRESIÓN LINEAL (Imagen ~ Edad)")
     print(modelo.summary())
 
     # 5. Generar recta de regresión
@@ -668,12 +760,11 @@ def regresion_imagen_edad(df, peso_col=None):
     x_vals = np.linspace(x.min(), x.max(), 100)
     y_vals = intercepto + pendiente * x_vals
 
-    # 6. Gráfico - FIX para el TypeError y uso de pesos
+    # 6. Gráfico - Scatterplot de variables continuas
     fig, ax = plt.subplots(figsize=(10,6)) # Crear figura y ejes
     
     if weights is not None:
          # Plot scatterplot usando pesos para el tamaño. 
-         # Se usa legend=False para evitar el TypeError y luego se añade manualmente.
          sns.scatterplot(
              x=x, 
              y=y, 
@@ -682,7 +773,7 @@ def regresion_imagen_edad(df, peso_col=None):
              alpha=0.4, 
              color="gray", 
              ax=ax,
-             legend=False # Deshabilita la leyenda automática que causa el error
+             legend=False 
          )
          
          # Añadir una entrada de leyenda manual para los puntos
@@ -702,13 +793,11 @@ def regresion_imagen_edad(df, peso_col=None):
     ax.plot(x_vals, y_vals, color="blue", linewidth=2,
              label=f"Recta de regresión\npendiente={pendiente:.3f}")
 
-    ax.set_title("Relación entre Edad del Votante e Intención de Voto (Candidato A)")
+    ax.set_title("Relación entre Imagen del Candidato y Edad del Votante")
     ax.set_xlabel("Edad del votante (años)")
-    ax.set_ylabel("Probabilidad de votar A (0-1)")
+    ax.set_ylabel("Imagen del candidato (0–100)")
     ax.grid(alpha=0.3)
     ax.legend() # Genera la leyenda con las entradas manuales
     plt.tight_layout()
-    # plt.show()
 
     return modelo, fig
-    

@@ -105,12 +105,21 @@ fig_transf.savefig(ruta_guardado_heatmap)
 print(tabla_transf)
 plt.close(fig_transf)
 
-#REGRESION LINEAL
-from procesamiento import regresion_imagen_edad
-tabla_reg_edad, fig_reg_edad = regresion_imagen_edad(df, peso_col="peso")
+#REGRESION logistica
+from procesamiento import regresion_imagen_rango_etario
+tabla_reg_edad, fig_reg_edad = regresion_imagen_rango_etario(df, peso_col="peso")
 print(tabla_reg_edad.summary())
 
     #Guardado de regresion
-ruta_guardado_reg = os.path.join(output_dir, "regresion_imagen_edad.png")
+ruta_guardado_reg = os.path.join(output_dir, "regresion_imagen_rango_etario.png")
 tabla_reg_edad, fig_reg_edad.savefig(ruta_guardado_reg)
 plt.close(fig_reg_edad)
+
+#PRUEBA regresion simple
+#Regresión Lineal Simple: Imagen vs Edad
+from procesamiento import regresion_imagen_edad
+tabla_reg_edad, fig_reg_edad = regresion_imagen_edad(df) 
+ruta_guardado_reg_edad = os.path.join(output_dir, "regresion_imagen_edad.png")
+fig_reg_edad.savefig(ruta_guardado_reg_edad)
+plt.close(fig_reg_edad)
+
